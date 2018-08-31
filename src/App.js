@@ -3,16 +3,16 @@ import React, {
    Fragment
  } from 'react'
 import { render } from 'react-dom'
-import lodash from 'lodash'
-import { Icon } from 'antd'
-import data from './data'
-import Header from './Header'
+import lodash     from 'lodash'
+import { Icon }   from 'antd'
+import data       from './data'
+import Header     from './Header'
 import { Grid,
    Slug,
    Fade
 } from 'mauerwerk'
 
-// import logo from './logo.svg';
+
 import 'antd/dist/antd.css'
 import './styles.css'
 // import './App.css';
@@ -46,38 +46,25 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
 )
 
 
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <h1 className="App-title">Welcome to React</h1>
-//         </header>
-//         <p className="App-intro">
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
+//@todo add "reworm" https://github.com/pedronauck/reworm
 
 class App extends Component {
 
-  state = { data, columns: 2, margin: 70, filter: '', height: true }
-  search = e => this.setState({ filter: e.target.value })
-  shuffle = () => this.setState(state => ({ data: lodash.shuffle(state.data) }))
-  setColumns = e => this.setState({ columns: parseInt(e.key) })
-  setMargin = e => this.setState({ margin: parseInt(e.key) })
-  setHeight = e => this.setState({ height: e })
-  
+  state      = { data, columns: 2, margin: 70, filter: '', height: true }
+  search     = e  => this.setState({ filter: e.target.value })
+  shuffle    = () => this.setState(state => ({ data: lodash.shuffle(state.data) }))
+  setColumns = e  => this.setState({ columns: parseInt(e.key) })
+  setMargin  = e  => this.setState({ margin: parseInt(e.key) })
+  setHeight  = e  => this.setState({ height: e })
+
   render() {
     const data = this.state.data.filter(
       d => d.name.toLowerCase().indexOf(this.state.filter) != -1
     )
+
     return (
       <div className="main">
+
         <Header
           {...this.state}
           search={this.search}
