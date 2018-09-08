@@ -5,7 +5,6 @@ import React, {
 import { render } from 'react-dom'
 import lodash     from 'lodash'
 import { Icon }   from 'antd'
-import data       from './data'
 import Header     from './Header'
 import { Grid,
    Slug,
@@ -15,6 +14,8 @@ import { Grid,
 
 import 'antd/dist/antd.css'
 import './styles.css'
+
+import gf from '@groceristar/groceristar-fetch/groceristar'
 // import './App.css';
 
 const Cell = ({ toggle, name, height, description, css, maximized }) => (
@@ -30,7 +31,22 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
             <Icon type="close" style={{ cursor: 'pointer' }} onClick={toggle} />
           </div>
           <h1>{name}</h1>
-          <p>{description}</p>
+          <p><ul>{
+            gf.getGroceryByNameWithDepAndIng(name)
+              .map((item)=>
+            <li>
+              <h2>{item.department}</h2>
+              <ul>
+                {item.ingredients.map(
+                  (item) =>
+                    <li>{item}</li>
+                    )}
+              </ul>
+            </li>
+                  )
+                }
+            </ul>
+    </p>
         </Slug>
       </div>
     </Fade>
@@ -50,14 +66,22 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
 
 class App extends Component {
 
-  state      = { data, columns: 2, margin: 70, filter: '', height: true }
+  state      = { data: gf.getGroceryShowcase(), columns: 2, margin: 70, filter: '', height: true }
   search     = e  => this.setState({ filter: e.target.value })
   shuffle    = () => this.setState(state => ({ data: lodash.shuffle(state.data) }))
   setColumns = e  => this.setState({ columns: parseInt(e.key) })
   setMargin  = e  => this.setState({ margin: parseInt(e.key) })
   setHeight  = e  => this.setState({ height: e })
 
+
   render() {
+  let result = gf.getGrocery();
+    for (let iter = 1; iter <= 7; iter++ ){
+    console.log(gf.getAllIngredientsByOneDepartment(result[0].departments[0]));
+
+  }
+  console.log(result);
+
     const data = this.state.data.filter(
       d => d.name.toLowerCase().indexOf(this.state.filter) != -1
     )

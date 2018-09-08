@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
+    "@groceristar/groceristar-fetch": "^1.1.22",
+    "antd": "^3.9.0",
+=======
     "antd": "^3.9.1",
+>>>>>>> 9062af30d4024870b41859c7e274bf03007bb26d
     "lodash": "^4.17.10",
     "mauerwerk": "^2.0.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-scripts": "1.1.5",
     "reworm": "^1.0.4"
   },
