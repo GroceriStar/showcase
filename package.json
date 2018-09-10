@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@groceristar/groceristar-fetch": "^1.1.22",
+    "@groceristar/groceristar-fetch": "^1.1.23",
     "antd": "^3.9.1",
     "lodash": "^4.17.10",
     "mauerwerk": "^2.0.0",
