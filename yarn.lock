@@ -61,13 +61,7 @@
   version "7.0.0-beta.51"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.0.0-beta.51.tgz#27cec2df409df60af58270ed8f6aa55409ea86f6"
 
-"@babel/runtime@7.0.0-rc.1":
-  version "7.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0-rc.1.tgz#42f36fc5817911c89ea75da2b874054922967616"
-  dependencies:
-    regenerator-runtime "^0.12.0"
-
-"@babel/runtime@^7.0.0":
+"@babel/runtime@7.0.0", "@babel/runtime@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0.tgz#adeb78fedfc855aa05bc041640f3f6f98e85424c"
   dependencies:
@@ -4663,13 +4657,13 @@ math-random@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.1.tgz#8b3aac588b8a66e4975e3cdea67f7bb329601fac"
 
-mauerwerk@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/mauerwerk/-/mauerwerk-2.0.0.tgz#181b6b1692769c6617649d6c511db302a879a47d"
+mauerwerk@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/mauerwerk/-/mauerwerk-2.0.2.tgz#08d9817fa994c9377b1afd9f5c26cb0f05130106"
   dependencies:
-    "@babel/runtime" "7.0.0-rc.1"
-    react-measure "^2.1.0"
-    react-spring "^5.6.6"
+    "@babel/runtime" "7.0.0"
+    react-measure "^2.1.2"
+    react-spring "^5.7.2"
 
 md5.js@^1.3.4:
   version "1.3.4"
@@ -6335,9 +6329,9 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-measure@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-measure/-/react-measure-2.1.0.tgz#e9a4645066d6fed54cf0ce44aa7a28da6dd7a9f7"
+react-measure@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/react-measure/-/react-measure-2.1.2.tgz#2fa690cc657d1e7a1271902b7a5937e0055338d5"
   dependencies:
     get-node-dimensions "^1.2.0"
     prop-types "^15.5.10"
@@ -6398,9 +6392,9 @@ react-slick@~0.23.1:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-react-spring@^5.6.6:
-  version "5.6.10"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.6.10.tgz#646e428e77d687ea190984c8726a73fe54bfbc00"
+react-spring@^5.7.2:
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.7.2.tgz#5c0fb7c726305f11bfae6fbb5dfaf08fe0ea113f"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
