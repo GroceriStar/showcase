@@ -22,16 +22,18 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
   <div
     className="cell"
     style={{ backgroundImage: css, cursor: !maximized ? 'pointer' : 'auto' }}
-    onClick={!maximized ? toggle : undefined}>
+    onClick={ !maximized ? toggle : undefined }>
     <Fade show={maximized} delay={maximized ? 400 : 0}>
       <div className="details">
         <Slug delay={600}>
-          <div className="circle" style={{ background: css }} />
+          {/*<div className="circle" style={{ background: css }} />*/}
           <div className="close">
             <Icon type="close" style={{ cursor: 'pointer' }} onClick={toggle} />
           </div>
           <h1>{name}</h1>
-          <p><ul>{
+          <div>
+          <ul>
+          {
             gf.getGroceryByNameWithDepAndIng(name)
               .map((item)=>
             <li>
@@ -46,7 +48,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
                   )
                 }
             </ul>
-    </p>
+            </div>
         </Slug>
       </div>
     </Fade>
@@ -66,7 +68,13 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
 
 class App extends Component {
 
-  state      = { data: gf.getGroceryShowcase(), columns: 2, margin: 70, filter: '', height: true }
+  state      = {
+    data: gf.getGroceryShowcase(),
+    columns: 2,
+    margin: 70,
+    filter: '',
+    height: true
+  }
   search     = e  => this.setState({ filter: e.target.value })
   shuffle    = () => this.setState(state => ({ data: lodash.shuffle(state.data) }))
   setColumns = e  => this.setState({ columns: parseInt(e.key) })
@@ -111,7 +119,7 @@ class App extends Component {
           // Space between elements
           margin={this.state.margin}
           // Removes the possibility to scroll away from a maximized element
-          lockScroll={false}
+          lockScroll={true}
           // Delay when active elements (blown up) are minimized again
           closeDelay={400}>
           {(data, maximized, toggle) => (
