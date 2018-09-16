@@ -1,5 +1,12 @@
 import React from 'react'
-import { Button, Icon, Input, Dropdown, Menu, Switch } from 'antd'
+import {
+  Button,
+  Icon,
+  Input,
+  Dropdown,
+  Menu,
+  Switch
+} from 'antd'
 
 export default function({
   shuffle,
@@ -21,6 +28,7 @@ export default function({
         placeholder="input search text"
         onChange={search}
       />
+
       <Dropdown
         trigger={['click']}
         overlay={
@@ -33,10 +41,13 @@ export default function({
             <Menu.Item key="6">6</Menu.Item>
           </Menu>
         }>
+
         <Button style={{ marginLeft: 15, minWidth: 130 }}>
           {columns} Columns <Icon type="down" />
         </Button>
+
       </Dropdown>
+
       <Dropdown
         trigger={['click']}
         overlay={
@@ -51,7 +62,11 @@ export default function({
           {margin} px margin <Icon type="down" />
         </Button>
       </Dropdown>
-      <span style={{ marginLeft: 15 }}>Individual height</span>
+
+      <span style={{ marginLeft: 15 }}>
+        Individual height
+      </span>
+      
       <Switch style={{ marginLeft: 15 }} defaultChecked onChange={setHeight} />
     </div>
   )
