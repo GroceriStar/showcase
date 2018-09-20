@@ -1,15 +1,9 @@
-import React, {
-   Component,
-   Fragment
- } from 'react'
+import React, {Component,Fragment} from 'react'
 import { render } from 'react-dom'
-import lodash     from 'lodash'
-import { Icon }   from 'antd'
-import Header     from './Header'
-import { Grid,
-   Slug,
-   Fade
-} from 'mauerwerk'
+import lodash from 'lodash'
+import { Icon } from 'antd'
+import Header  from './Header'
+import { Grid, Slug, Fade} from 'mauerwerk'
 
 
 import 'antd/dist/antd.css'
@@ -23,12 +17,13 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
     className="cell"
     style={{ backgroundImage: css, cursor: !maximized ? 'pointer' : 'auto' }}
     onClick={ !maximized ? toggle : undefined }>
+
     <Fade show={maximized} delay={maximized ? 400 : 0}>
       <div className="details">
         <Slug delay={600}>
           {/*<div className="circle" style={{ background: css }} />*/}
-          <div className="close">
-            <Icon type="close" style={{ cursor: 'pointer' }} onClick={toggle} />
+          <div className="close" style={{ cursor: 'pointer' }} onClick={toggle}>
+            <Icon type="close"/>
           </div>
           <h1>{name}</h1>
           <div>
