@@ -4,14 +4,15 @@ import lodash from 'lodash'
 import { Icon } from 'antd'
 import Header  from './Header'
 import { Grid, Slug, Fade} from 'mauerwerk'
-import shortid from 'shortid'
 
 import 'antd/dist/antd.css'
 import './styles.css'
 
 import gf from '@groceristar/groceristar-fetch/groceristar'
 // import './App.css';
-import RenderDepartments from './RenderDepartments'
+
+import {Departments} from './components/Departments'
+
 const Cell = ({ toggle, name, height, description, css, maximized }) => (
   <div
     className="cell"
@@ -26,7 +27,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
             <Icon type="close"/>
           </div>
             <h1>{name}</h1>
-              <RenderDepartments name = {name}/>
+              <Departments name = {name}/>
         </Slug>
       </div>
     </Fade>
