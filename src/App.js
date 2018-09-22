@@ -11,7 +11,7 @@ import './styles.css'
 
 import gf from '@groceristar/groceristar-fetch/groceristar'
 // import './App.css';
-
+import RenderDepartments from './RenderDepartments'
 const Cell = ({ toggle, name, height, description, css, maximized }) => (
   <div
     className="cell"
@@ -25,25 +25,8 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
           <div className="close" style={{ cursor: 'pointer' }} onClick={toggle}>
             <Icon type="close"/>
           </div>
-          <h1>{name}</h1>
-          <div>
-          <ul>
-          {
-            gf.getGroceryByNameWithDepAndIng(name)
-              .map((item)=>
-            <li key={shortid.generate()}>
-              <h2>{item.department}</h2>
-              <ul>
-                {item.ingredients.map(
-                  (item) =>
-                    <li key={shortid.generate()}>{item}</li>
-                    )}
-              </ul>
-            </li>
-                  )
-                }
-            </ul>
-            </div>
+            <h1>{name}</h1>
+              <RenderDepartments name = {name}/>
         </Slug>
       </div>
     </Fade>
