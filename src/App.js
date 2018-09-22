@@ -4,7 +4,7 @@ import lodash from 'lodash'
 import { Icon } from 'antd'
 import Header  from './Header'
 import { Grid, Slug, Fade} from 'mauerwerk'
-
+import shortid from 'shortid'
 
 import 'antd/dist/antd.css'
 import './styles.css'
@@ -31,12 +31,12 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
           {
             gf.getGroceryByNameWithDepAndIng(name)
               .map((item)=>
-            <li>
+            <li key={shortid.generate()}>
               <h2>{item.department}</h2>
               <ul>
                 {item.ingredients.map(
                   (item) =>
-                    <li>{item}</li>
+                    <li key={shortid.generate()}>{item}</li>
                     )}
               </ul>
             </li>
@@ -84,7 +84,6 @@ class App extends Component {
 
   }
   console.log(result);
-
     const data = this.state.data.filter(
       d => d.name.toLowerCase().indexOf(this.state.filter) != -1
     )
