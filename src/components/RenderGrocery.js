@@ -4,7 +4,7 @@ import {DepartmentInfo} from './DepartmentInfo'
 
 import gf from '@groceristar/groceristar-fetch/groceristar'
 
-class Departments extends Component {
+class RenderGrocery extends Component {
   render(){
     return(
 
@@ -24,4 +24,4 @@ class Departments extends Component {
   }
 }
 
-export {Departments};
+export {RenderGrocery};

@@ -11,7 +11,7 @@ import './styles.css'
 import gf from '@groceristar/groceristar-fetch/groceristar'
 // import './App.css';
 
-import {Departments} from './components/Departments'
+import {RenderGrocery} from './components/RenderGrocery'
 
 const Cell = ({ toggle, name, height, description, css, maximized }) => (
   <div
@@ -27,7 +27,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
             <Icon type="close"/>
           </div>
             <h1>{name}</h1>
-              <Departments name = {name}/>
+              <RenderGrocery name = {name}/>
         </Slug>
       </div>
     </Fade>
