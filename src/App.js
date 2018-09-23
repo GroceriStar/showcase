@@ -11,7 +11,7 @@ import './styles.css'
 import gf from '@groceristar/groceristar-fetch/groceristar'
 // import './App.css';
 
-import {RenderGrocery} from './components/RenderGrocery'
+import { RenderGrocery } from './components/RenderGrocery'
 
 const Cell = ({ toggle, name, height, description, css, maximized }) => (
   <div
@@ -22,12 +22,11 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
     <Fade show={maximized} delay={maximized ? 400 : 0}>
       <div className="details">
         <Slug delay={600}>
-          {/*<div className="circle" style={{ background: css }} />*/}
           <div className="close" style={{ cursor: 'pointer' }} onClick={toggle}>
             <Icon type="close"/>
           </div>
-            <h1>{name}</h1>
-              <RenderGrocery name = {name}/>
+          <h1>{name}</h1>
+          <RenderGrocery name = {name}/>
         </Slug>
       </div>
     </Fade>
@@ -100,11 +99,11 @@ class App extends Component {
           lockScroll={true}
           // Delay when active elements (blown up) are minimized again
           closeDelay={400}>
+          
           {(data, maximized, toggle) => (
             <Cell {...data} maximized={maximized} toggle={toggle} />
           )}
         </Grid>
-
       </div>
     )
   }

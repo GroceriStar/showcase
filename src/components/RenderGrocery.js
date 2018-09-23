@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import shortid from 'shortid'
-import {DepartmentInfo} from './DepartmentInfo'
+import { DepartmentInfo } from './DepartmentInfo'
 
 import gf from '@groceristar/groceristar-fetch/groceristar'
 
