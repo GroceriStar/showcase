@@ -1,0 +1,13 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": "airbnb",
+    "rules": {
+        "indent": [2, "tab"],
+        "import/no-unresolved": 0,
+        "no-multi-spaces": 0
+    }
+}
