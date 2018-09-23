@@ -7,7 +7,7 @@
   "private": true,
   "dependencies": {
     "@groceristar/groceristar-fetch": "^1.1.25",
-    "antd": "^3.9.2",
+    "antd": "^3.9.3",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
     "react": "^16.5.2",
