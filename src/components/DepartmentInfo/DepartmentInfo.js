@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Ingredients} from './Ingredients'
+import {Ingredients} from '../Ingredients/Ingredients'
 
 class DepartmentInfo extends Component{
 

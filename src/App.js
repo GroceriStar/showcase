@@ -11,7 +11,7 @@ import './styles.css'
 import gf from '@groceristar/groceristar-fetch/groceristar'
 // import './App.css';
 
-import { RenderGrocery } from './components/RenderGrocery'
+import { RenderGrocery } from './components/RenderGrocery/RenderGrocery'
 
 const Cell = ({ toggle, name, height, description, css, maximized }) => (
   <div
@@ -99,7 +99,7 @@ class App extends Component {
           lockScroll={true}
           // Delay when active elements (blown up) are minimized again
           closeDelay={400}>
-          
+
           {(data, maximized, toggle) => (
             <Cell {...data} maximized={maximized} toggle={toggle} />
           )}
