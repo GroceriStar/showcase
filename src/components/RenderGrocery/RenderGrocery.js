@@ -6,6 +6,7 @@ import gf from '@groceristar/groceristar-fetch/groceristar'
 
 class RenderGrocery extends Component {
   render(){
+
     return(
 
       <div>
