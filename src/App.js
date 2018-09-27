@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import lodash from 'lodash'
-import Header  from './Header'
+import Header  from './components/Header/Header'
 import { Grid } from 'mauerwerk'
 
 import 'antd/dist/antd.css'
