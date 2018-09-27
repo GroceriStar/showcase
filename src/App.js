@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import lodash from 'lodash'
-import { Icon } from 'antd'
 import Header  from './Header'
-import { Grid, Slug, Fade} from 'mauerwerk'
+import { Grid } from 'mauerwerk'
 
 import 'antd/dist/antd.css'
 import './styles.css'
@@ -10,38 +9,10 @@ import './styles.css'
 import gf from '@groceristar/groceristar-fetch/groceristar'
 // import './App.css';
 
-import { RenderGrocery } from './components/RenderGrocery/RenderGrocery'
 
-const Cell = ({ toggle, name, height, description, css, maximized }) => (
-  <div
-    className="cell"
-    style={{ backgroundImage: css, cursor: !maximized ? 'pointer' : 'auto' }}
-    onClick={ !maximized ? toggle : undefined }>
-
-    <Fade show={maximized} delay={maximized ? 400 : 0}>
-      <div className="details">
-        <Slug delay={600}>
-          <div className="close" style={{ cursor: 'pointer' }} onClick={toggle}>
-            <Icon type="close"/>
-          </div>
-          <h1>{name}</h1>
-          <RenderGrocery name = {name}/>
-        </Slug>
-      </div>
-    </Fade>
-    <Fade
-      show={!maximized}
-      from={{ opacity: 0, transform: 'translate3d(0,140px,0)' }}
-      enter={{ opacity: 1, transform: 'translate3d(0,0px,0)' }}
-      leave={{ opacity: 0, transform: 'translate3d(0,-50px,0)' }}
-      delay={maximized ? 0 : 400}>
-      <div className="default">{name}</div>
-    </Fade>
-  </div>
-)
-
-
+import Cell from './components/Cell/Cell'
 //@todo add "reworm" https://github.com/pedronauck/reworm
+
 
 class App extends Component {
 
@@ -60,9 +31,6 @@ class App extends Component {
 
 
   render() {
-
-  let result = gf.getGrocery();
-    
 
     const data = this.state.data.filter(
       d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
@@ -98,8 +66,8 @@ class App extends Component {
           closeDelay={400}>
 
           {(data, maximized, toggle) => (
-            <Cell {...data} maximized={maximized} toggle={toggle} />
-          )}
+          <Cell {...data} maximized={maximized} toggle={toggle} />
+        )}
         </Grid>
       </div>
     )
