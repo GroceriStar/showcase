@@ -1,5 +1,4 @@
-import React, {Component,Fragment} from 'react'
-import { render } from 'react-dom'
+import React, {Component} from 'react'
 import lodash from 'lodash'
 import { Icon } from 'antd'
 import Header  from './Header'
@@ -55,20 +54,18 @@ class App extends Component {
   }
   search     = e  => this.setState({ filter: e.target.value })
   shuffle    = () => this.setState(state => ({ data: lodash.shuffle(state.data) }))
-  setColumns = e  => this.setState({ columns: parseInt(e.key) })
-  setMargin  = e  => this.setState({ margin: parseInt(e.key) })
+  setColumns = e  => this.setState({ columns: parseInt(e.key, 10) })
+  setMargin  = e  => this.setState({ margin: parseInt(e.key, 10) })
   setHeight  = e  => this.setState({ height: e })
 
 
   render() {
-  let result = gf.getGrocery();
-    for (let iter = 1; iter <= 7; iter++ ){
-    console.log(gf.getAllIngredientsByOneDepartment(result[0].departments[0]));
 
-  }
-  console.log(result);
+  let result = gf.getGrocery();
+    
+
     const data = this.state.data.filter(
-      d => d.name.toLowerCase().indexOf(this.state.filter) != -1
+      d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
     )
 
     return (
