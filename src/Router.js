@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
-import Meal from './components/Meal/Meal';
+import RenderGroceryById from './components/RenderGroceryById/RenderGroceryById';
 class Router extends Component {
   render(){
     return (
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={App}/>
-          <Route path="/meal/:id" component={Meal}/>
+          <Route path="/grocery/:id" component={RenderGroceryById}/>
         </Switch>
       </BrowserRouter>
     )
