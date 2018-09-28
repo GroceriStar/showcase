@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from 'antd'
-import {Slug, Fade} from 'mauerwerk'
+import { Slug, Fade } from 'mauerwerk'
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
 
 const Cell = ({ toggle, name, height, description, css, maximized }) => (
