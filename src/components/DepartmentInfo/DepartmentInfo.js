@@ -6,7 +6,7 @@ import {
 } from '../Ingredients/Ingredients'
 import shortid from 'shortid'
 
-class DepartmentInfo extends Component{
+class DepartmentInfo extends Component {
 
   render(){
     return(
@@ -17,7 +17,7 @@ class DepartmentInfo extends Component{
     )
   }
 }
-// @TODO i think we can use this.props.key, but on parent component 
+// @TODO i think we can use this.props.key, but on parent component
 // we can pass a shortid.generate
 // so our small component will be clean and don't require changes, when
 // we'll connect it to database

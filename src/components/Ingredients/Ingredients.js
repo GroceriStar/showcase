@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import shortid from 'shortid'
 
 class Ingredients extends Component {
+
   render(){
 
     return(
@@ -16,4 +17,4 @@ class Ingredients extends Component {
 
 }
 
-export {Ingredients};
+export { Ingredients };
