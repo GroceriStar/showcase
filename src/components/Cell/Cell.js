@@ -2,6 +2,7 @@ import React from 'react'
 import { Icon } from 'antd'
 import { Slug, Fade } from 'mauerwerk'
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
+import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
 
 const Cell = ({ toggle, name, height, description, css, maximized }) => (
   <div
@@ -16,6 +17,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
             <Icon type="close" />
           </div>
           <h1>{name}</h1>
+          <GeneratePDF groceryName={name}/>
           <RenderGrocery name={name} />
         </Slug>
       </div>
