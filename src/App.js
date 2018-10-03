@@ -1,44 +1,40 @@
-import React, {Component} from 'react'
-import lodash from 'lodash'
-import Header  from './components/Header/Header'
-import { Grid } from 'mauerwerk'
+import React, { Component } from "react";
+import lodash from "lodash";
+import Header from "./components/Header/Header";
+import { Grid } from "mauerwerk";
 
-import 'antd/dist/antd.css'
-import './styles.css'
+import "antd/dist/antd.css";
+import "./styles.css";
 
-import gf from '@groceristar/groceristar-fetch/groceristar'
+import gf from "@groceristar/groceristar-fetch/groceristar";
 // import './App.css';
 
+import Cell from "./components/Cell/Cell";
 
-import Cell from './components/Cell/Cell'
 //@todo add "reworm" https://github.com/pedronauck/reworm
 
-
 class App extends Component {
-
-  state      = {
+  state = {
     data: gf.getGroceryShowcase(),
     columns: 2,
     margin: 70,
-    filter: '',
+    filter: "",
     height: true
-  }
-  search     = e  => this.setState({ filter: e.target.value })
-  shuffle    = () => this.setState(state => ({ data: lodash.shuffle(state.data) }))
-  setColumns = e  => this.setState({ columns: parseInt(e.key, 10) })
-  setMargin  = e  => this.setState({ margin: parseInt(e.key, 10) })
-  setHeight  = e  => this.setState({ height: e })
-
+  };
+  search = e => this.setState({ filter: e.target.value });
+  shuffle = () =>
+    this.setState(state => ({ data: lodash.shuffle(state.data) }));
+  setColumns = e => this.setState({ columns: parseInt(e.key, 10) });
+  setMargin = e => this.setState({ margin: parseInt(e.key, 10) });
+  setHeight = e => this.setState({ height: e });
 
   render() {
-
     const data = this.state.data.filter(
       d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
-    )
+    );
 
     return (
       <div className="main">
-
         <Header
           {...this.state}
           search={this.search}
@@ -63,14 +59,14 @@ class App extends Component {
           // Removes the possibility to scroll away from a maximized element
           lockScroll={true}
           // Delay when active elements (blown up) are minimized again
-          closeDelay={400}>
-
+          closeDelay={400}
+        >
           {(data, maximized, toggle) => (
-          <Cell {...data} maximized={maximized} toggle={toggle} />
-        )}
+            <Cell {...data} maximized={maximized} toggle={toggle} />
+          )}
         </Grid>
       </div>
-    )
+    );
   }
 }
 
