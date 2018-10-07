@@ -4,6 +4,9 @@ import React, {
 import {
   Ingredients
 } from '../Ingredients/Ingredients'
+import {
+  Ingredients2
+} from '../Ingredients/Ingredients2'
 import shortid from 'shortid'
 
 class DepartmentInfo extends Component {
@@ -12,7 +15,8 @@ class DepartmentInfo extends Component {
     return(
       <li key={shortid.generate()}>
         <h2>{this.props.department}</h2>
-        <Ingredients ingredients = {this.props.ingredients} />
+        <Ingredients ingredients={this.props.ingredients} />
+        <Ingredients2 data={this.props.ingredients} />
       </li>
     )
   }

@@ -53,11 +53,14 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
             />
 
           </Header>
-          <Content>
-            Content
-            <RenderGrocery name={name} />
+          <Content style={{ margin: '24px 16px 0' }}>
+            // Content
+
+            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+              <RenderGrocery name={name} />
+            </div>
           </Content>
-          <Footer>
+          <Footer style={{ textAlign: 'center' }}>
             Footer
           </Footer>
         </Layout>
