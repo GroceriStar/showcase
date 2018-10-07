@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import lodash from 'lodash'
 import Header  from './components/Header/Header'
 import { Grid } from 'mauerwerk'

@@ -14,7 +14,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
   >
     <Fade show={maximized} delay={maximized ? 400 : 0}>
       <div className="details">
-        {/*
+
         <Slug delay={600}>
           <div className="close" style={{ cursor: "pointer" }} onClick={toggle}>
             <Icon type="close" />
@@ -22,46 +22,6 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
           <h1>{name}</h1>
           <RenderGrocery name={name} />
         </Slug>
-        */}
-        <Layout>
-          <Header style={{ background: '#fff', color:'red', //padding: 0
-        }}>
-            Header - {name}
-            <div className="close" style={{ cursor: "pointer" }} onClick={toggle}>
-              <Icon type="close" />
-            </div>
-
-            {/*
-              .tile-close {
-                font-size: 18px;
-                line-height: 64px;
-                padding: 0 24px;
-                cursor: pointer;
-                transition: color .3s;
-              }
-
-              tile-close:hover {
-                color: #1890ff; // or other color
-              }
-              */}
-
-            <Icon
-              className="tile-close"
-              type="close"
-              style={{ cursor: "pointer" }}
-              onClick={toggle}
-            />
-
-          </Header>
-          <Content>
-            Content
-            <RenderGrocery name={name} />
-          </Content>
-          <Footer>
-            Footer
-          </Footer>
-        </Layout>
-
 
       </div>
     </Fade>
