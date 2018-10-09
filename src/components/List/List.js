@@ -19,15 +19,13 @@ const styles = StyleSheet.create({
   knob: {
     alignItems: 'center',
     justifyContent: 'center',
-    width: '20px',
-    height: '20px',
-    borderRadius: 10,
-    borderWidth: 3,
-    borderColor: 'orange',
+    width: '10px',
+    height: '10px',
+    borderWidth: 1,
+    borderColor: 'black',
     position: 'absolute',
     backgroundColor: 'white',
     fontSize: 8,
-    top: -6,
   }
 });
 
