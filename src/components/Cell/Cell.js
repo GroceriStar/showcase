@@ -15,7 +15,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
   >
     <Fade show={maximized} delay={maximized ? 400 : 0}>
       <div className="details">
-        {/*
+
         <Slug delay={600}>
           <div className="close" style={{ cursor: "pointer" }} onClick={toggle}>
             <Icon type="close" />
@@ -24,7 +24,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
           <GeneratePDF groceryName={name}/>
           <RenderGrocery name={name} />
         </Slug>
-        */}
+       
         <Layout>
           <Header style={{ background: '#fff', color:'red', //padding: 0
         }}>
