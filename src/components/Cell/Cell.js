@@ -3,6 +3,7 @@ import { Icon, Layout } from 'antd'
 import { Slug, Fade } from 'mauerwerk'
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
 import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
+import groceristar from "@groceristar/groceristar-fetch/groceristar"
 
 // @TODO move this stuff
 const { Header, Footer, Sider, Content } = Layout;
@@ -22,9 +23,16 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
           </div>
           <h1>{name}</h1>
           <GeneratePDF groceryName={name}/>
+          <div>
+          <a href= {'/grocery/'+ groceristar.getGroceryByName(name)[0].id}>
+          <button type="button">
+            {name}
+          </button>
+        </a>
+        </div>
           <RenderGrocery name={name} />
         </Slug>
-       
+
         <Layout>
           <Header style={{ background: '#fff', color:'red', //padding: 0
         }}>
