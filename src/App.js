@@ -62,7 +62,7 @@ class App extends Component {
           closeDelay={400}
         >
           {(data, maximized, toggle) => (
-            <Cell {...data} maximized={maximized} toggle={toggle} />
+              <Cell {...data} maximized={maximized} toggle={toggle} id={data.id + 10}/>
           )}
         </Grid>
       </div>

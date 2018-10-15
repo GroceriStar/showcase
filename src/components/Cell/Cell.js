@@ -8,7 +8,7 @@ import groceristar from "@groceristar/groceristar-fetch/groceristar"
 // @TODO move this stuff
 const { Header, Footer, Sider, Content } = Layout;
 
-const Cell = ({ toggle, name, height, description, css, maximized }) => (
+const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
   <div
     className="cell"
     style={{ backgroundImage: css, cursor: !maximized ? "pointer" : "auto" }}
@@ -24,7 +24,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
           <h1>{name}</h1>
           <GeneratePDF groceryName={name}/>
           <div>
-          <a href= {'/grocery/'+ (groceristar.getGroceryByName(name)[0].id + 10)}>
+          <a href= {'/grocery/'+ id}>
           <button type="button">
             {name}
           </button>
