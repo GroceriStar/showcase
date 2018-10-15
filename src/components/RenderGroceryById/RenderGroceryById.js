@@ -14,7 +14,7 @@ class RenderGroceryById extends Component {
         <ul>
           {gf
             .getGroceryByNameWithDepAndIng(
-              gf.getGroceryById(parseInt(this.props.match.params.id, 10))[0]
+              gf.getGroceryById((parseInt(this.props.match.params.id) - 10), 10)[0]
                 .name
             )
             .map(item => (

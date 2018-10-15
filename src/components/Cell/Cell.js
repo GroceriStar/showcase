@@ -24,7 +24,7 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
           <h1>{name}</h1>
           <GeneratePDF groceryName={name}/>
           <div>
-          <a href= {'/grocery/'+ groceristar.getGroceryByName(name)[0].id}>
+          <a href= {'/grocery/'+ (groceristar.getGroceryByName(name)[0].id + 10)}>
           <button type="button">
             {name}
           </button>
