@@ -3,7 +3,7 @@ import { Icon, Layout } from 'antd'
 import { Slug, Fade } from 'mauerwerk'
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
 import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
-import groceristar from "@groceristar/groceristar-fetch/groceristar"
+// import groceristar from "@groceristar/groceristar-fetch/groceristar"
 
 // @TODO move this stuff
 const { Header, Footer, Sider, Content } = Layout;
