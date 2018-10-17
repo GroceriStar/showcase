@@ -9,14 +9,12 @@ import shortid from "shortid";
 
 class RenderGroceryById extends Component {
   render() {
+    let id = parseInt(this.props.match.params.id, 10);
+    let groceryName = gf.getGroceryById(id - 10)[0].name;
     return (
       <div>
         <ul>
-          {gf
-            .getGroceryByNameWithDepAndIng(
-              gf.getGroceryById((parseInt(this.props.match.params.id) - 10), 10)[0]
-                .name
-            )
+          {gf.getGroceryByNameWithDepAndIng(groceryName)
             .map(item => (
               <DepartmentInfo
                 department={item.department}
