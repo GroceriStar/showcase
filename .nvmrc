@@ -1,1 +1,2 @@
 v10.5.0
+npm config set yoga-layout:platform standalone
