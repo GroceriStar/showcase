@@ -15,12 +15,13 @@ class RenderGroceryById extends Component {
     }
   }
   render() {
-    let groceryName = gf.getGroceryById(this.state.id - 10)[0].name;
-    let grocery = gf.getGroceryByNameWithDepAndIng(groceryName);
+    let grocery = gf.getGroceryById(this.state.id)[0];
+    let groceryName = grocery.name;
+    let groceryWithDepAndIng = gf.getGroceryByNameWithDepAndIng(groceryName);
     return (
       <div>
         <ul>
-          { grocery.map(item => (
+          { groceryWithDepAndIng.map(item => (
               <DepartmentInfo
                 department={item.department}
                 ingredients={item.ingredients}
