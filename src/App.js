@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import lodash from "lodash";
 import Header from "./components/Header/Header";
 import { Grid } from "mauerwerk";
-
+import _ from "lodash";
 import "antd/dist/antd.css";
 import "./styles.css";
 
@@ -27,6 +27,31 @@ class App extends Component {
   setColumns = e => this.setState({ columns: parseInt(e.key, 10) });
   setMargin = e => this.setState({ margin: parseInt(e.key, 10) });
   setHeight = e => this.setState({ height: e });
+
+  grocery = [];
+  currentId = 1;
+  getId(name){
+    var foundObj = {};
+      if (this.grocery.length > 0){
+        foundObj = this.grocery.find((obj) =>  {
+          if(obj.name === name) {
+            return true;
+          } else {
+            return false;
+          }
+        });
+      }
+
+      if (_.isEmpty(foundObj)) {
+        this.grocery.push({
+          "name": name,
+          "id": this.currentId
+        })
+        return this.currentId++;
+      }else {
+        return foundObj.id;
+      }
+  }
 
   render() {
     const data = this.state.data.filter(
@@ -62,7 +87,7 @@ class App extends Component {
           closeDelay={400}
         >
           {(data, maximized, toggle) => (
-            <Cell {...data} maximized={maximized} toggle={toggle} />
+              <Cell {...data} maximized={maximized} toggle={toggle} id={this.getId(data.name)}/>
           )}
         </Grid>
       </div>

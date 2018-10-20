@@ -3,11 +3,15 @@ import { Icon, Layout } from 'antd'
 import { Slug, Fade } from 'mauerwerk'
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
 import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
+// import groceristar from "@groceristar/groceristar-fetch/groceristar"
 
 // @TODO move this stuff
 const { Header, Footer, Sider, Content } = Layout;
 
-const Cell = ({ toggle, name, height, description, css, maximized }) => (
+function getLink(id){
+  return '/grocery/'+ id;
+}
+const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
   <div
     className="cell"
     style={{ backgroundImage: css, cursor: !maximized ? "pointer" : "auto" }}
@@ -22,9 +26,16 @@ const Cell = ({ toggle, name, height, description, css, maximized }) => (
           </div>
           <h1>{name}</h1>
           <GeneratePDF groceryName={name}/>
+          <div>
+          <a href= {getLink(id)}>
+          <button type="button">
+            {name}
+          </button>
+        </a>
+        </div>
           <RenderGrocery name={name} />
         </Slug>
-       
+
         <Layout>
           <Header style={{ background: '#fff', color:'red', //padding: 0
         }}>
