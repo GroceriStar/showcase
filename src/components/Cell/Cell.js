@@ -2,6 +2,7 @@ import React from 'react'
 import { Icon, Layout } from 'antd'
 import { Slug, Fade } from 'mauerwerk'
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
+import { Link } from 'react-router-dom'
 import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
 // import groceristar from "@groceristar/groceristar-fetch/groceristar"
 
@@ -27,11 +28,11 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
           <h1>{name}</h1>
           <GeneratePDF groceryName={name}/>
           <div>
-          <a href= {getLink(id)}>
+          <Link to= {getLink(id)}>
           <button type="button">
             {name}
           </button>
-        </a>
+        </Link>
         </div>
           <RenderGrocery name={name} />
         </Slug>

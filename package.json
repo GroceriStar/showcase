@@ -14,6 +14,7 @@
     "antd": "^3.10.3",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "reworm": "^2.0.2",
     "shortid": "^2.2.13",
@@ -38,7 +39,7 @@
   ],
   "devDependencies": {
     "enzyme": "^3.7.0",
-  "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-app": "^3.0.5",
     "eslint-plugin-import": "^2.14.0",
