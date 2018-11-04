@@ -11,7 +11,7 @@
     "react-scripts": "2.1.0",
     "@groceristar/groceristar-fetch": "^1.1.28",
     "@react-pdf/renderer": "^1.0.0-alpha.24",
-    "antd": "^3.10.3",
+    "antd": "^3.10.4",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
     "react-router": "^4.3.1",
