@@ -17,7 +17,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "reworm": "^2.0.2",
-    "shortid": "^2.2.13",
+    "shortid": "^2.2.14",
     "yoga-layout": "^1.9.3"
   },
   "scripts": {
