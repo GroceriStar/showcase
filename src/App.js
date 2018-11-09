@@ -38,7 +38,7 @@ class App extends Component {
 
   getId(name){
     var foundObj = {};
-      if (this.grocery.length > 0){
+      if (this.grocery.length > 0) {
         foundObj = this.grocery.find((obj) =>  {
           if(obj.name === name) {
             return true;
@@ -60,8 +60,6 @@ class App extends Component {
   }
 
   render() {
-
-    getGroceryCollection();
 
     const data = this.state.data.filter(
       d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
