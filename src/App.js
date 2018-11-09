@@ -19,6 +19,7 @@ import { getGroceryCollection } from "./components/selectors/selector.js";
 
 class App extends Component {
   state = {
+    //@TODO YEP, it's a bug, not solved yet. https://github.com/GroceriStar/groceristar-fetch/issues/141
     data: getGroceryCollection(), //Did we need it here? i think we didn use all data from this method
     columns: 2,
     margin: 70,

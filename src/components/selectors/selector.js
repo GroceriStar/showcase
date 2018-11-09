@@ -13,12 +13,7 @@ function getFullGrocery( name ) {
 }
 
 function getGroceryCollection(){
-  console.log(groceriStar)
-
   return groceriStar.getGroceryShowcase();
 }
-// getGroceryShowcase
-// getGroceryById
-// getGroceryByNameWithDepAndIng
 
 export { getGroceryById, getFullGrocery, getGroceryCollection }
