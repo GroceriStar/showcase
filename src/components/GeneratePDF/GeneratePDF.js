@@ -1,9 +1,11 @@
 import React from 'react';
 // Create styles
-import './GeneratePDF.css';
-import DownloadLink from '../DownloadLink/DownloadLink';
 
-class GeneratePDF extends React.Component{
+import DownloadLink from '../DownloadLink/DownloadLink';
+import './GeneratePDF.css';
+
+class GeneratePDF extends React.Component {
+  
   constructor () {
     super()
     this.state = {

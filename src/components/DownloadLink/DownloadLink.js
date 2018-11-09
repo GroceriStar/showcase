@@ -1,5 +1,11 @@
 import React from 'react';
-import {Text, Page, View, Document, StyleSheet, PDFDownloadLink  } from '@react-pdf/renderer';
+import { Text,
+   Page,
+   View,
+   Document,
+   StyleSheet,
+   PDFDownloadLink
+} from '@react-pdf/renderer';
 import RenderLists from '../RenderLists/RenderLists';
 
 const styles = StyleSheet.create({
@@ -42,10 +48,10 @@ class DownloadLink extends React.Component{
   render(){
     return(
       <div>
-      <PDFDownloadLink document={this.MyDoc} fileName={this.props.groceryName1 + ".pdf"}>
-          {({ blob, url, loading, error }) => (
-            loading ? 'Loading document...' : 'Download now!'
-          )}
+        <PDFDownloadLink document={this.MyDoc} fileName={this.props.groceryName1 + ".pdf"}>
+            {({ blob, url, loading, error }) => (
+              loading ? 'Loading document...' : 'Download now!'
+            )}
         </PDFDownloadLink>
       </div>
     );

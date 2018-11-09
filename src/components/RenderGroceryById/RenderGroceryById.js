@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
-import gf from "@groceristar/groceristar-fetch/groceristar";
+import { getGroceryById, getFullGrocery } from "../selectors/selector.js";
+// import gf from "@groceristar/groceristar-fetch/groceristar";
 
 import shortid from "shortid";
 
@@ -8,16 +9,20 @@ import shortid from "shortid";
 // it's a bit unclear for me.
 
 class RenderGroceryById extends Component {
+
   constructor(props){
     super(props);
     this.state ={
       id: parseInt(props.match.params.id, 10)
     }
   }
+
   render() {
-    let grocery = gf.getGroceryById(this.state.id)[0];
+    // @TODO maybe we can move this things into selectors?
+    let grocery = getGroceryById(this.state.id)[0];
     let groceryName = grocery.name;
-    let groceryWithDepAndIng = gf.getGroceryByNameWithDepAndIng(groceryName);
+    let groceryWithDepAndIng = getFullGrocery(groceryName);
+
     return (
       <div>
         <ul>

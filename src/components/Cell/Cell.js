@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Icon, Layout } from 'antd'
 import { Slug, Fade } from 'mauerwerk'
+
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
-import { Link } from 'react-router-dom'
 import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
-// import groceristar from "@groceristar/groceristar-fetch/groceristar"
+
+
 
 // @TODO move this stuff
 const { Header, Footer, Sider, Content } = Layout;
@@ -12,6 +14,7 @@ const { Header, Footer, Sider, Content } = Layout;
 function getLink(id){
   return '/grocery/'+ id;
 }
+//@TODO we have 2 Fade components. is this ok or we can make it better
 const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
   <div
     className="cell"
@@ -89,7 +92,9 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
       leave={{ opacity: 0, transform: "translate3d(0,-50px,0)" }}
       delay={maximized ? 0 : 400}
     >
-      <div className="default">{name}</div>
+      <div className="default">
+        {name}
+      </div>
     </Fade>
   </div>
 );
