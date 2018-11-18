@@ -71,7 +71,7 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
 
           </Header>
           <Content style={{ margin: '24px 16px 0' }}>
-            // Content
+            {/*Content */}
 
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
               <RenderGrocery name={name} />
