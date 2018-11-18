@@ -9,7 +9,7 @@ import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
 
 
 // @TODO move this stuff
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 function getLink(id){
   return '/grocery/'+ id;
@@ -48,7 +48,7 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
               <Icon type="close" />
             </div>
 
-            {/*
+            {/* i think this styles maybe unnecessary. but i'm not sure right now
               .tile-close {
                 font-size: 18px;
                 line-height: 64px;

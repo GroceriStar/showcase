@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { List } from 'antd';
-import shortid from 'shortid'
+// import shortid from 'shortid'
 
 // https://ant.design/components/list/
 // https://ant.design/components/collapse/

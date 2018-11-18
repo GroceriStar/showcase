@@ -1,19 +1,21 @@
-import { groceriStar } from "@groceristar/groceristar-fetch";
+import { groceristar } from "@groceristar/groceristar-fetch";
+
+// console.log(groceristar);
 
 //  function getDish(randomWeek){
 //       return mealCalendar.getDishByWeek(randomWeek);
 //   }
 //
 function getGroceryById( id ) {
-  return groceriStar.getGroceryById(id);
+  return groceristar.getGroceryById(id);
 }
 
 function getFullGrocery( name ) {
-  return groceriStar.getGroceryByNameWithDepAndIng(name);
+  return groceristar.getGroceryByNameWithDepAndIng(name);
 }
 
 function getGroceryCollection(){
-  return groceriStar.getGroceryShowcase();
+  return groceristar.getGroceryShowcase();
 }
 
 export { getGroceryById, getFullGrocery, getGroceryCollection }
