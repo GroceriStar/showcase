@@ -16,7 +16,7 @@
     "mauerwerk": "^2.0.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "reworm": "^2.0.2",
+    "reworm": "^2.2.1",
     "shortid": "^2.2.14",
     "yoga-layout": "^1.9.3"
   },
