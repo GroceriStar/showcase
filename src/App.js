@@ -8,7 +8,6 @@ import _ from "lodash";
 import "antd/dist/antd.css";
 import "./styles.css";
 
-// import gf from "@groceristar/groceristar-fetch/groceristar";
 import { getGroceryCollection } from "./components/selectors/selector.js";
 
 
@@ -18,6 +17,7 @@ import { getGroceryCollection } from "./components/selectors/selector.js";
 //@TODO update and make it clear. we have a lot of data here. it's not cool
 
 class App extends Component {
+
   state = {
     //@TODO YEP, it's a bug, not solved yet. https://github.com/GroceriStar/groceristar-fetch/issues/141
     data: getGroceryCollection(), //Did we need it here? i think we didn use all data from this method
@@ -26,12 +26,19 @@ class App extends Component {
     filter: "",
     height: true
   };
+
+
+
+  //@TODO move this stuff to header
   search = e => this.setState({ filter: e.target.value });
   shuffle = () =>
     this.setState(state => ({ data: _.shuffle(state.data) }));
   setColumns = e => this.setState({ columns: parseInt(e.key, 10) });
   setMargin = e => this.setState({ margin: parseInt(e.key, 10) });
   setHeight = e => this.setState({ height: e });
+
+
+
 
   grocery = [];
   currentId = 1;

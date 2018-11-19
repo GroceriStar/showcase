@@ -13,6 +13,7 @@ import shortid from 'shortid'
 // it should explain things better, but i'm not sure if i have a better name for it. Maybe FullDepartmentData or DepartmentDataFull
 // and we'll be able to have a short department data as well, if we need it
 class DepartmentInfo extends Component {
+
   render() {
     return (
       <li key={shortid.generate()}>

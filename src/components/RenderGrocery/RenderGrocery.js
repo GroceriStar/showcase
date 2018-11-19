@@ -13,6 +13,7 @@ class RenderGrocery extends Component {
     return (
       <div>
         <ul>
+        111111111
             {grocery.map(item => (
               <DepartmentInfo
                 department={item.department}
