@@ -17,15 +17,15 @@ function getLink(id){
 
 class InsideLayout extends Component {
 
-  constructor(props) {
-    super(props);
-    // maybe we should add to state some default stuff and then check on mount if data,
-    // that we used was passed into this component
-    // this.state = {
-    //   counter
-    // }
-
-  }
+  // constructor(props) {
+  //   super(props);
+  //   // maybe we should add to state some default stuff and then check on mount if data,
+  //   // that we used was passed into this component
+  //   // this.state = {
+  //   //   counter
+  //   // }
+  //
+  // }
 
   render() {
     return (
@@ -79,10 +79,10 @@ class InsideLayout extends Component {
           If yes, then we should make it clear, so later we'll be able to */}
           <GeneratePDF groceryName={this.props.name}/>
 
-          <Link to={getLink(id)} />
+          <Link to={getLink(this.props.id)} />
 
           <button type="button">
-            {name}
+            {this.props.name}
           </button>
 
 

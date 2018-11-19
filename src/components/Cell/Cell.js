@@ -1,24 +1,8 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
-
-
 import { Slug, Fade } from 'mauerwerk'
-//
-// import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
-// import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
-
-
 
 import InsideLayout from './InsideLayout';
-
-// @TODO move this stuff
-// const { Header, Footer, Content } = Layout;
-
-// function getLink(id){
-//   return '/grocery/'+ id;
-// }
-
 
 const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
   <div
@@ -49,7 +33,7 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
     >
       <div className="default">
         {name}
-        {/* Maybe put icon */}
+        {/* Maybe put an icon */}
       </div>
     </Fade>
   </div>

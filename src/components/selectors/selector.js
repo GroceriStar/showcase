@@ -18,4 +18,14 @@ function getGroceryCollection(){
   return groceristar.getGroceryShowcase();
 }
 
+function getGroceryDataFromId(this.state.id){
+
+  console.log(getGroceryById(id));
+  let grocery = getGroceryById(id)[0];
+  let groceryName = grocery.name;
+  let groceryWithDepAndIng = getFullGrocery(groceryName);
+  return groceryWithDepAndIng;
+}
+
+
 export { getGroceryById, getFullGrocery, getGroceryCollection }
