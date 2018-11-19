@@ -17,9 +17,16 @@ class DepartmentInfo extends Component {
   render() {
     return (
       <li key={shortid.generate()}>
-        <h2>{this.props.department}</h2>
+        <h2>
+          {this.props.department}
+        </h2>
+        {this.props.ingredients3}
+        {/*
         <Ingredients ingredients={this.props.ingredients} />
+
         <Ingredients2 data={this.props.ingredients} />
+        */}
+
       </li>
     );
   }

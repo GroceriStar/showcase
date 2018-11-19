@@ -1,15 +1,31 @@
 import React, { Component } from "react";
 import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
-import { getGroceryById,
+import {
+  getGroceryById,
   getFullGrocery,
   getGroceryDataFromId
 } from "../selectors/selector.js";
 
-
 import shortid from "shortid";
+
+import {
+  Ingredients
+} from '../Ingredients/Ingredients'
 
 // @TODO let's discuss why we cannot use a same component, for this version.
 // it's a bit unclear for me.
+
+
+
+// const DepartmentList = ({ departments }) => (
+//   <ul>
+//     {departments.map(deparment => (
+//       <li>
+//         ....
+//       </li>
+//     ))}
+//   </ul>
+// );
 
 class RenderGroceryById extends Component {
 
@@ -30,16 +46,16 @@ class RenderGroceryById extends Component {
     // let departmentsCollection = getGroceryDataFromId(this.state.id);
 
     return (
-
-      // 222222222
       <div>
         <ul>
+          {/* maybe we can create a statement,
+            when if we don't have id field - then we use a shordid */}
           { groceryWithDepAndIng.map(item => (
               <DepartmentInfo
                 department={item.department}
                 ingredients={item.ingredients}
-                {/* maybe we can  */}
                 key={shortid.generate()}
+                ingredients3={<Ingredients ingredients={item.ingredients} />}
               />
             ))}
         </ul>

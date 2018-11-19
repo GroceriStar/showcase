@@ -18,7 +18,7 @@ function getGroceryCollection(){
   return groceristar.getGroceryShowcase();
 }
 
-function getGroceryDataFromId(this.state.id){
+function getGroceryDataFromId(id){
 
   console.log(getGroceryById(id));
   let grocery = getGroceryById(id)[0];

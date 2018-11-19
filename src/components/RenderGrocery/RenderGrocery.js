@@ -8,12 +8,12 @@ import { getFullGrocery } from "../selectors/selector.js";
 class RenderGrocery extends Component {
 
   render() {
-    // @TODO move this long line here. use a variable. it'll make code more readable
+
     let grocery = getFullGrocery(this.props.name);
+
     return (
       <div>
         <ul>
-        111111111111
             {grocery.map(item => (
               <DepartmentInfo
                 department={item.department}
