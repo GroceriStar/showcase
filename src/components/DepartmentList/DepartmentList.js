@@ -5,11 +5,6 @@ import shortid from "shortid";
 // right now this component just cover our current case,
 // but later i want to make it more extendable, so it can handle a different layouts that we'll need to have.
 
-
-
-
-
-
 class DepartmentList extends Component {
 
   constructor(props){
@@ -18,20 +13,24 @@ class DepartmentList extends Component {
     //
     // }
   }
-  {/* maybe we can create a statement,
-    when if we don't have id field - then we use a shordid */}
+
+  /* maybe we can create a statement,
+    when if we don't have id field - then we use a shordid */
   render() {
-    <ul>
-      {collection.map(item => (
-        
-        <Item
-          department={item.department}
-          ingredients={item.ingredients}
-          key={shortid.generate()}
+    let { collection } = this.props;
+    return (
+      <ul>
+        {collection.map(item => (
+
+          <Item
+            key={shortid.generate()}
+            department={item.department}
+            ingredients={item.ingredients}
           />
-      ))}
-    </ul>
-  }
+
+        ))}
+      </ul>
+  )}
 
 }
 

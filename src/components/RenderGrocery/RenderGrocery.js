@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import shortid from "shortid";
-import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
+// import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
+import DepartmentList from '../DepartmentList/DepartmentList';
+
 import { getFullGrocery } from "../selectors/selector.js";
 
 
@@ -13,6 +14,8 @@ class RenderGrocery extends Component {
 
     return (
       <div>
+        <DepartmentList collection={grocery} />
+        {/*
         <ul>
             {grocery.map(item => (
               <DepartmentInfo
@@ -22,6 +25,7 @@ class RenderGrocery extends Component {
               />
             ))}
         </ul>
+        */}
       </div>
     );
   }
