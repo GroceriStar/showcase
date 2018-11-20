@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import Item from './Item.js';
-import shortid from "shortid";
+import IngredientCustomList from '../Ingredients/IngredientCustomList.js';
 
-// right now this component just cover our current case,
-// but later i want to make it more extendable, so it can handle a different layouts that we'll need to have.
 
-class DepartmentList extends Component {
+class DepartmentListCustom extends Component {
 
   // constructor(props){
   //   super(props);
@@ -19,19 +16,18 @@ class DepartmentList extends Component {
   render() {
     let { collection } = this.props;
     return (
-      <ul>
+
         {collection.map(item => (
 
-          <Item
-            key={shortid.generate()}
+          <IngredientCustomList
             department={item.department}
             ingredients={item.ingredients}
           />
 
         ))}
-      </ul>
+
   )}
 
 }
 
-export default DepartmentList;
+export default DepartmentListCustom;

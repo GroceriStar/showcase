@@ -14,11 +14,8 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
 
 
       <div className="details">
-
         <Slug delay={600}>
-
           <InsideLayout id={id} name={name} toggle={toggle}  />
-
         </Slug>
       </div>
     </Fade>

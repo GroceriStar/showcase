@@ -6,25 +6,12 @@ import {
   getGroceryDataFromId
 } from "../selectors/selector.js";
 
-
-
 import DepartmentList from '../DepartmentList/DepartmentList';
 
 
 // @TODO let's discuss why we cannot use a same component, for this version.
 // it's a bit unclear for me.
 
-
-
-// const DepartmentList = ({ departments }) => (
-//   <ul>
-//     {departments.map(deparment => (
-//       <li>
-//         ....
-//       </li>
-//     ))}
-//   </ul>
-// );
 
 class RenderGroceryById extends Component {
 

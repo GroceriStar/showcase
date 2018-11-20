@@ -87,9 +87,6 @@ class InsideLayout extends Component {
             View "{this.props.name}"
           </Button>
 
-
-
-
         </Footer>
       </Layout>
     )
