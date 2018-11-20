@@ -8,7 +8,7 @@ import { Button } from 'antd';
 
 class GeneratePDF extends React.Component {
 
-  constructor () {
+  constructor(props) {
     super(props);
     this.state = {
       isHidden: true
@@ -24,9 +24,6 @@ class GeneratePDF extends React.Component {
   render(){
     return (
       <div>
-         // <button type="button" >
-         //
-         // </button>
          <Button type="primary" icon="file-pdf" size="large"
             onClick={this.toggleHidden.bind(this)}>
             Generate PDF file

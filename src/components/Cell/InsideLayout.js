@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
 import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
 
-import { Icon, Layout } from 'antd'
+import { Button, Icon, Layout } from 'antd'
 
 const { Header, Footer, Content } = Layout;
 
@@ -79,12 +79,14 @@ class InsideLayout extends Component {
           If yes, then we should make it clear, so later we'll be able to */}
 
 
-          
-          <GeneratePDF groceryName={this.props.name}/>
 
-          <Link to={getLink(this.props.id)}>
-            {this.props.name}
-          </Link>
+          <GeneratePDF groceryName={this.props.name} />
+          <br />
+          <Button type="primary" icon="right" size="large"
+            href={getLink(this.props.id)}>
+            View "{this.props.name}"
+          </Button>
+
 
 
 

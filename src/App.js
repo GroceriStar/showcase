@@ -19,7 +19,6 @@ import { getGroceryCollection } from "./components/selectors/selector.js";
 class App extends Component {
 
   state = {
-    //@TODO YEP, it's a bug, not solved yet. https://github.com/GroceriStar/groceristar-fetch/issues/141
     data: getGroceryCollection(), //Did we need it here? i think we didn use all data from this method
     columns: 2,
     margin: 70,
@@ -43,6 +42,8 @@ class App extends Component {
   grocery = [];
   currentId = 1;
 
+
+  // @TODO change this. I really don't like this method
   getId(name){
     var foundObj = {};
       if (this.grocery.length > 0) {
@@ -55,15 +56,22 @@ class App extends Component {
         });
       }
 
+      let id = null;
+
       if (_.isEmpty(foundObj)) {
         this.grocery.push({
           "name": name,
           "id": this.currentId
         })
-        return this.currentId++;
+        id = this.currentId++;
+        // return this.currentId++;
       } else {
-        return foundObj.id;
+        id = foundObj.id;
+        // return foundObj.id;
       }
+
+      console.log(id);
+      return id;
   }
 
   render() {
@@ -72,6 +80,8 @@ class App extends Component {
       d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
     );
 
+
+    // console.log(data);
     return (
       <div className="main">
         <Header
