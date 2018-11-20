@@ -8,9 +8,8 @@ import {
 
 import shortid from "shortid";
 
-import {
-  Ingredients
-} from '../Ingredients/Ingredients'
+import DepartmentList from '../DepartmentList/DepartmentList';
+import IngredientList from '../Ingredients/IngredientList'
 
 // @TODO let's discuss why we cannot use a same component, for this version.
 // it's a bit unclear for me.
@@ -47,18 +46,23 @@ class RenderGroceryById extends Component {
 
     return (
       <div>
+
+        <DepartmentList departments={groceryWithDepAndIng} />
+
+        // <IngredientList ingredients={item.ingredients} />
+        {/*
         <ul>
-          {/* maybe we can create a statement,
-            when if we don't have id field - then we use a shordid */}
+
           { groceryWithDepAndIng.map(item => (
               <DepartmentInfo
                 department={item.department}
                 ingredients={item.ingredients}
                 key={shortid.generate()}
-                ingredients3={<Ingredients ingredients={item.ingredients} />}
               />
             ))}
         </ul>
+        */}
+
       </div>
     );
   }

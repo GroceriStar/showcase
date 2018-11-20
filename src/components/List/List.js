@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
+
+// this component important to generation PDF
 
 const styles = StyleSheet.create({
   item: {
@@ -55,5 +58,7 @@ List.propTypes = {
 Item.propTypes = {
   children: PropTypes.node,
 };
+
+
 
 export default List;
