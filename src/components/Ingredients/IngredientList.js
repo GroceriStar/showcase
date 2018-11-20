@@ -7,8 +7,9 @@ import shortid from "shortid";
 // https://github.com/developerdizzle/react-virtual-list
 // https://www.npmjs.com/package/react-list
 
-// maybe IngredientsList
-const Ingredients = ({ ingredients }) => (
+// maybe IngredientsList later we should check
+// if we have an ingredient id or we generate key by using shortid
+const IngredientList = ({ ingredients }) => (
   <ul>
     {ingredients.map(ingredient => (
       <li key={shortid.generate()}>
@@ -31,4 +32,4 @@ const Ingredients = ({ ingredients }) => (
 //   }
 // }
 
-export { Ingredients };
+export default IngredientList
