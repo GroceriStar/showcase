@@ -48,7 +48,8 @@ class DownloadLink extends React.Component{
   render(){
     return(
       <div>
-        <PDFDownloadLink document={this.MyDoc} fileName={this.props.groceryName1 + ".pdf"}>
+        <PDFDownloadLink document={this.MyDoc}
+        fileName={this.props.groceryName1 + ".pdf"}>
             {({ blob, url, loading, error }) => (
               loading ? 'Loading document...' : 'Download now!'
             )}

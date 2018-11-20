@@ -77,13 +77,15 @@ class InsideLayout extends Component {
 
           {/* Should we really pass the name? or this is just because we don't have a propper ids here?
           If yes, then we should make it clear, so later we'll be able to */}
+
+
+          
           <GeneratePDF groceryName={this.props.name}/>
 
-          <Link to={getLink(this.props.id)} />
-
-          <button type="button">
+          <Link to={getLink(this.props.id)}>
             {this.props.name}
-          </button>
+          </Link>
+
 
 
         </Footer>

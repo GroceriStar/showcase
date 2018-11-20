@@ -2,12 +2,14 @@ import React from 'react';
 // Create styles
 
 import DownloadLink from '../DownloadLink/DownloadLink';
-import './GeneratePDF.css';
+import { Button } from 'antd';
+
+// import './GeneratePDF.css';
 
 class GeneratePDF extends React.Component {
-  
+
   constructor () {
-    super()
+    super(props);
     this.state = {
       isHidden: true
     }
@@ -22,10 +24,17 @@ class GeneratePDF extends React.Component {
   render(){
     return (
       <div>
-         <button type="button" onClick={this.toggleHidden.bind(this)} >
-           Generate PDF file
-         </button>
-         {!this.state.isHidden && <DownloadLink groceryName1={this.props.groceryName}/>}
+         // <button type="button" >
+         //
+         // </button>
+         <Button type="primary" icon="file-pdf" size="large"
+            onClick={this.toggleHidden.bind(this)}>
+            Generate PDF file
+        </Button>
+
+         {!this.state.isHidden &&
+            <DownloadLink groceryName1={this.props.groceryName}/>
+         }
        </div>
    );
  }
