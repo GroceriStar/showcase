@@ -38,7 +38,9 @@ class DownloadLink extends React.Component{
     <Document>
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.section}>
-          <Text style={styles.text}>{this.props.groceryName1}</Text>
+          <Text style={styles.text}>
+            {this.props.groceryName1}
+          </Text>
           <RenderLists groceryName2={this.props.groceryName1}/>
         </View>
       </Page>
@@ -48,8 +50,9 @@ class DownloadLink extends React.Component{
   render(){
     return(
       <div>
-        <PDFDownloadLink document={this.MyDoc}
-        fileName={this.props.groceryName1 + ".pdf"}>
+        <PDFDownloadLink
+          document={this.MyDoc}
+          fileName={this.props.groceryName1 + ".pdf"}>
             {({ blob, url, loading, error }) => (
               loading ? 'Loading document...' : 'Download now!'
             )}

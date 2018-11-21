@@ -34,6 +34,9 @@ body,
   line-height: 10px;
 }
 
+
+
+
 .default {
   position: absolute;
   width: 100%;
@@ -73,6 +76,7 @@ body,
   background: #f9f9f9;
 }
 
+
 .details {
   position: fixed;
   bottom: 0px;
@@ -91,6 +95,7 @@ body,
   overflow-x: scroll;
 }
 
+
 .details h1 {
   color: #ca6a9a;
   font-size: 36px;
@@ -100,6 +105,7 @@ body,
   padding: 0;
   /* max-width: 250px; */
 }
+
 
 .details p {
   color: thistle;
@@ -117,6 +123,9 @@ body,
   padding-top: 15px;
 }
 
+
+
+
 .circle {
   position: absolute;
   top: calc(50% - 140px);
@@ -126,6 +135,7 @@ body,
   border-radius: 50%;
   box-shadow: 0px 20px 60px -10px rgba(0, 0, 0, 0.2);
 }
+
 
 .close {
   position: absolute;

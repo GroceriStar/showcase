@@ -7,6 +7,9 @@ import List, { Item } from '../List/List';
 import { getFullGrocery } from "../selectors/selector.js";
 import shortid from 'shortid';
 
+// This component is related to creating PDF document
+
+
 const styles = StyleSheet.create({
   title: {
     fontSize: 16,

@@ -4,7 +4,7 @@ import DepartmentList from '../DepartmentList/DepartmentList';
 
 import { getFullGrocery } from "../selectors/selector.js";
 
-
+// Looks like we don't use this component. Maybe we shall delete it soon
 
 class RenderGrocery extends Component {
 
