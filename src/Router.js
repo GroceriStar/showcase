@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
 import RenderGroceryById from './components/RenderGroceryById/RenderGroceryById';
 
+import AntdLayout from './components/layouts/GroceryList/AntdLayout'
+
 class Router extends Component {
   render(){
     return (
@@ -11,6 +13,8 @@ class Router extends Component {
         <Switch>
           <Route path="/" exact component={App}/>
           <Route path="/grocery/:id" component={RenderGroceryById}/>
+          {/* not finished
+            <Route path="/design/grocery/:id" component={AntdLayout}/>*/}
         </Switch>
       </BrowserRouter>
     )
