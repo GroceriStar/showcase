@@ -4,10 +4,10 @@ import {
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId
-} from "./components/selectors/selector.js";
+} from "selectors/selector.js";
 
-import DepartmentListCollapse from './components/DepartmentList/DepartmentListCollapse';
-
+// import DepartmentListCollapse from './components/DepartmentList/DepartmentListCollapse';
+import DepartmentList from 'components/DepartmentList/DepartmentList'
 
 // @TODO let's discuss why we cannot use a same component, for this version.
 // it's a bit unclear for me.
@@ -30,10 +30,10 @@ class AntdLayout extends Component {
     let groceryWithDepAndIng = getFullGrocery(groceryName);
 
     // let departmentsCollection = getGroceryDataFromId(this.state.id);
-
+// <DepartmentListCollapse collection={groceryWithDepAndIng} />
     return (
       <div>
-        <DepartmentListCollapse collection={groceryWithDepAndIng} />
+        <DepartmentList collection={groceryWithDepAndIng} />
       </div>
     );
   }

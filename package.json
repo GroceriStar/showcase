@@ -6,16 +6,16 @@
   },
   "private": true,
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1",
     "@groceristar/groceristar-fetch": "^1.1.31",
     "@react-pdf/renderer": "^1.0.0-alpha.25",
     "antd": "^3.10.9",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
     "reworm": "^2.2.1",
     "shortid": "^2.2.14",
     "yoga-layout": "^1.9.3"
@@ -38,10 +38,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-app": "^3.0.5",
+    "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1"

@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from './App';
 import RenderGroceryById from './components/RenderGroceryById/RenderGroceryById';
 
-import AntdLayout from './components/layouts/GroceryList/AntdLayout'
+import AntdLayout from './layouts/GroceryList/AntdLayout'
 
 class Router extends Component {
   render(){

@@ -8,7 +8,7 @@ import _ from "lodash";
 import "antd/dist/antd.css";
 import "./styles.css";
 
-import { getGroceryCollection } from "./components/selectors/selector.js";
+import { getGroceryCollection } from "./selectors/selector.js";
 
 
 

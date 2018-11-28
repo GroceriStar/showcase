@@ -23,7 +23,7 @@ class DepartmentListCollapse extends Component {
     return (
       <Collapse accordion>
         {collection.map(item => (
-          <Panel header={item.department} key={shortid.generate()}>            
+          <Panel header={item.department} key={shortid.generate()}>
             <IngredientList ingredients={item.ingredients} />
           </Panel>
         ))}
