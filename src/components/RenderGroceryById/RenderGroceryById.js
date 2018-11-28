@@ -4,7 +4,7 @@ import {
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId
-} from "selectors/selector.js";
+} from "../../selectors/selector";
 
 import DepartmentList from '../DepartmentList/DepartmentList';
 

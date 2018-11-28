@@ -4,10 +4,11 @@ import {
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId
-} from "selectors/selector.js";
+} from "../../selectors/selector";
 
 // import DepartmentListCollapse from './components/DepartmentList/DepartmentListCollapse';
-import DepartmentList from 'components/DepartmentList/DepartmentList'
+// import DepartmentList from './components/DepartmentList/DepartmentList'
+import DepartmentList from '../../components/DepartmentList/DepartmentList'
 
 // @TODO let's discuss why we cannot use a same component, for this version.
 // it's a bit unclear for me.
