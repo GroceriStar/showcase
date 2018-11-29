@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
-import Header from "./components/Header/Header";
-import Cell from "./components/Cell/Cell";
+import Header   from "./../components/Header/Header";
+import Cell     from "./../components/Cell/Cell";
 import { Grid } from "mauerwerk";
-import _ from "lodash";
+import _        from "lodash";
 
 import "antd/dist/antd.css";
-import "./styles.css";
+import "./../styles.css";
 
-import { getGroceryCollection } from "./selectors/selector.js";
+
+import { getGroceryCollection } from "./../selectors/selector.js";
 
 
 class HomeView extends Component {
@@ -77,7 +78,7 @@ class HomeView extends Component {
       d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
     );
 
-    return (              
+    return (
 
       <div className="main">
         <Header

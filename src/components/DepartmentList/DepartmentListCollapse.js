@@ -6,6 +6,8 @@ import shortid from "shortid";
 
 // right now this component just cover our current case,
 // but later i want to make it more extendable, so it can handle a different layouts that we'll need to have.
+const Panel = Collapse.Panel;
+
 
 class DepartmentListCollapse extends Component {
 
