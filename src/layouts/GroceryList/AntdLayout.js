@@ -6,9 +6,8 @@ import {
   getGroceryDataFromId
 } from "../../selectors/selector";
 
-// import DepartmentListCollapse from './components/DepartmentList/DepartmentListCollapse';
-// import DepartmentList from './components/DepartmentList/DepartmentList'
-import DepartmentList from '../../components/DepartmentList/DepartmentList'
+
+import DepartmentListCollapse from '../../components/DepartmentList/DepartmentListCollapse'
 
 // @TODO let's discuss why we cannot use a same component, for this version.
 // it's a bit unclear for me.
@@ -34,7 +33,7 @@ class AntdLayout extends Component {
 // <DepartmentListCollapse collection={groceryWithDepAndIng} />
     return (
       <div>
-        <DepartmentList collection={groceryWithDepAndIng} />
+        <DepartmentListCollapse collection={groceryWithDepAndIng} />
       </div>
     );
   }
