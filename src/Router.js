@@ -12,12 +12,15 @@ class Router extends Component {
     return (
       <BrowserRouter>
         <Switch>
-        
+
           {/*}<Route path="/" exact component={App}/> */}
           <Route path="/" exact component={HomeView}/>
           <Route path="/grocery/:id" component={RenderGroceryById}/>
-          {/* not finished
-            <Route path="/design/grocery/:id" component={AntdLayout}/>*/}
+
+          <Route path="/design/grocery/:id" component={AntdLayout}/>
+          
+          {/*<Route path="/grocery/all" component={GroceriesView}/> */}
+
         </Switch>
       </BrowserRouter>
     )
