@@ -25,17 +25,18 @@ class HomeView extends Component {
 
 
     //@TODO move this stuff to header
-    search = e => this.setState({ filter: e.target.value });
+    search  = e => this.setState({ filter: e.target.value });
     shuffle = () =>
       this.setState(state => ({ data: _.shuffle(state.data) }));
+
     setColumns = e => this.setState({ columns: parseInt(e.key, 10) });
-    setMargin = e => this.setState({ margin: parseInt(e.key, 10) });
-    setHeight = e => this.setState({ height: e });
+    setMargin  = e => this.setState({ margin: parseInt(e.key, 10) });
+    setHeight  = e => this.setState({ height: e });
 
 
 
 
-    grocery = [];
+    grocery   = [];
     currentId = 1;
 
 

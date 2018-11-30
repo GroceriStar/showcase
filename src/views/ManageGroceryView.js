@@ -1,14 +1,12 @@
 import React, { Component, Fragment } from 'react';
 
-import { getGroceryCollection, getAllGrocery } from "./../selectors/selector.js";
+import { getGroceryCollection } from "./../selectors/selector.js";
 
-class HomeView extends Component {
+class ManageGroceryView extends Component {
 
 
   render() {
     console.log( getGroceryCollection() );
-
-    // console.log( getAllGrocery() );
     // const data = this.state.data.filter(
     //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
     // );
@@ -21,4 +19,4 @@ class HomeView extends Component {
   }
 }
 
-export default HomeView;
+export default ManageGroceryView;

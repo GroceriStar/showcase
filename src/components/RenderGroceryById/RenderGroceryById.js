@@ -26,8 +26,12 @@ class RenderGroceryById extends Component {
 
     // @TODO maybe we can move this things into selectors?
     let grocery = getGroceryById(this.state.id)[0];
+    console.log(grocery)
+    
     let groceryName = grocery.name;
     let groceryWithDepAndIng = getFullGrocery(groceryName);
+
+
 
     // let departmentsCollection = getGroceryDataFromId(this.state.id);
 
