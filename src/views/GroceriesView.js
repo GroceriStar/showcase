@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import _ from 'lodash';
 import { getGroceryCollection, getAllGrocery } from "./../selectors/selector.js";
+import _ from 'lodash';
 
 class GroceriesView extends Component {
 

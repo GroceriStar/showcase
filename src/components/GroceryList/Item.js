@@ -2,10 +2,7 @@ import React, {
   Component
 } from 'react'
 
-import IngredientList from '../Ingredients/IngredientList'
-// import {
-//   Ingredients2
-// } from '../Ingredients/Ingredients2'
+import DepartmentList from '../DepartmentList/DepartmentList'
 
 
 // This component are layout for displaying data inside of the department list
@@ -19,9 +16,9 @@ class Item extends Component {
     return (
       <li key={this.props.key}>
         <h2>
-          {this.props.department}
+          {this.props.name}
         </h2>
-        <IngredientList ingredients={this.props.ingredients} />
+        <DepartmentList departments={this.props.departments} />
 
       </li>
     );

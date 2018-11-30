@@ -1,7 +1,7 @@
 import React, {
   Component
 } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
 import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
@@ -75,6 +75,7 @@ class InsideLayout extends Component {
 
         </Content>
         <Footer style={{ textAlign: 'center' }}>
+
 
           {/* Should we really pass the name? or this is just because we don't have a propper ids here?
           If yes, then we should make it clear, so later we'll be able to */}
