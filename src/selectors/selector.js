@@ -1,11 +1,5 @@
 import { groceristar } from "@groceristar/groceristar-fetch";
 
-// console.log(groceristar);
-
-//  function getDish(randomWeek){
-//       return mealCalendar.getDishByWeek(randomWeek);
-//   }
-//
 function getGroceryById( id ) {
   return groceristar.getGroceryById(id);
 }
@@ -32,4 +26,10 @@ function getGroceryDataFromId(id){
 }
 
 
-export { getGroceryById, getFullGrocery, getGroceryDataFromId, getGroceryCollection, getAllGrocery }
+export {
+  getGroceryById,
+  getFullGrocery,
+  getGroceryDataFromId,
+  getGroceryCollection,
+  getAllGrocery
+}

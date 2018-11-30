@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react';
-
+import _ from 'lodash';
 import { getGroceryCollection, getAllGrocery } from "./../selectors/selector.js";
 
-class HomeView extends Component {
+class GroceriesView extends Component {
 
 
   render() {
-    console.log( getGroceryCollection() );
 
+    const collection = getGroceryCollection();
     // console.log( getAllGrocery() );
     // const data = this.state.data.filter(
     //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
@@ -15,10 +15,10 @@ class HomeView extends Component {
 
     return (
       <Fragment>
-
+        <GroceryList collection={collection} />
       </Fragment>
     );
   }
 }
 
-export default HomeView;
+export default GroceriesView;

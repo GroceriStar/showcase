@@ -17,7 +17,6 @@ class Router extends Component {
       <BrowserRouter>
         <Switch>
 
-          {/*}<Route path="/" exact component={App}/> */}
           <Route path="/" exact component={HomeView} />
           <Route path="/grocery/:id" component={RenderGroceryById} />
 

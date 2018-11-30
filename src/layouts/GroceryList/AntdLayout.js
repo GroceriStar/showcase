@@ -30,7 +30,7 @@ class AntdLayout extends Component {
     let groceryWithDepAndIng = getFullGrocery(groceryName);
 
     // let departmentsCollection = getGroceryDataFromId(this.state.id);
-// <DepartmentListCollapse collection={groceryWithDepAndIng} />
+
     return (
       <div>
         <DepartmentListCollapse collection={groceryWithDepAndIng} />
