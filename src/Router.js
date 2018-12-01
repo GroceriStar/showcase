@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomeView from './views/HomeView'
 import GroceriesView from './views/GroceriesView'
 // import GroceryView from './views/GroceryView'
-
+import ManageGroceryView from './views/ManageGroceryView'
 
 import RenderGroceryById from './components/RenderGroceryById/RenderGroceryById';
 
@@ -23,6 +23,8 @@ class Router extends Component {
           <Route path="/design/grocery/:id" component={AntdLayout} />
 
           <Route path="/groceries" component={GroceriesView} />
+
+          <Route path="/manage/grocery/:id" component={ManageGroceryView} />
 
         </Switch>
       </BrowserRouter>

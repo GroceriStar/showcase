@@ -2,6 +2,11 @@ import React, { Component, Fragment } from 'react';
 
 import { getGroceryCollection } from "./../selectors/selector.js";
 
+// @TODO I want to have long view and a short view.
+// Long view is related to viewing ingredients as part of departments
+// short view related to viewing only list on ingredients.
+
+
 class ManageGroceryView extends Component {
 
 
@@ -13,7 +18,11 @@ class ManageGroceryView extends Component {
 
     return (
       <Fragment>
-
+        <h1>Manage Grocery List</h1>
+        1. Change name
+        <hr />
+        2. Hide/Unhide department
+        3. Delete Ingredients from grocery list.
       </Fragment>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   Button,
   Icon,
@@ -90,6 +91,12 @@ export default function({
       </span>
 
       <Switch style={{ marginLeft: 15 }} defaultChecked onChange={setHeight} />
+
+      <Button type="primary">
+        <Link to="/groceries">View collection without fanciness</Link>
+      </Button>
+
+
     </div>
   )
 }
