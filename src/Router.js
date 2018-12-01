@@ -7,6 +7,8 @@ import GroceriesView from './views/GroceriesView'
 // import GroceryView from './views/GroceryView'
 import ManageGroceryView from './views/ManageGroceryView'
 
+
+// @TODO create a separated view for displaying grocery and update it here.
 import RenderGroceryById from './components/RenderGroceryById/RenderGroceryById';
 
 import AntdLayout from './layouts/GroceryList/AntdLayout'
@@ -18,6 +20,7 @@ class Router extends Component {
         <Switch>
 
           <Route path="/" exact component={HomeView} />
+
           <Route path="/grocery/:id" component={RenderGroceryById} />
 
           <Route path="/design/grocery/:id" component={AntdLayout} />
