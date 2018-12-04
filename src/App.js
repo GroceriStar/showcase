@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import HomeView from "./views/HomeView";
 
 
-
+import { TodaysDate } from "@groceristar/grocery-component";
 
 //@TODO add "reworm" https://github.com/pedronauck/reworm
 //@TODO update and make it clear. we have a lot of data here. it's not cool
@@ -24,6 +24,7 @@ class App extends Component {
     return (
 
       <Fragment>
+        <TodaysDate />
         <HomeView />
       </Fragment>
 

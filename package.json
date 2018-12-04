@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@groceristar/groceristar-fetch": "^1.1.31",
+    "@groceristar/grocery-component": "^1.0.0",
     "@react-pdf/renderer": "^1.0.0-alpha.25",
     "antd": "^3.10.9",
     "lodash": "^4.17.11",
@@ -38,12 +39,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-app": "^3.0.5",
-
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1"
