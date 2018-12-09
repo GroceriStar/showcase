@@ -9,9 +9,7 @@ import "antd/dist/antd.css";
 import "./../styles.css";
 
 
-import { TodaysDate } from "@groceristar/grocery-component";
-
-import { getGroceryCollection } from "./../selectors/selector.js";
+import { getGroceryCollection } from "./../selectors/selector";
 
 
 class HomeView extends Component {
@@ -85,7 +83,7 @@ class HomeView extends Component {
 
       <div className="main">
 
-      <TodaysDate />
+
 
         <Header
           {...this.state}
