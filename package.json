@@ -7,7 +7,7 @@
   "private": true,
   "dependencies": {
     "@groceristar/groceristar-fetch": "^1.1.31",
-    "@groceristar/grocery-component": "^1.0.0",
+    "@groceristar/grocery-component": "^1.0.1",
     "@react-pdf/renderer": "^1.0.0",
     "antd": "^3.11.0",
     "lodash": "^4.17.11",
