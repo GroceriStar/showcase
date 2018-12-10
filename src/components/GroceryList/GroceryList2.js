@@ -3,6 +3,8 @@ import React, { Component } from "react"
 import { Link } from 'react-router-dom'
 
 import Item from './Item.js';
+
+
 import shortid from "shortid";
 
 import { List } from '@groceristar/grocery-component';
@@ -30,6 +32,10 @@ const GroceryItemSimple = ({ id, name }) => (
 );
 
 
+
+
+
+
 const Wrapper = ({ children }) => (
   <ul>{children}</ul>
 );
@@ -55,21 +61,6 @@ const GL2 = ({ items, renderItem2 }) => (
 
 class GroceryList2 extends Component {
 
-  // constructor(props){
-  //   super(props);
-  //   // this.state = {
-  //   //
-  //   // }
-  // }
-
-  /* maybe we can create a statement,
-    when if we don't have id field - then we use a shordid */
-
-    // <Item
-    //   key={shortid.generate()}
-    //   department={item.department}
-    //   ingredients={item.ingredients}
-    // />
   render() {
     let { collection } = this.props;
     return (
