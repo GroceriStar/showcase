@@ -48,7 +48,7 @@ class GroceryList extends Component {
     let { collection } = this.props;
     return (
       <ul>
-        {collection.map(item => (
+        { collection && collection.map(item => (
 
           <li>
             ID: {item.id}

@@ -6,7 +6,7 @@ import {
   getAllGrocery
 } from "./../selectors/selector.js"
 
-import GroceryList2 from '../components/GroceryList/GroceryList'
+import GroceryList2 from '../components/GroceryList/GroceryList2'
 
 
 class GroceriesView extends Component {
