@@ -920,10 +920,10 @@
     lodash "^4.17.10"
     uuid "3.3.2"
 
-"@groceristar/grocery-component@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@groceristar/grocery-component/-/grocery-component-1.0.2.tgz#1bd47657761c2c1c932e1d7ea0f556e07d2ba2ec"
-  integrity sha512-pQptyCcNqkdfipxKi8mTP/etD/IJ9N4UPMhTsEsb1gBq4BdG+uH5LZdDQW0G9KVWxDYoKPB3RymGz9uuo02a6A==
+"@groceristar/grocery-component@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@groceristar/grocery-component/-/grocery-component-1.0.4.tgz#aa054e0ad73ea76e1111cc1f8112a5e5b33986eb"
+  integrity sha512-MMIVGCzGO+Mh/bmNeqFH8bBYBm5E6/QD0Oh+xY79l9snWC7pnLP5LGNL+DZz8rOeoaHwqGoRdtmq6yMyugS7nw==
   dependencies:
     uuid "^3.3.2"
 
