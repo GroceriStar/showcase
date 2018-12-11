@@ -1,8 +1,19 @@
-
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
 import { Link } from 'react-router-dom'
+
 import Item from './Item.js';
-import shortid from "shortid";
+
+
+
+import uuidv1 from 'uuid/v1';
+
+import { List } from '@groceristar/grocery-component';
+
+//@TODO this file should be improved. Maybe splitted with structure.
+// i don't know how exactly it should looks, but not like this right know
+// because it's more looking like layout file, not like a list component that i want to see
+// i want to see it similar to our DefaultList structure
+
 
 // right now this component just cover our current case,
 // but later i want to make it more extendable, so it can handle a different layouts that we'll need to have.
@@ -14,56 +25,65 @@ const ViewGroceryLink = ({ id, title }) => (
 );
 
 const ManageGroceryLink = ({ id, title }) => (
-
   <Link to={'/grocery/' + id }>
     View "{title}" Template
   </Link>
 );
-// title only
-const GroceryItemSimple = ({ id, name }) => (
-    <li key={id}>
-      {name}
-    </li>
+
+//  ---- here actually our GL list started.
+const Wrapper = ({ children }) => (
+  <ul>{children}</ul>
 );
 
-
-class GroceryList extends Component {
-
-  // constructor(props){
-  //   super(props);
-  //   // this.state = {
-  //   //
-  //   // }
-  // }
-
-  /* maybe we can create a statement,
-    when if we don't have id field - then we use a shordid */
 
     // <Item
     //   key={shortid.generate()}
     //   department={item.department}
     //   ingredients={item.ingredients}
     // />
-  render() {
-    let { collection } = this.props;
-    return (
-      <ul>
-        { collection && collection.map(item => (
 
-          <li>
-            ID: {item.id}
-            Name: {item.name}
-            <pre>
-            {item.departments}
-            </pre>
-            <ViewGroceryLink id={item.id} title={item.name} />
-            <hr />
-          </li>
+const renderItem2 = ({ key, value }) => (
+  <Fragment>
+    <li>
+      ID: {value.id}
+      Name: {value.name}
+      <pre>
+      {value.departments}
+      </pre>
+      <ViewGroceryLink id={value.id} title={value.name} />
+      <hr />
+    </li>
+  </Fragment>
 
-        ))}
-      </ul>
-  )}
+);
+
+const RenderItem = ({ data, id }) => {
+
+  return (
+    <Fragment>
+      ID: {data.id}
+      Name: {data.name}
+      <pre>
+      {data.departments}
+      </pre>
+      <ViewGroceryLink id={data.id} title={data.name} />
+      <hr />
+    </Fragment>
+
+
+  )
 
 }
 
-export default GroceryList;
+const GroceryList2 = ({ items }) => (
+  <Wrapper>
+    <List items={items}>
+      {(data) =>
+        <RenderItem data={data} key={uuidv1()} id={uuidv1()} />
+      }
+      </List>
+  </Wrapper>
+);
+
+
+export default GroceryList2;

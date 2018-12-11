@@ -6,7 +6,7 @@ import {
   getAllGrocery
 } from "./../selectors/selector.js"
 
-import GroceryList2 from '../components/GroceryList/GroceryList2'
+import GroceryList from '../components/GroceryList/GroceryList'
 
 
 class GroceriesView extends Component {
@@ -19,10 +19,10 @@ class GroceriesView extends Component {
     // const data = this.state.data.filter(
     //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
     // );
-    // <GroceryList collection={collection} />
+    
     return (
       <Fragment>
-        <GroceryList2 items={collection} />
+        <GroceryList items={collection} />
 
       </Fragment>
     );
