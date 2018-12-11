@@ -13,12 +13,14 @@ import DepartmentList from '../DepartmentList/DepartmentList'
 class Item extends Component {
 
   render() {
+    // <DepartmentList departments={this.props.departments} />
     return (
       <li key={this.props.key}>
         <h2>
           {this.props.name}
         </h2>
-        <DepartmentList departments={this.props.departments} />
+        <DepartmentList items={this.props.departments} />
+
 
       </li>
     );

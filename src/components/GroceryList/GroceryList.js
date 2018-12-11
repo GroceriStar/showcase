@@ -18,6 +18,9 @@ import { List } from '@groceristar/grocery-component';
 // right now this component just cover our current case,
 // but later i want to make it more extendable, so it can handle a different layouts that we'll need to have.
 
+// @TODO i think this links should be separated, and also instead of having plain url here - i think it's better to have routes.
+// details upon request
+
 const ViewGroceryLink = ({ id, title }) => (
   <Link to={'/grocery/' + id }>
     View "{title}" Template
@@ -31,6 +34,7 @@ const ManageGroceryLink = ({ id, title }) => (
 );
 
 //  ---- here actually our GL list started.
+
 const Wrapper = ({ children }) => (
   <ul>{children}</ul>
 );
@@ -42,20 +46,6 @@ const Wrapper = ({ children }) => (
     //   ingredients={item.ingredients}
     // />
 
-const renderItem2 = ({ key, value }) => (
-  <Fragment>
-    <li>
-      ID: {value.id}
-      Name: {value.name}
-      <pre>
-      {value.departments}
-      </pre>
-      <ViewGroceryLink id={value.id} title={value.name} />
-      <hr />
-    </li>
-  </Fragment>
-
-);
 
 const RenderItem = ({ data, id }) => {
 
@@ -75,7 +65,7 @@ const RenderItem = ({ data, id }) => {
 
 }
 
-const GroceryList2 = ({ items }) => (
+const GroceryList = ({ items }) => (
   <Wrapper>
     <List items={items}>
       {(data) =>
@@ -86,4 +76,4 @@ const GroceryList2 = ({ items }) => (
 );
 
 
-export default GroceryList2;
+export default GroceryList;
