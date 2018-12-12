@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 
 import { List, DefaultList } from '@groceristar/grocery-component';
 // @TODO i think we have here an Ingredients List.
@@ -16,17 +16,5 @@ const IngredientList = ({ ingredients }) => (
 
 );
 
-
-// class Ingredients extends Component {
-//   render() {
-//     return (
-//       <ul>
-//         {this.props.ingredients.map(ingredient => (
-//           <li key={shortid.generate()}>{ingredient}</li>
-//         ))}
-//       </ul>
-//     );
-//   }
-// }
 
 export default IngredientList

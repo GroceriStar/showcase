@@ -1,33 +1,29 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
+
+import uuidv1 from 'uuid/v1';
+import { List } from '@groceristar/grocery-component';
+
 import IngredientCustomList from '../Ingredients/IngredientCustomList.js';
 
+const RenderItem = ({ data, id }) => {
 
-class DepartmentListCustom extends Component {
-
-  // constructor(props){
-  //   super(props);
-  //   // this.state = {
-  //   //
-  //   // }
-  // }
-
-  /* maybe we can create a statement,
-    when if we don't have id field - then we use a shordid */
-  render() {
-    let { collection } = this.props;
-    return (
-
-        {collection.map(item => (
-
-          <IngredientCustomList
-            department={item.department}
-            ingredients={item.ingredients}
-          />
-
-        ))}
-
-  )}
-
+  return (
+    <Fragment>
+      <IngredientCustomList
+        id={id}
+        department={data.department}
+        ingredients={data.ingredients}
+      />
+    </Fragment>
+  )
 }
+
+const DepartmentListCustom = ({ items }) => (
+    <List items={items}>
+      {(data) =>
+        <RenderItem data={data} key={uuidv1()} id={uuidv1()} />
+      }
+    </List>
+);
 
 export default DepartmentListCustom;
