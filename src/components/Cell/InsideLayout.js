@@ -82,6 +82,7 @@ class InsideLayout extends Component {
 
           <GeneratePDF groceryName={this.props.name} />
           <br />
+          
           <Button type="primary" icon="right" size="large"
             href={getLink(this.props.id)}>
             View "{this.props.name}"

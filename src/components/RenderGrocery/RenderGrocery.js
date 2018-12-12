@@ -14,7 +14,7 @@ class RenderGrocery extends Component {
 
     return (
       <div>
-        <DepartmentList collection={grocery} />
+        <DepartmentList items={grocery} />
         {/*
         <ul>
             {grocery.map(item => (

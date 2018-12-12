@@ -21,8 +21,8 @@ class Item extends Component {
         <h2>
           {this.props.department}
         </h2>
-        <IngredientList ingredients={this.props.ingredients} />
-        {/*<Ingredients2 data={this.props.ingredients} />*/}
+        <IngredientList items={this.props.ingredients} />
+        
       </li>
     );
   }

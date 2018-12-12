@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-// import shortid from "shortid";
 
 import { List, DefaultList } from '@groceristar/grocery-component';
 // @TODO i think we have here an Ingredients List.
@@ -10,7 +9,7 @@ import { List, DefaultList } from '@groceristar/grocery-component';
 
 // maybe IngredientsList later we should check
 // if we have an ingredient id or we generate key by using shortid
-const IngredientList = ({ ingredients }) => (  
+const IngredientList = ({ ingredients }) => (
   <Fragment>
     <DefaultList items={ingredients} />
   </Fragment>

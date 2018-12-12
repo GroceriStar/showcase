@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Collapse } from 'antd';
+import uuidv1 from 'uuid/v1';
 
 import { List } from '@groceristar/grocery-component';
 
@@ -18,7 +19,7 @@ const RenderItem = ({ data, id }) => {
   return (
     <Fragment>
       <Panel header={data.department} key={id}>
-        <IngredientList ingredients={data.ingredients} />
+        <IngredientList items={data.ingredients} />
       </Panel>
     </Fragment>
   )
