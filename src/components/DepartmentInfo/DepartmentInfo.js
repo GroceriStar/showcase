@@ -3,9 +3,6 @@ import React, {
 } from 'react'
 
 import IngredientList from '../Ingredients/IngredientList'
-import {
-  Ingredients2
-} from '../Ingredients/Ingredients2'
 
 import shortid from 'shortid'
 
@@ -15,6 +12,8 @@ import shortid from 'shortid'
 // @TODO i think we should change the name, because i think we have a list item, that store departments information.
 // it should explain things better, but i'm not sure if i have a better name for it. Maybe FullDepartmentData or DepartmentDataFull
 // and we'll be able to have a short department data as well, if we need it
+
+// @TODO check this component. i think it generates warning. but it's hard to catch it, due to our not perfect structure that we have here
 class DepartmentInfo extends Component {
 
   render() {
@@ -24,9 +23,6 @@ class DepartmentInfo extends Component {
           {this.props.department}
         </h2>
         <IngredientList items={this.props.ingredients} />
-
-        {/*<Ingredients2 data={this.props.ingredients} />*/}
-
 
       </li>
     );

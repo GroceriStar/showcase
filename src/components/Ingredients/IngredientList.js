@@ -9,12 +9,13 @@ import { List, DefaultList } from '@groceristar/grocery-component';
 
 // maybe IngredientsList later we should check
 // if we have an ingredient id or we generate key by using shortid
-const IngredientList = ({ ingredients }) => (
-  <Fragment>
-    <DefaultList items={ingredients} />
-  </Fragment>
-
-);
+const IngredientList = ({ items }) => {
+  return (
+    <Fragment>
+      <DefaultList items={items} />
+    </Fragment>
+  )
+}
 
 
 export default IngredientList
