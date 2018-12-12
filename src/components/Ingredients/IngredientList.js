@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { List, DefaultList } from '@groceristar/grocery-component';
+import { DefaultList } from '@groceristar/grocery-component';
 // @TODO i think we have here an Ingredients List.
 
 // @TODO discuss using some of list components as

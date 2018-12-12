@@ -1,9 +1,8 @@
 import React, { Component, Fragment } from 'react'
-import _ from 'lodash'
+// import _ from 'lodash'
 
 import {
-  getGroceryCollection,
-  getAllGrocery
+  getGroceryCollection
 } from "./../selectors/selector.js"
 
 import GroceryList from '../components/GroceryList/GroceryList'
@@ -19,7 +18,7 @@ class GroceriesView extends Component {
     // const data = this.state.data.filter(
     //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
     // );
-    
+
     return (
       <Fragment>
         <GroceryList items={collection} />
