@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import shortid from "shortid";
+import React, { Component, Fragment } from "react";
+// import shortid from "shortid";
 
+import { List, DefaultList } from '@groceristar/grocery-component';
 // @TODO i think we have here an Ingredients List.
 
 // @TODO discuss using some of list components as
@@ -9,14 +10,11 @@ import shortid from "shortid";
 
 // maybe IngredientsList later we should check
 // if we have an ingredient id or we generate key by using shortid
-const IngredientList = ({ ingredients }) => (
-  <ul>
-    {ingredients.map(ingredient => (
-      <li key={shortid.generate()}>
-        {ingredient}
-      </li>
-    ))}
-  </ul>
+const IngredientList = ({ ingredients }) => (  
+  <Fragment>
+    <DefaultList items={ingredients} />
+  </Fragment>
+
 );
 
 

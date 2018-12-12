@@ -19,7 +19,6 @@ const Wrapper = ({ children }) => (
 );
 
 const RenderItem = ({ data, id }) => {
-
   return (
     <Fragment>
 
@@ -29,10 +28,7 @@ const RenderItem = ({ data, id }) => {
         ingredients={data.ingredients}
       />
     </Fragment>
-
-
   )
-
 }
 
 const DepartmentList = ({ items }) => (
