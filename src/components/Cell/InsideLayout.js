@@ -34,6 +34,11 @@ class InsideLayout extends Component {
           background: '#fff',
           color:'red', //padding: 0
       }}>
+
+
+
+
+      
           Header - {this.props.name}
 
           {/*
@@ -64,8 +69,17 @@ class InsideLayout extends Component {
             onClick={this.props.toggle}
           />
 
+
+
+
+
+
         </Header>
         <Content style={{ margin: '24px 16px 0' }}>
+
+
+
+
 
 
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
@@ -75,8 +89,18 @@ class InsideLayout extends Component {
             <RenderGrocery name={this.props.name} />
           </div>
 
+
+
+
+
         </Content>
         <Footer style={{ textAlign: 'center' }}>
+
+
+
+
+
+
 
 
           {/* Should we really pass the name? or this is just because we don't have a propper ids here?
@@ -89,6 +113,17 @@ class InsideLayout extends Component {
             href={getLink(this.props.id)}>
             View "{this.props.name}"
           </Button>
+
+
+
+
+
+
+
+
+
+
+
 
         </Footer>
       </Layout>

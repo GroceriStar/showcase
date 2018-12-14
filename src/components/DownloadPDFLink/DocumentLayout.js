@@ -1,9 +1,8 @@
-import { Text,
-   Page,
-   View,
-   Document,
-   // StyleSheet,
-   // PDFDownloadLink
+import {
+  Text,
+  Page,
+  View,
+  Document
 } from '@react-pdf/renderer';
 
 import styles from './styles'
