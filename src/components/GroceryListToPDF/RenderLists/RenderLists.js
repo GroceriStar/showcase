@@ -5,6 +5,8 @@ import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import List, { Item } from '../List/List';
 
 import { getFullGrocery } from "../../selectors/selector";
+
+// replace with uuid
 import shortid from 'shortid';
 
 // This component is related to creating PDF document
