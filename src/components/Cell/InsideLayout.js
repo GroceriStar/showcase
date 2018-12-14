@@ -4,7 +4,7 @@ import React, {
 // import { Link } from 'react-router-dom'
 
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
-import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
+import  GeneratePDFButton  from '../GeneratePDFButton/GeneratePDFButton'
 
 import { Button, Icon, Layout } from 'antd'
 
@@ -82,7 +82,7 @@ class InsideLayout extends Component {
           {/* Should we really pass the name? or this is just because we don't have a propper ids here?
           If yes, then we should make it clear, so later we'll be able to */}
 
-          <GeneratePDF groceryName={this.props.name} />
+          <GeneratePDFButton groceryName={this.props.name} />
           <br />
 
           <Button type="primary" icon="right" size="large"
