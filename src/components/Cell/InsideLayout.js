@@ -3,17 +3,19 @@ import React, {
 } from 'react'
 // import { Link } from 'react-router-dom'
 
-import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
-// import  GeneratePDFButton  from '../GeneratePDFButton/GeneratePDFButton'
+import { Button, Icon, Layout, Row, Col } from 'antd'
 
+import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
 import { GeneratePDFButton } from '../GroceryListToPDF'
 
-import { Button, Icon, Layout } from 'antd'
+
+import { getFullGrocery } from '../../selectors/selector';
+
 
 const { Header, Footer, Content } = Layout;
 
-
-function getLink(id){
+// @TODO replace this with a links, related to react-router
+function getLink( id ){
   return '/grocery/'+ id;
 }
 
@@ -30,6 +32,9 @@ class InsideLayout extends Component {
   // }
 
   render() {
+
+    const { name, toggle, id } = this.props;
+
     return (
       <Layout>
         <Header style={{
@@ -38,19 +43,30 @@ class InsideLayout extends Component {
       }}>
 
 
+        <Row>
+          <Col span={20}>
+
+                    {name}
+          </Col>
+          <Col span={4}>
+
+          <Icon
+            className="tile-close"
+            type="close"
+            style={{ cursor: "pointer" }}
+            onClick={toggle}
+          />
+
+          </Col>
+        </Row>
 
 
-
-          Header - {this.props.name}
 
 
 
           {/*
 
-            // <Row>
-              <Col span={20}></Col>
-              <Col span={4}></Col>
-            // </Row>
+
 
           <div className="close" style={{ cursor: "pointer" }} onClick={toggle}>
             <Icon type="close" />
@@ -72,12 +88,7 @@ class InsideLayout extends Component {
             }
             */}
 
-          <Icon
-            className="tile-close"
-            type="close"
-            style={{ cursor: "pointer" }}
-            onClick={this.props.toggle}
-          />
+
 
 
 
@@ -96,7 +107,7 @@ class InsideLayout extends Component {
 
           {/* Should we really pass the name? or this is just because we don't have a propper ids here?
           If yes, then we should make it clear, so later we'll be able to */}
-            <RenderGrocery name={this.props.name} />
+            <RenderGrocery name={name} items={getFullGrocery(name)} />
           </div>
 
 
@@ -116,12 +127,12 @@ class InsideLayout extends Component {
           {/* Should we really pass the name? or this is just because we don't have a propper ids here?
           If yes, then we should make it clear, so later we'll be able to */}
 
-          <GeneratePDFButton name={this.props.name} />
+          <GeneratePDFButton name={name} />
           <br />
 
           <Button type="primary" icon="right" size="large"
-            href={getLink(this.props.id)}>
-            View "{this.props.name}"
+            href={getLink(id)}>
+            View "{name}"
           </Button>
 
 
