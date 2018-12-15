@@ -31,7 +31,7 @@ class Item extends Component {
   }
 }
 // @TODO i think we can use this.props.key, but on parent component
-// we can pass a shortid.generate
+// we can pass a uuidv1
 // so our small component will be clean and don't require changes, when
 // we'll connect data and id from database
 

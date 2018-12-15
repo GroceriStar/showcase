@@ -21,7 +21,7 @@ class RenderGrocery extends Component {
               <DepartmentInfo
                 department={item.department}
                 ingredients={item.ingredients}
-                key={shortid.generate()}
+                key={uuidv1()}
               />
             ))}
         </ul>

@@ -22,13 +22,13 @@ class Item extends Component {
           {this.props.department}
         </h2>
         <IngredientList items={this.props.ingredients} />
-        
+
       </li>
     );
   }
 }
 // @TODO i think we can use this.props.key, but on parent component
-// we can pass a shortid.generate
+// we can pass a uuidv1
 // so our small component will be clean and don't require changes, when
 // we'll connect it to database
 

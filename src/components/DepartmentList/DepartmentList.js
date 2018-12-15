@@ -9,7 +9,7 @@ import { List } from '@groceristar/grocery-component';
 // but later i want to make it more extendable, so it can handle a different layouts that we'll need to have.
 
 // <Item
-//   key={shortid.generate()}
+//   key={uuidv1()}
 //   department={item.department}
 //   ingredients={item.ingredients}
 // />

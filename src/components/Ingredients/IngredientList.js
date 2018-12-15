@@ -8,7 +8,7 @@ import { DefaultList } from '@groceristar/grocery-component';
 // https://www.npmjs.com/package/react-list
 
 // maybe IngredientsList later we should check
-// if we have an ingredient id or we generate key by using shortid
+// if we have an ingredient id or we generate key by using import uuidv1 from 'uuid/v1';
 const IngredientList = ({ items }) => {
   return (
     <Fragment>

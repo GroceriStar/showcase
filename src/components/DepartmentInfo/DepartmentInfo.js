@@ -4,7 +4,7 @@ import React, {
 
 import IngredientList from '../Ingredients/IngredientList'
 
-import shortid from 'shortid'
+// import uuidv1 from 'uuid/v1';
 
 // This component are layout for displaying data inside of the department list
 // We replacing it with DepartmentList -> Item.js
@@ -29,7 +29,7 @@ class DepartmentInfo extends Component {
   }
 }
 // @TODO i think we can use this.props.key, but on parent component
-// we can pass a shortid.generate
+// we can pass a uuidv1
 // so our small component will be clean and don't require changes, when
 // we'll connect it to database
 

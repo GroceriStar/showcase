@@ -8,8 +8,7 @@ import { getFullGrocery } from "../../../selectors/selector";
 
 
 // import { getFullGrocery } from "../../selectors/selector";
-// replace with uuid
-import shortid from 'shortid';
+
 import uuidv1 from 'uuid/v1';
 // This component is related to creating PDF document
 
@@ -33,7 +32,7 @@ const Lists = ({ department, ingredients }) => (
       {department}
     </Text>
     <List>
-      {ingredients.map((ingredient) => <Item key={shortid.generate()}>{ingredient}</Item>)}
+      {ingredients.map((ingredient) => <Item key={uuidv1()}>{ingredient}</Item>)}
     </List>
   </View>
 );
