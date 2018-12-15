@@ -1,9 +1,5 @@
 import React, { Component, Fragment } from 'react';
 
-// import { getGroceryCollection, getGroceryById } from "./../selectors/selector.js";
-
-
-
 // if we want to use antd styles we should include them
 import "antd/dist/antd.css";
 
