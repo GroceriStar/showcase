@@ -4,9 +4,7 @@ import React, {
 // import { Link } from 'react-router-dom'
 
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
-// import  GeneratePDFButton  from '../GeneratePDFButton/GeneratePDFButton'
-
-import { GeneratePDFButton } from '../GroceryListToPDF'
+import  GeneratePDFButton  from '../GeneratePDFButton/GeneratePDFButton'
 
 import { Button, Icon, Layout } from 'antd'
 
@@ -43,15 +41,7 @@ class InsideLayout extends Component {
 
           Header - {this.props.name}
 
-
-
           {/*
-
-            // <Row>
-              <Col span={20}></Col>
-              <Col span={4}></Col>
-            // </Row>
-
           <div className="close" style={{ cursor: "pointer" }} onClick={toggle}>
             <Icon type="close" />
           </div>

@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import List, { Item } from '../List/List';
 
-import { getFullGrocery } from "../../selectors/selector";
+import { getFullGrocery } from "../../../selectors/selector";
 
+
+// import { getFullGrocery } from "../../selectors/selector";
 // replace with uuid
 import shortid from 'shortid';
-
+import uuidv1 from 'uuid/v1';
 // This component is related to creating PDF document
 
 
@@ -41,7 +43,7 @@ const RenderLists = (props) => (
   <View>
     {getFullGrocery(props.groceryName2).map(item => (
       <Lists
-        key={shortid.generate()}
+        key={uuidv1()}
         department={item.department}
         ingredients={item.ingredients} />
     ))}

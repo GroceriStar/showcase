@@ -3,9 +3,15 @@ import {
    PDFDownloadLink
 } from '@react-pdf/renderer';
 
+
+import { Button } from 'antd';
+
+
+import { DocumentLayout, RenderLists }  from '../index';
+
 import styles from './styles'
 
-import RenderLists from '../RenderLists/RenderLists';
+// import RenderLists from '../RenderLists/RenderLists';
 
 // @TODO rename this component name.
 // because it's quite similar to component from @react-pdf - see above
@@ -21,6 +27,7 @@ class DownloadPDFLink extends Component {
           type="primary"
           icon="download"
           size="large">
+
            <PDFDownloadLink
              document={DocumentLayout(styles, this.props.name)}
              fileName={this.props.name + ".pdf"}>
@@ -28,6 +35,7 @@ class DownloadPDFLink extends Component {
                  loading ? 'Loading document...' : 'Download now!'
                )}
            </PDFDownloadLink>
+           
        </Button>
     );
   }

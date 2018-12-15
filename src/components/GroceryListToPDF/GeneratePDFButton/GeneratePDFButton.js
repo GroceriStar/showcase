@@ -1,8 +1,11 @@
 import React from 'react';
 // Create styles
 
-import DownloadPDFLink from '../DownloadPDFLink/DownloadPDFLink';
 import { Button } from 'antd';
+
+// import DownloadPDFLink from '../DownloadPDFLink/DownloadPDFLink';
+import { DownloadPDFLink } from '../index'
+
 
 class GeneratePDFButton extends React.Component {
 
