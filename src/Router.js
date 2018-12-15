@@ -5,12 +5,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomeView from './views/HomeView'
 
 import GroceriesView from './views/GroceriesView'
-// import GroceryView from './views/GroceryView'
+import GroceryView from './views/GroceryView'
 import ManageGroceryView from './views/ManageGroceryView'
 
 
 // @TODO create a separated view for displaying grocery and update it here.
-import RenderGroceryById from './components/RenderGroceryById/RenderGroceryById';
+// import RenderGroceryById from './components/RenderGroceryById/RenderGroceryById';
 
 import AntdLayout from './layouts/GroceryList/AntdLayout'
 
@@ -22,7 +22,7 @@ class Router extends Component {
 
           <Route path="/" exact component={HomeView} />
 
-          <Route path="/grocery/:id" component={RenderGroceryById} />
+          <Route path="/grocery/:id" component={GroceryView} />
 
           <Route path="/design/grocery/:id" component={AntdLayout} />
 
