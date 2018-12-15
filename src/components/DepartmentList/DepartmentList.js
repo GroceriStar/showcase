@@ -33,11 +33,13 @@ const RenderItem = ({ data, id }) => {
 
 const DepartmentList = ({ items }) => (
   <Wrapper>
+  {items &&
     <List items={items}>
       {(data) =>
         <RenderItem data={data} key={uuidv1()} id={uuidv1()} />
       }
       </List>
+  }
   </Wrapper>
 );
 

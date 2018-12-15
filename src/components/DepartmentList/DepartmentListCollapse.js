@@ -16,6 +16,7 @@ const Wrapper = ({ children }) => (
 );
 
 const RenderItem = ({ data, id }) => {
+  // console.log(data.ingredients);
   return (
     <Fragment>
       <Panel header={data.department} key={id}>

@@ -9,10 +9,12 @@ import { DefaultList } from '@groceristar/grocery-component';
 
 // maybe IngredientsList later we should check
 // if we have an ingredient id or we generate key by using import uuidv1 from 'uuid/v1';
+
+// later this checking will be completed at main list object
 const IngredientList = ({ items }) => {
   return (
     <Fragment>
-      <DefaultList items={items} />
+      {items && <DefaultList items={items} />}      
     </Fragment>
   )
 }
