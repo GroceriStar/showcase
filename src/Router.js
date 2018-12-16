@@ -10,6 +10,8 @@ import ManageGroceryView from './views/ManageGroceryView'
 
 import AntdLayout from './layouts/GroceryList/AntdLayout'
 
+import CleanLayout from './layouts/GroceryList/CleanLayout'
+
 class Router extends Component {
   render(){
     return (
