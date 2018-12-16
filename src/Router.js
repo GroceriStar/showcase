@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-// import App from './App';
 import HomeView from './views/HomeView'
 
 import GroceriesView from './views/GroceriesView'
 import GroceryView from './views/GroceryView'
 import ManageGroceryView from './views/ManageGroceryView'
 
-
-// @TODO create a separated view for displaying grocery and update it here.
-// import RenderGroceryById from './components/RenderGroceryById/RenderGroceryById';
 
 import AntdLayout from './layouts/GroceryList/AntdLayout'
 
