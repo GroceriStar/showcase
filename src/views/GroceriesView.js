@@ -63,7 +63,7 @@ class GroceriesView extends Component {
     return (
       <Fragment>
 
-    <GroceryList items={collection} />
+      <GroceryList items={collection} />
       {/*}
         <Button type="primary" onClick={this.showModal}>
            Open Modal that we want to compare with previous version
