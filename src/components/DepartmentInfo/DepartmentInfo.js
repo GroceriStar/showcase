@@ -2,7 +2,8 @@ import React, {
   Component
 } from 'react'
 
-import IngredientList from '../Ingredients/IngredientList'
+
+import { IngredientList } from '@groceristar/grocery-component'
 
 // import uuidv1 from 'uuid/v1';
 

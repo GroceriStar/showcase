@@ -5,8 +5,7 @@ import {
   getGroceryCollection
 } from "./../selectors/selector.js"
 
-import GroceryList from '../components/GroceryList/GroceryList'
-
+import { GroceryList } from '@groceristar/grocery-component'
 
 class GroceriesView extends Component {
 

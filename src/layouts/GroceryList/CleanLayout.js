@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 // if we want to use antd styles we should include them
 // import "antd/dist/antd.css";
 
-import DepartmentList from '../components/DepartmentList/DepartmentList'
+import { DepartmentList } from '@groceristar/grocery-component'
 // import DepartmentListCollapse from '../components/DepartmentList/DepartmentListCollapse'
 
 
@@ -11,7 +11,7 @@ import {
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId
-} from "./../selectors/selector";
+} from "../../selectors/selector";
 
 class CleanLayout extends Component {
 

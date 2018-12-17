@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 // import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
-// import DepartmentList from '../DepartmentList/DepartmentList';
+
+// import { DepartmentList } from '@groceristar/grocery-component'
 import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
 
 
