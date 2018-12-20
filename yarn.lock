@@ -873,9 +873,9 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@react-pdf/png-js/-/png-js-1.0.0.tgz#00fcb969dca4ce82a0a7673413ade039e47b361e"
 
-"@react-pdf/renderer@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0.tgz#4e638f7fd9a8a3b8ea812532324adbfe35657f0f"
+"@react-pdf/renderer@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.1.0.tgz#2f09abb2ef26b419e9ddd6f014e368f7e9516725"
   dependencies:
     "@react-pdf/fontkit" "^1.13.0"
     "@react-pdf/pdfkit" "^1.2.0"
@@ -2557,13 +2557,6 @@ create-react-class@^15.5.2, create-react-class@^15.5.3, create-react-class@^15.6
 create-react-context@0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.2.tgz#9836542f9aaa22868cd7d4a6f82667df38019dca"
-  dependencies:
-    fbjs "^0.8.0"
-    gud "^1.0.0"
-
-create-react-context@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
   dependencies:
     fbjs "^0.8.0"
     gud "^1.0.0"
@@ -8145,7 +8138,7 @@ react-dev-utils@^6.1.1:
     strip-ansi "4.0.0"
     text-table "0.2.0"
 
-react-dom@^16.4.2, react-dom@^16.6.3:
+react-dom@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.6.3.tgz#8fa7ba6883c85211b8da2d0efeffc9d3825cccc0"
   dependencies:
@@ -8299,7 +8292,7 @@ react-test-renderer@^16.0.0-0:
     react-is "^16.5.2"
     schedule "^0.5.0"
 
-react@^16.4.1, react@^16.4.2, react@^16.6.3:
+react@^16.4.1, react@^16.6.3:
   version "16.6.3"
   resolved "https://registry.yarnpkg.com/react/-/react-16.6.3.tgz#25d77c91911d6bbdd23db41e70fb094cc1e0871c"
   dependencies:
@@ -8620,16 +8613,6 @@ restructure@^0.5.3:
 ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
-
-reworm@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/reworm/-/reworm-2.2.1.tgz#27e7cdf6b2161bf3a7c22480381627dc4bbfa4be"
-  dependencies:
-    create-react-context "^0.2.3"
-    fast-deep-equal "^2.0.1"
-    react "^16.4.2"
-    react-dom "^16.4.2"
-    ulid "^2.3.0"
 
 rgb-regex@^1.0.1:
   version "1.0.1"
@@ -9594,10 +9577,6 @@ uglifyjs-webpack-plugin@^1.2.4:
     uglify-es "^3.3.4"
     webpack-sources "^1.1.0"
     worker-farm "^1.5.2"
-
-ulid@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/ulid/-/ulid-2.3.0.tgz#93063522771a9774121a84d126ecd3eb9804071f"
 
 underscore@~1.4.4:
   version "1.4.4"
