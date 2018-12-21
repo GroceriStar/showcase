@@ -7,8 +7,8 @@
   "private": true,
   "dependencies": {
     "@groceristar/groceristar-fetch": "^1.1.33",
-    "@groceristar/grocery-component": "^1.0.4",
-    "@react-pdf/renderer": "^1.0.0",
+    "@groceristar/grocery-component": "^1.0.5",
+    "@react-pdf/renderer": "^1.1.0",
     "antd": "^3.11.2",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
@@ -17,10 +17,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
-    "reworm": "^2.2.1",
-    "shortid": "^2.2.14",
-    "uuid": "^3.3.2",
-    "yoga-layout": "^1.9.3"
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

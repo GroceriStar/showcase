@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import List, { Item } from '../List/List';
 
-import { getFullGrocery } from "../../selectors/selector";
-import shortid from 'shortid';
+// @TODO move this selector away from this not a container like component.
+import { getFullGrocery } from "../../../selectors/selector";
 
+
+import uuidv1 from 'uuid/v1';
 // This component is related to creating PDF document
 
 
@@ -29,17 +31,18 @@ const Lists = ({ department, ingredients }) => (
       {department}
     </Text>
     <List>
-      {ingredients.map((ingredient) => <Item key={shortid.generate()}>{ingredient}</Item>)}
+      {ingredients.map((ingredient) => <Item key={uuidv1()}>{ingredient}</Item>)}
     </List>
   </View>
 );
 
-
+// @TODO this is a bad situation where we have a passing data as it is - we use names, not id at not a main container - component
+// and this will be hardly to catch later
 const RenderLists = (props) => (
   <View>
     {getFullGrocery(props.groceryName2).map(item => (
       <Lists
-        key={shortid.generate()}
+        key={uuidv1()}
         department={item.department}
         ingredients={item.ingredients} />
     ))}

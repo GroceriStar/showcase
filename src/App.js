@@ -2,8 +2,10 @@ import React, { Component } from "react";
 
 
 // @TODO maybe we should an update and put here a router instead of HomeView?
-import HomeView from "./views/HomeView";
 
+// import HomeView from "./views/HomeView";
+
+import Router from './Router';
 
 
 
@@ -24,8 +26,8 @@ class App extends Component {
     return (
 
       <Fragment>
-        
-        <HomeView />
+
+        <Router />
       </Fragment>
 
     );

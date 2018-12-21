@@ -4,16 +4,16 @@ import React, { Component, Fragment } from 'react';
 // import "antd/dist/antd.css";
 
 import { DepartmentList } from '@groceristar/grocery-component'
-import DepartmentListCollapse from '../components/DepartmentList/DepartmentListCollapse'
+// import DepartmentListCollapse from '../components/DepartmentList/DepartmentListCollapse'
 
 
 import {
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId
-} from "./../selectors/selector";
+} from "../../selectors/selector";
 
-class GroceryView extends Component {
+class CleanLayout extends Component {
 
 
   render() {
@@ -43,11 +43,10 @@ class GroceryView extends Component {
 
     return (
       <Fragment>
-        {/*<DepartmentList items={groceryWithDepAndIng} />*/ }
-        <DepartmentListCollapse items={groceryWithDepAndIng} />
+        <DepartmentList items={groceryWithDepAndIng} />
       </Fragment>
     );
   }
 }
 
-export default GroceryView;
+export default CleanLayout;

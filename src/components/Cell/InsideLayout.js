@@ -3,15 +3,19 @@ import React, {
 } from 'react'
 // import { Link } from 'react-router-dom'
 
-import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
-import  GeneratePDF  from '../GeneratePDF/GeneratePDF'
+import { Button, Icon, Layout, Row, Col } from 'antd'
 
-import { Button, Icon, Layout } from 'antd'
+import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
+import { GeneratePDFButton } from '../GroceryListToPDF'
+
+
+import { getFullGrocery } from '../../selectors/selector';
+
 
 const { Header, Footer, Content } = Layout;
 
-
-function getLink(id){
+// @TODO replace this with a links, related to react-router
+function getLink( id ){
   return '/grocery/'+ id;
 }
 
@@ -28,67 +32,78 @@ class InsideLayout extends Component {
   // }
 
   render() {
+
+    const { name, toggle, id } = this.props;
+
     return (
       <Layout>
         <Header style={{
-          background: '#fff',
-          color:'red', //padding: 0
+          // background: '#fff',
+          // color:'red',
+          //padding: 0
+          fontSize: '20px'
       }}>
-          Header - {this.props.name}
-
-          {/*
-          <div className="close" style={{ cursor: "pointer" }} onClick={toggle}>
-            <Icon type="close" />
-          </div>
-          */}
 
 
-          {/* i think this styles maybe unnecessary. but i'm not sure right now
-            .tile-close {
-              font-size: 18px;
-              line-height: 64px;
-              padding: 0 24px;
-              cursor: pointer;
-              transition: color .3s;
-            }
+          <Row>
+            <Col span={20}>
 
-            tile-close:hover {
-              color: #1890ff; // or other color
-            }
-            */}
+                      "{name}" Template
+            </Col>
+            <Col span={4}>
 
-          <Icon
-            className="tile-close"
-            type="close"
-            style={{ cursor: "pointer" }}
-            onClick={this.props.toggle}
-          />
+              <Icon
+                className="tile-close"
+                type="close"
+                style={{ cursor: "pointer", transition: "color .3s" }}
+                onClick={toggle}
+              />
+
+            </Col>
+          </Row>
 
         </Header>
-        <Content style={{ margin: '24px 16px 0' }}>
+        <Content style={{ margin: '24px 16px 0', fontSize: '14px' }}>
 
 
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-
-          {/* Should we really pass the name? or this is just because we don't have a propper ids here?
-          If yes, then we should make it clear, so later we'll be able to */}
-            <RenderGrocery name={this.props.name} />
+            <RenderGrocery items={getFullGrocery(name)} />
           </div>
 
         </Content>
         <Footer style={{ textAlign: 'center' }}>
 
 
-          {/* Should we really pass the name? or this is just because we don't have a propper ids here?
-          If yes, then we should make it clear, so later we'll be able to */}
 
-          <GeneratePDF groceryName={this.props.name} />
+
+
+
+
+
+          {/* Should we really pass the name? or this is just because we don't have a propper ids here?
+          If yes, then we should make it clear, so later we'll be able to
+          @TODO bad layout here - we need to overmake it as possible - right now it's just working*/}
+
+
+
+          <GeneratePDFButton name={name} />
           <br />
 
           <Button type="primary" icon="right" size="large"
-            href={getLink(this.props.id)}>
-            View "{this.props.name}"
+            href={getLink(id)}>
+            View "{name}"
           </Button>
+
+
+
+
+
+
+
+
+
+
+
 
         </Footer>
       </Layout>
