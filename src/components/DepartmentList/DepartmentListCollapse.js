@@ -15,11 +15,13 @@ const Wrapper = ({ children }) => (
 );
 
 const RenderItem = ({ data, id }) => {
-  // console.log(data.ingredients);
+  // console.log(id);
   return (
     <Fragment>
       <Panel header={data.department} key={id}>
-        <IngredientList items={data.ingredients} />
+        <p>
+          <IngredientList items={data.ingredients} />
+        </p>
       </Panel>
     </Fragment>
   )
@@ -31,7 +33,7 @@ const DepartmentListCollapse = ({ items }) => (
       {(data) =>
         <RenderItem data={data} key={uuidv1()} id={uuidv1()} />
       }
-      </List>
+    </List>
   </Wrapper>
 );
 

@@ -10,7 +10,7 @@ import { DepartmentList } from '@groceristar/grocery-component'
 import {
   getGroceryById,
   getFullGrocery,
-  getGroceryDataFromId
+  // getGroceryDataFromId
 } from "../../selectors/selector";
 
 class CleanLayout extends Component {

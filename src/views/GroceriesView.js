@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 // import _ from 'lodash'
-import { Modal, Button } from 'antd';
+// import { Modal, Button } from 'antd';
 
 
 import {
@@ -63,7 +63,7 @@ class GroceriesView extends Component {
     return (
       <Fragment>
 
-      <GroceryList items={collection} />
+        <GroceryList items={collection} />
       {/*}
         <Button type="primary" onClick={this.showModal}>
            Open Modal that we want to compare with previous version
