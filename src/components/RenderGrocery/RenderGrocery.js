@@ -6,7 +6,11 @@ import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
 
 
 
+import { Collapse } from 'antd';
+import uuidv1 from 'uuid/v1';
+import {  IngredientList } from '@groceristar/grocery-component';
 
+const Panel = Collapse.Panel;
 // Looks like we don't use this component. Maybe we shall delete it soon
 
 class RenderGrocery extends Component {
@@ -17,7 +21,20 @@ class RenderGrocery extends Component {
     // console.log(items)
     return (
       <Fragment>
-        <DepartmentListCollapse items={items} />
+        { /* DepartmentListCollapse items={items} /> */ }
+
+
+        <Collapse accordion>
+
+          {items && items.map( (value) =>
+             // console.log(value)
+             (<Panel header={value.department} key={uuidv1()} >
+
+               <IngredientList items={value.ingredients} />
+             </Panel>)
+           )}
+
+        </Collapse>
 
       </Fragment>
     );

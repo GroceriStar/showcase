@@ -14,7 +14,7 @@ import {
 } from "./../selectors/selector";
 
 
-import { List } from '@groceristar/grocery-component';
+import { List, IngredientList } from '@groceristar/grocery-component';
 import uuidv1 from 'uuid/v1';
 
 // import { DepartmentList } from '@groceristar/grocery-component'
@@ -97,16 +97,19 @@ class GroceryView extends Component {
             */}
 
             <Collapse accordion>
-             <Panel header="This is panel header 1" key="1">
-               <p>{text}</p>
-             </Panel>
-             <Panel header="This is panel header 2" key="2">
-               <p>{text}</p>
-             </Panel>
-             <Panel header="This is panel header 3" key="3" >
-               <p>{text}</p>
-             </Panel>
 
+              {groceryWithDepAndIng && groceryWithDepAndIng.map( (value) =>
+                 // console.log(value)
+                 (<Panel header={value.department} key={uuidv1()} >
+                   
+                   <IngredientList items={value.ingredients} />
+                 </Panel>)
+               )}
+
+
+
+
+             {/*
                <List items={['pidor', 'olen', 'rabotai']}>
 
                  {(data) =>
@@ -124,7 +127,7 @@ class GroceryView extends Component {
                   </Panel>)
                 )}
                 </Fragment>
-
+              */}
             </Collapse>
 
           </Content>
