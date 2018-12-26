@@ -14,27 +14,50 @@ const Wrapper = ({ children }) => (
   <Collapse accordion>{children}</Collapse>
 );
 
+// <Fragment>
+//   <Panel header={data.department} key={id}>
+//     <p>
+//       <IngredientList items={data.ingredients} />
+//     </p>
+//   </Panel>
+// </Fragment>
+
 const RenderItem = ({ data, id }) => {
   // console.log(id);
   return (
-    <Fragment>
+
       <Panel header={data.department} key={id}>
-        <p>
+
           <IngredientList items={data.ingredients} />
-        </p>
+        
       </Panel>
-    </Fragment>
+
   )
 }
 
 const DepartmentListCollapse = ({ items }) => (
   <Wrapper>
-    <List items={items}>
-      {(data) =>
-        <RenderItem data={data} key={uuidv1()} id={uuidv1()} />
-      }
-    </List>
+
+  { items && items.map( (value) => {
+      return (
+        <RenderItem data={value} key={uuidv1()} id={uuidv1()} />
+      )
+  }
+
+  )}
+
+
+
+
+
+
   </Wrapper>
 );
+
+// <List items={items}>
+//   {(data) =>
+//     <RenderItem data={data} key={uuidv1()} id={uuidv1()} />
+//   }
+// </List>
 
 export default DepartmentListCollapse;

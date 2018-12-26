@@ -82,6 +82,8 @@ class GroceryView extends Component {
             Header - {groceryName}
           </Header>
           <Content>
+
+
             {/*
             <Collapse accordion>
              <Panel header="This is panel header 1" key="1">
@@ -96,12 +98,16 @@ class GroceryView extends Component {
             </Collapse>
             */}
 
+
+            
+
+
             <Collapse accordion>
 
               {groceryWithDepAndIng && groceryWithDepAndIng.map( (value) =>
                  // console.log(value)
                  (<Panel header={value.department} key={uuidv1()} >
-                   
+
                    <IngredientList items={value.ingredients} />
                  </Panel>)
                )}
