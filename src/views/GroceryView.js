@@ -99,7 +99,7 @@ class GroceryView extends Component {
             */}
 
 
-            
+
 
 
             <Collapse accordion>
@@ -115,25 +115,8 @@ class GroceryView extends Component {
 
 
 
-             {/*
-               <List items={['pidor', 'olen', 'rabotai']}>
+             
 
-                 {(data) =>
-                   <Panel header="This is panel header 3" key={uuidv1()} >
-                     <p>{text}</p>
-                   </Panel>
-                 }
-
-               </List>
-               <Fragment>
-               {['pidor', 'olen', 'rabotai'] && ['pidor', 'olen', 'rabotai'].map( (value) =>
-                  // console.log(value)
-                  (<Panel header="This is panel header 3" key={uuidv1()} >
-                    <p>{text}</p>
-                  </Panel>)
-                )}
-                </Fragment>
-              */}
             </Collapse>
 
           </Content>
