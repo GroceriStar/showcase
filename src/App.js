@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 
 // @TODO maybe we should an update and put here a router instead of HomeView?
