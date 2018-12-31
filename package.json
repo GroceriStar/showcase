@@ -8,7 +8,7 @@
   "dependencies": {
     "@groceristar/groceristar-fetch": "^1.1.33",
     "@groceristar/grocery-component": "^1.0.6",
-    "@react-pdf/renderer": "^1.1.0",
+    "@react-pdf/renderer": "^1.1.1",
     "antd": "^3.11.6",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
