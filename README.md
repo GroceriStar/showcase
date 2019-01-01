@@ -18,7 +18,7 @@ Stretch goals:
 - [ ] install and connect Raven at index.js
 - [ ] adjust logic of envconfig and try to connect to our local/shared servers
 - [ ] make first axios calls and be happy to receive json results
-- [ ] connect to our simple fake-api that i've created...
+- [ ] connect to our simple [fake-api](https://github.com/GroceriStar/fake-api) that i've created...
 
 ---
 
