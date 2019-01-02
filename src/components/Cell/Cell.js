@@ -4,6 +4,13 @@ import { Slug, Fade } from 'mauerwerk'
 
 import InsideLayout from './InsideLayout';
 
+// @TODO can we avoid passing css variable? i think yep
+// can we avoid passing a maximized variable - we should explore this
+const styles = {
+  backgroundImage: css,
+  cursor: !maximized ? "pointer" : "auto"
+}
+
 const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
   <div
     className="cell"
@@ -15,7 +22,12 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
 
       <div className="details">
         <Slug delay={600}>
+
+          {/* {children()} ??????? */}
+
           <InsideLayout id={id} name={name} toggle={toggle}  />
+
+
         </Slug>
       </div>
     </Fade>
