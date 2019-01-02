@@ -9,6 +9,14 @@ import "antd/dist/antd.css";
 import "./../styles.css";
 
 
+// @TODO i want to have a separation.
+// right now to grid we're passing all stuff that we have for grocery lists,
+// but we only need major things like id and title, usually.
+// it's better to fetch additional data, related to one single list only when we open a tile...
+// it's also not necessary, becausee we're passing only id to InsideLayout component.
+// but what we should pass into InsideLayout it's also debatable. because we're overweight it right now
+
+
 import { getGroceryCollection } from "./../selectors/selector";
 
 
@@ -94,6 +102,9 @@ class HomeView extends Component {
           setHeight={this.setHeight}
         />
 
+
+
+
         <Grid
           className="grid"
           // Arbitrary data, should contain keys, possibly heights, etc.
@@ -101,7 +112,7 @@ class HomeView extends Component {
           // Key accessor, instructs grid on how to fet individual keys from the data set
           keys={d => d.name}
           // Can be a fixed value or an individual data accessor
-          heights={this.state.height ? d => d.height : 200}
+          heights={this.state.height ? d => d.height : 200} //@TODO update it L(
           // Number of columns
           columns={this.state.columns}
           // Space between elements

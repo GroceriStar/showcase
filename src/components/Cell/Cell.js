@@ -6,17 +6,26 @@ import InsideLayout from './InsideLayout';
 
 // @TODO can we avoid passing css variable? i think yep
 // can we avoid passing a maximized variable - we should explore this
-const styles = {
-  backgroundImage: css,
-  cursor: !maximized ? "pointer" : "auto"
-}
+// const styles = {
+//
+//   cursor: !maximized ? "pointer" : "auto"
+// }
 
 //@TODO as we passing a lot of stuff as props, maybe we should have a { attrib } = this.props?
+
+const Cell2 = ( props ) => {
+  console.log(props);
+  const { toggle, name, height, description, css, maximized, id } = props;
+  return (
+    <div>This is America </div>
+  )
+}
+
 
 const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
   <div
     className="cell"
-    style={styles}
+    style={{ backgroundImage: css, cursor: !maximized ? "pointer" : "auto" }}
     onClick={!maximized ? toggle : undefined}
   >
     <Fade show={maximized} delay={maximized ? 400 : 0}>
@@ -26,7 +35,7 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
         <Slug delay={600}>
 
           {/* {children()} ??????? */}
-
+          {/* instead of passing id to layout maybe we should call a function and pass stuff into it?????? */}
           <InsideLayout id={id} name={name} toggle={toggle}  />
 
 
