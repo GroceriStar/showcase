@@ -8,7 +8,7 @@ import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
 
 import { Collapse } from 'antd';
 import uuidv1 from 'uuid/v1';
-import {  IngredientList } from '@groceristar/grocery-component';
+import { IngredientList } from '@groceristar/grocery-component';
 
 const Panel = Collapse.Panel;
 // Looks like we don't use this component. Maybe we shall delete it soon

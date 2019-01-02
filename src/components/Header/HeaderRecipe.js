@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import {
   Button,
   Icon,
@@ -109,7 +108,7 @@ const Header = function({
       <span style={{ marginLeft: 15 }}>
 
       </span>
-
+      
       <Button type="primary">
         <Link to="/groceries">View collection without fanciness</Link>
       </Button>

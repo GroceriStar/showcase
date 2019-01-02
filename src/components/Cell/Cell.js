@@ -11,10 +11,12 @@ const styles = {
   cursor: !maximized ? "pointer" : "auto"
 }
 
+//@TODO as we passing a lot of stuff as props, maybe we should have a { attrib } = this.props?
+
 const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
   <div
     className="cell"
-    style={{ backgroundImage: css, cursor: !maximized ? "pointer" : "auto" }}
+    style={styles}
     onClick={!maximized ? toggle : undefined}
   >
     <Fade show={maximized} delay={maximized ? 400 : 0}>
@@ -45,6 +47,7 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
         {/* Maybe put an icon */}
       </div>
     </Fade>
+
   </div>
 );
 
