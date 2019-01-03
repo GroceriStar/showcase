@@ -5,7 +5,11 @@ import React, {
 
 import { Button, Icon, Layout, Row, Col } from 'antd'
 
+
 import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
+
+
+
 import { GeneratePDFButton } from '../GroceryListToPDF'
 
 
@@ -79,6 +83,9 @@ class InsideLayout extends Component {
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
 
             {/* @TODO the problem here - we need to connect selectors and pass `name` variable here. it's not cool and not- reusable */}
+
+            {/* old version: /* Should we really pass the name? or this is just because we don't have a propper ids here?
+            If yes, then we should make it clear, so later we'll be able to */ */}
             <RenderGrocery items={getFullGrocery(name)} />
 
 

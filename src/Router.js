@@ -23,6 +23,7 @@ class Router extends Component {
 
           <Route path="/" exact component={HomeView} />
           <Route path="/home2" exact component={HomeRecipeView} />
+          
 
           <Route path="/grocery/:id" component={GroceryView} />
 
