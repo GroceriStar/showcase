@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import HomeView from './views/HomeView'
+import HomeRecipeView from './views/HomeRecipeView'
 
 import GroceriesView from './views/GroceriesView'
 import GroceryView from './views/GroceryView'
@@ -12,6 +13,8 @@ import AntdLayout from './layouts/GroceryList/AntdLayout'
 
 import CleanLayout from './layouts/GroceryList/CleanLayout'
 
+
+
 class Router extends Component {
   render(){
     return (
@@ -19,6 +22,7 @@ class Router extends Component {
         <Switch>
 
           <Route path="/" exact component={HomeView} />
+          <Route path="/home2" exact component={HomeRecipeView} />
 
           <Route path="/grocery/:id" component={GroceryView} />
 

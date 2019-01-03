@@ -78,7 +78,7 @@ class InsideLayout extends Component {
 
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
 
-
+            {/* @TODO the problem here - we need to connect selectors and pass `name` variable here. it's not cool and not- reusable */}
             <RenderGrocery items={getFullGrocery(name)} />
 
 

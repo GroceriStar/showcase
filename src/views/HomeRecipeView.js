@@ -79,6 +79,23 @@ class HomeRecipeView extends Component {
 
 
 
+
+    {/*
+
+
+      <Cell {...data}
+        maximized={maximized}
+        toggle={toggle}
+        id={this.getId(data.name)}
+      >
+
+          <InsideLayout id={id} name={name} toggle={toggle}  />
+
+      </Cell>
+
+      */}
+
+
   render() {
 
     console.log( getGroceryCollection() )
@@ -132,20 +149,6 @@ class HomeRecipeView extends Component {
                 id={this.getId(data.name)}
               />
 
-              {/*
-
-
-                <Cell {...data}
-                  maximized={maximized}
-                  toggle={toggle}
-                  id={this.getId(data.name)}
-                >
-
-                    <InsideLayout id={id} name={name} toggle={toggle}  />
-
-                </Cell>
-
-                */}
           )}
         </Grid>
       </div>
@@ -154,4 +157,4 @@ class HomeRecipeView extends Component {
   }
 }
 
-export default HomeView;
+export default HomeRecipeView;
