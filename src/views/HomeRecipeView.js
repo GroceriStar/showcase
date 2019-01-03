@@ -80,7 +80,7 @@ class HomeRecipeView extends Component {
 
 
 
-    {/*
+  /*   {
 
 
       <Cell {...data}
@@ -93,7 +93,7 @@ class HomeRecipeView extends Component {
 
       </Cell>
 
-      */}
+      }*/
 
 
   render() {
