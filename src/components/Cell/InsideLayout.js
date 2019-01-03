@@ -13,6 +13,7 @@ import TileLayout from '../TileLayout/TileLayout'
 
 
 import { GeneratePDFButton } from '../GroceryListToPDF'
+import { GeneratePDFButton2 } from '../GroceryListToPDF'
 
 
 import { getFullGrocery } from '../../selectors/selector';
@@ -114,6 +115,7 @@ class InsideLayout extends Component {
             </Col>
             <Col className="gutter-row" span={8}>
                 {/* our second button can be here */}
+                <GeneratePDFButton2 name={name} />
             </Col>
             <Col className="gutter-row" span={8}>
               <Button
