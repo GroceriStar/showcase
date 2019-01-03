@@ -13,6 +13,7 @@ import TileLayout from '../TileLayout/TileLayout'
 
 
 import { GeneratePDFButton } from '../GroceryListToPDF'
+import { GeneratePDFButton2 } from '../GroceryListToPDF'
 
 
 import { getFullGrocery } from '../../selectors/selector';
