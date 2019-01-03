@@ -19,6 +19,17 @@ function getLink( id ){
   return '/grocery/'+ id;
 }
 
+// @TODO update this component by moving out styles.
+// example
+// const cssHeader = {
+//   // background: '#fff',
+//   // color:'red',
+//   //padding: 0
+//   fontSize: '20px'
+// }
+// <Header style={cssHeader} />
+
+
 class InsideLayout extends Component {
 
   // constructor(props) {
@@ -47,8 +58,7 @@ class InsideLayout extends Component {
 
           <Row>
             <Col span={20}>
-
-                      "{name}" Template
+              "{name}" Template
             </Col>
             <Col span={4}>
 
@@ -67,7 +77,13 @@ class InsideLayout extends Component {
 
 
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+
+
             <RenderGrocery items={getFullGrocery(name)} />
+
+
+
+
           </div>
 
         </Content>

@@ -28,6 +28,9 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
     style={{ backgroundImage: css, cursor: !maximized ? "pointer" : "auto" }}
     onClick={!maximized ? toggle : undefined}
   >
+
+
+
     <Fade show={maximized} delay={maximized ? 400 : 0}>
 
 
@@ -43,7 +46,7 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
       </div>
     </Fade>
 
-
+    {/* @TODO we should find a way how to minify this animation stuff at our layouts. maybe config will be a huge help for us/?*/}
     <Fade
       show={!maximized}
       from={{ opacity: 0, transform: "translate3d(0,140px,0)" }}
