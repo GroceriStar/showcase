@@ -15,23 +15,24 @@ import InsideLayout from './InsideLayout';
 
 const Cell2 = ( props ) => {
   console.log(props);
-  const { toggle, name, height, description, css, maximized, id } = props;
+  const { toggle, name, height, description, css, open, id } = props;
   return (
     <div>This is America </div>
   )
 }
 
 
-const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
+const Cell = ({ toggle, name, height, description, css, open, id }) => (
+  
   <div
     className="cell"
-    style={{ backgroundImage: css, cursor: !maximized ? "pointer" : "auto" }}
-    onClick={!maximized ? toggle : undefined}
+    style={{ backgroundImage: css, cursor: !open ? "pointer" : "auto" }}
+    onClick={!open ? toggle : undefined}
   >
 
 
 
-    <Fade show={maximized} delay={maximized ? 400 : 0}>
+    <Fade show={open} delay={open ? 400 : 0}>
 
 
       <div className="details">
@@ -48,11 +49,11 @@ const Cell = ({ toggle, name, height, description, css, maximized, id }) => (
 
     {/* @TODO we should find a way how to minify this animation stuff at our layouts. maybe config will be a huge help for us/?*/}
     <Fade
-      show={!maximized}
+      show={!open}
       from={{ opacity: 0, transform: "translate3d(0,140px,0)" }}
       enter={{ opacity: 1, transform: "translate3d(0,0px,0)" }}
       leave={{ opacity: 0, transform: "translate3d(0,-50px,0)" }}
-      delay={maximized ? 0 : 400}
+      delay={open ? 0 : 400}
     >
       <div className="default">
         {name}

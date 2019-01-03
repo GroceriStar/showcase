@@ -130,9 +130,9 @@ class HomeView extends Component {
           // Delay when active elements (blown up) are minimized again
           closeDelay={400}
         >
-          {(data, maximized, toggle) => (
+          {(data, open, toggle) => (
               <Cell {...data}
-                maximized={maximized}
+                open={open}
                 toggle={toggle}
                 id={this.getId(data.name)}
               />
