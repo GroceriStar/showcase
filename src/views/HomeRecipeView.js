@@ -80,7 +80,8 @@ class HomeRecipeView extends Component {
 
 
 
-  /*   {
+// this will be a new version
+    /*
 
 
       <Cell {...data}
@@ -93,22 +94,24 @@ class HomeRecipeView extends Component {
 
       </Cell>
 
-      }*/
+      */
 
 
   render() {
 
     console.log( getGroceryCollection() )
-    console.log( getRandomRecipe() )
+    // console.log( getRandomRecipe() )
     console.log( getFirstFiveRecipes() )
 
 
     //@TODO i don't like this structure...
     // we can use streight map or lodash map and have more recognizible logic.
     // here the test - did you figure out what this 3 lines doing without debug? me too :)
-    const data = this.state.data.filter(
-      d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
-    );
+    // const data = this.state.data.filter(
+    //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
+    // );
+
+    const data = this.state.data;
 
     return (
 
@@ -130,7 +133,7 @@ class HomeRecipeView extends Component {
           // Arbitrary data, should contain keys, possibly heights, etc.
           data={data}
           // Key accessor, instructs grid on how to fet individual keys from the data set
-          keys={d => d.name}
+          keys={d => d.key}
           // Can be a fixed value or an individual data accessor
           heights={this.state.height ? d => d.height : 200}
           // Number of columns
@@ -142,9 +145,9 @@ class HomeRecipeView extends Component {
           // Delay when active elements (blown up) are minimized again
           closeDelay={400}
         >
-          {(data, maximized, toggle) => (
+          {(data, open, toggle) => (
               <Cell {...data}
-                maximized={maximized}
+                open={open}
                 toggle={toggle}
                 id={this.getId(data.name)}
               />

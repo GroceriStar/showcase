@@ -5,7 +5,9 @@ import React, {
 
 import { Button, Icon, Layout, Row, Col } from 'antd'
 
-import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
+// import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
+import TileLayout from '../TileLayout/TileLayout'
+
 import { GeneratePDFButton } from '../GroceryListToPDF'
 
 
@@ -80,7 +82,8 @@ class RecipeLayout extends Component {
 
 
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-            <RenderGrocery items={getFullGrocery(name)} />
+        /*<RenderGrocery items={getFullGrocery(name)} /> */}
+            <TileLayout  items={getFullGrocery(name)} />
           </div>
 
         </Content>

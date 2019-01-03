@@ -83,9 +83,17 @@ class HomeView extends Component {
 
   render() {
 
-    const data = this.state.data.filter(
-      d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
-    );
+    // console.log(this.state.data);
+    //@TODO i don't like this structure...
+    // we can use streight map or lodash map and have more recognizible logic.
+    // here the test - did you figure out what this 3 lines doing without debug? me too :)
+    // const data = this.state.data.filter(
+    //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
+    // );
+    //
+    // console.log(data);
+
+    const data = this.state.data;
 
     return (
 
@@ -122,9 +130,9 @@ class HomeView extends Component {
           // Delay when active elements (blown up) are minimized again
           closeDelay={400}
         >
-          {(data, maximized, toggle) => (
+          {(data, open, toggle) => (
               <Cell {...data}
-                maximized={maximized}
+                open={open}
                 toggle={toggle}
                 id={this.getId(data.name)}
               />
