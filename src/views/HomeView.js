@@ -135,6 +135,7 @@ class HomeView extends Component {
                 open={open}
                 toggle={toggle}
                 id={this.getId(data.name)}
+                type='grocery-list'
               />
           )}
         </Grid>

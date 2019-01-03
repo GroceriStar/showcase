@@ -32,7 +32,7 @@ class Cell extends Component {
 
     console.log(this.props);
 
-    const { toggle, name, height, description, css, open, id } = this.props;
+    const { toggle, name, height, description, css, open, id, type } = this.props;
 
     var layout;
     if( type == 'grocery-list'){

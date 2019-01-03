@@ -166,6 +166,7 @@ class HomeRecipeView extends Component {
                 toggle={toggle}
                 id={data.key}
                 name={data.title}
+                type='recipe'
               />
 
           ) }}
