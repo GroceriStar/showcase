@@ -88,7 +88,7 @@ class InsideLayout extends Component {
 
             {/* old version: /* Should we really pass the name? or this is just because we don't have a propper ids here?
             If yes, then we should make it clear, so later we'll be able to  */}
-            
+
             {/*<RenderGrocery items={getFullGrocery(name)} />*/}
             <TileLayout items={getFullGrocery(name)} />
 
@@ -100,25 +100,39 @@ class InsideLayout extends Component {
         <Footer style={{ textAlign: 'center' }}>
 
 
+          <Row gutter={16}>
+            <Col className="gutter-row" span={8}>
+
+                {/* Should we really pass the name? or this is just because we don't have a propper ids here?
+                If yes, then we should make it clear, so later we'll be able to
+                @TODO bad layout here - we need to overmake it as possible - right now it's just working*/}
+
+
+
+                <GeneratePDFButton name={name} />
+
+            </Col>
+            <Col className="gutter-row" span={8}>
+                {/* our second button can be here */}
+            </Col>
+            <Col className="gutter-row" span={8}>
+              <Button
+                type="primary"
+                icon="right"
+                size="large"
+                href={getLink(id)}>
+                  View "{name}"
+              </Button>
+            </Col>
+          </Row>
 
 
 
 
 
-
-          {/* Should we really pass the name? or this is just because we don't have a propper ids here?
-          If yes, then we should make it clear, so later we'll be able to
-          @TODO bad layout here - we need to overmake it as possible - right now it's just working*/}
-
-
-
-          <GeneratePDFButton name={name} />
           <br />
 
-          <Button type="primary" icon="right" size="large"
-            href={getLink(id)}>
-            View "{name}"
-          </Button>
+
 
 
 

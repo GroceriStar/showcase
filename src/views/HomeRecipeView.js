@@ -107,9 +107,11 @@ class HomeRecipeView extends Component {
     //@TODO i don't like this structure...
     // we can use streight map or lodash map and have more recognizible logic.
     // here the test - did you figure out what this 3 lines doing without debug? me too :)
-    const data = this.state.data.filter(
-      d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
-    );
+    // const data = this.state.data.filter(
+    //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
+    // );
+
+    const data = this.state.data;
 
     return (
 
