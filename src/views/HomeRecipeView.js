@@ -10,7 +10,7 @@ import "./../styles.css";
 
 
 import { getGroceryCollection, getRandomRecipe,
-getFirstFiveRecipes,
+getShowcaseFiveRecipes,
 getFiveRandomIngredients } from "./../selectors/selector";
 
 
@@ -19,7 +19,7 @@ getFiveRandomIngredients } from "./../selectors/selector";
 class HomeRecipeView extends Component {
 
     state = {
-      data: getFirstFiveRecipes(), //Did we need it here? i think we didn use all data from this method
+      data: getShowcaseFiveRecipes(), //Did we need it here? i think we didn use all data from this method
       columns: 2,
       margin: 70,
       filter: "",
@@ -101,7 +101,7 @@ class HomeRecipeView extends Component {
 
     console.log( getGroceryCollection() )
     // console.log( getRandomRecipe() )
-    console.log( getFirstFiveRecipes() )
+    console.log( getShowcaseFiveRecipes() )
 
 
     //@TODO i don't like this structure...
@@ -112,6 +112,19 @@ class HomeRecipeView extends Component {
     // );
 
     const data = this.state.data;
+
+
+
+
+
+    // it's a bad way, but at least it make our Grid setup less over confusing.
+    // so i'm checking
+    const cellHeight = 200; // nobody knows but i assume it's 200px...
+    // @TODO cover this later. right now it's not important. details upon request
+    // if( this.state.height ){
+    //   cellHeight = data[0].height
+    // }
+    // const cellHeight =
 
     return (
 
@@ -135,7 +148,8 @@ class HomeRecipeView extends Component {
           // Key accessor, instructs grid on how to fet individual keys from the data set
           keys={d => d.key}
           // Can be a fixed value or an individual data accessor
-          heights={this.state.height ? d => d.height : 200}
+          // heights={this.state.height ? d => d.height : 200}
+          heights={cellHeight}
           // Number of columns
           columns={this.state.columns}
           // Space between elements
@@ -145,14 +159,16 @@ class HomeRecipeView extends Component {
           // Delay when active elements (blown up) are minimized again
           closeDelay={400}
         >
-          {(data, open, toggle) => (
+          {(data, open, toggle) => { //console.log(data) ;
+            return (
               <Cell {...data}
                 open={open}
                 toggle={toggle}
-                id={this.getId(data.name)}
+                id={data.key}
+                name={data.title}
               />
 
-          )}
+          ) }}
         </Grid>
       </div>
 
