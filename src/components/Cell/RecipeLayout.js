@@ -30,6 +30,7 @@ import { IngredientList } from '@groceristar/grocery-component';
 const { Header, Footer, Content } = Layout;
 
 // @TODO replace this with a links, related to react-router
+// @TODO good example how for second case this link is not working well.
 function getLink( id ){
   return '/grocery/'+ id;
 }
@@ -48,11 +49,11 @@ class RecipeLayout extends Component {
 
   render() {
 
-    const { name, toggle, id } = this.props;
+    const { id, recipe, toggle } = this.props;
 
-    console.log(this.props);
+    console.log(recipe);
 
-    console.log(this.props.data)
+    // console.log(this.props.data)
 
     return (
       <Layout>
@@ -67,7 +68,7 @@ class RecipeLayout extends Component {
           <Row>
             <Col span={20}>
 
-                      "{name}" Template
+                      "{recipe.title}" Template
             </Col>
             <Col span={4}>
 
@@ -86,8 +87,33 @@ class RecipeLayout extends Component {
 
 
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-          {/*<RenderGrocery items={getFullGrocery(name)} /> */}
-            <TileLayout  items={getFullGrocery(name)} />
+            <div style={{ color: 'black' }}>
+              
+              {/*<TileLayout  items={getFullGrocery(name)} />*/}
+
+              {/* @TODO move away this. incorporate same logic as
+                 TileLayout has but with TileLayout/RecipePlain version */}
+              {recipe.id}
+              <br />
+              {recipe.title}
+              <br />
+              {recipe.directions}
+
+              <br />
+
+              {recipe.ingredients}
+              <IngredientList items={recipe.ingredients} />
+
+              <br />
+              {recipe.prep_time}
+              <br />
+              {recipe.total_time}
+              <br />
+              {recipe.recipe_yield}
+              <br />
+              {recipe.url}
+
+            </div>
           </div>
 
         </Content>
@@ -106,12 +132,12 @@ class RecipeLayout extends Component {
 
 
 
-          <GeneratePDFButton name={name} />
+          <GeneratePDFButton name={recipe.title} />
           <br />
 
           <Button type="primary" icon="right" size="large"
             href={getLink(id)}>
-            View "{name}"
+            View "{recipe.title}"
           </Button>
 
 

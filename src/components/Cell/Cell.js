@@ -36,12 +36,14 @@ class Cell extends Component {
 
     const { toggle, name, height, description, css, open, id, type } = this.props;
 
+    // console.log(this.props);
+
     var layout;
     if( type == 'grocery-list'){
       layout = <InsideLayout id={id} name={name} toggle={toggle}  />;
     } else {
       // 'recipe' case
-      layout = <RecipeLayout id={id} name={name} toggle={toggle} />;
+      layout = <RecipeLayout id={id} recipe={this.props.recipe} toggle={toggle} />;
     }
 
 
