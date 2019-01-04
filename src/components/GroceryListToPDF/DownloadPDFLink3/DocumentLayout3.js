@@ -11,6 +11,7 @@ import {
 import RenderLists3 from '../RenderLists3/RenderLists3';
 
 // const DocumentLayout = ( styles, name ) => (
+import { getFullGrocery } from "../../../selectors/selector";
 
   const DocumentLayout3 = ( styles, name ) => (
   <Document>
@@ -19,7 +20,7 @@ import RenderLists3 from '../RenderLists3/RenderLists3';
         <Text style={styles.text}>
           {name}
         </Text>
-        <RenderLists3 groceryName2={name}/>
+          <RenderLists3 data={getFullGrocery(name)} />
         {/* <View style={styles.block}>
           <View>
             <Text>one</Text>
