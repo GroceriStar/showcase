@@ -20,6 +20,26 @@ import RenderLists2 from '../RenderLists3/RenderLists3';
           {name}
         </Text>
         <RenderLists2 groceryName2={name}/>
+        {/* <View style={styles.block}>
+          <View>
+            <Text>one</Text>
+          </View>
+          <View style={styles.block1}>
+            <Text>one2</Text>
+          </View>
+          <View style={styles.block1}>
+            <Text>one3</Text>
+          </View>
+          <View style={styles.block1}>
+              <Text>on4</Text>
+          </View>
+          <View style={styles.block1}>
+              <Text>on5</Text>
+          </View>
+          <View style={styles.block1}>
+            <Text>one6</Text>
+          </View>
+        </View> */}
       </View>
     </Page>
   </Document>

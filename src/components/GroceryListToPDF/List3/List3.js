@@ -8,10 +8,8 @@ import { Text, View, StyleSheet } from '@react-pdf/renderer';
 const styles = StyleSheet.create({
   item: {
     flexDirection: 'row',
-    marginBottom: 5,
+    // marginBottom: 5,
     "marginLeft": "25px",
-    borderBottomWidth:1,
-    borderBottomColor:'black',
   },
   bulletPoint: {
     width: 10,
@@ -21,10 +19,15 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 14
   },
+  blockItem: {
+   backgroundColor: '#e14427',
+   // marginLeft:10,
+   border: '1 solid black'
+ },
   knob: {
     borderBottomWidth:1,
     borderBottomColor:'black',
-    marginLeft:10,
+    // marginLeft:10,
     alignItems: 'center',
     justifyContent: 'center',
     width: '10px',
@@ -41,7 +44,7 @@ const List3 = ({ children }) => children;
 
 
 export const Item  = ({ children}) => (
-  <View>
+  <View style={styles.blockItem}>
     <View style={[styles.knob]}>
     </View>
     <View style={styles.item}>

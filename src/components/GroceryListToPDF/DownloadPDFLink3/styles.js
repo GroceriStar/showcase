@@ -19,6 +19,13 @@ const styles = StyleSheet.create({
   },
   text: {
     "font-size": "18px"
+  },
+  block: {
+      backgroundColor: 'red'
+  },
+  block1: {
+      backgroundColor: 'green',
+      border: '1 solid purple'
   }
 
 });

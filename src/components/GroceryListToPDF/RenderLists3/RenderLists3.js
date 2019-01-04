@@ -22,20 +22,26 @@ const styles = StyleSheet.create({
     // borderBottomWidth: 5,
     //   borderBottomColor: 'red',
     // borderBottomStyle: "solid",
-    padding: 4,
+    // padding: 4,
     // border: '1 solid black',
     // borderWidth: 1,
     // borderColor: 'black',
   },
   skills: {
     fontSize: 14,
-    marginBottom: 10,
+    // marginBottom: 10,
   },
   main:{
   marginTop: 10,
+
   // borderLeft: '1 solid black',
   // borderRight: '1 solid black',
   },
+  block: {
+    margin: 0,
+    flexDirection:'column',
+    backgroundColor:'green',
+  }
 });
 
 
@@ -44,10 +50,12 @@ const Lists3 = ({ department, ingredients }) => (
     <Text style={styles.title}>
       {department}
     </Text>
+    <View style={styles.block} >
     <List3>
       {ingredients.map((ingredient, num) => <Item
         key={uuidv1()}>{ingredient}</Item>)}
     </List3>
+  </View>
   </View>
 );
 
