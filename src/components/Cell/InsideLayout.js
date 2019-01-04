@@ -108,8 +108,6 @@ class InsideLayout extends Component {
                 If yes, then we should make it clear, so later we'll be able to
                 @TODO bad layout here - we need to overmake it as possible - right now it's just working*/}
 
-
-
                 <GeneratePDFButton name={name} />
 
             </Col>
@@ -127,24 +125,6 @@ class InsideLayout extends Component {
               </Button>
             </Col>
           </Row>
-
-
-
-
-
-          <br />
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </Footer>

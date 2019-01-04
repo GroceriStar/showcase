@@ -4,6 +4,8 @@ import { Slug, Fade } from 'mauerwerk'
 
 import InsideLayout from './InsideLayout';
 
+import RecipeLayout from './RecipeLayout';
+
 // @TODO can we avoid passing css variable? i think yep
 // can we avoid passing a maximized variable - we should explore this
 // const styles = {
@@ -30,7 +32,7 @@ class Cell extends Component {
 
   render(){
 
-    console.log(this.props);
+    // console.log(this.props);
 
     const { toggle, name, height, description, css, open, id, type } = this.props;
 
@@ -38,7 +40,8 @@ class Cell extends Component {
     if( type == 'grocery-list'){
       layout = <InsideLayout id={id} name={name} toggle={toggle}  />;
     } else {
-      layout = ''
+      // 'recipe' case
+      layout = <RecipeLayout id={id} name={name} toggle={toggle} />;
     }
 
 
