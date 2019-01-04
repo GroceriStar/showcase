@@ -14,7 +14,7 @@ import TileLayout from '../TileLayout/TileLayout'
 
 import { GeneratePDFButton } from '../GroceryListToPDF'
 import { GeneratePDFButton2 } from '../GroceryListToPDF'
-
+import { GeneratePDFButton3 } from '../GroceryListToPDF'
 
 import { getFullGrocery } from '../../selectors/selector';
 
@@ -106,9 +106,7 @@ class InsideLayout extends Component {
 
                 {/* Should we really pass the name? or this is just because we don't have a propper ids here?
                 If yes, then we should make it clear, so later we'll be able to
-                @TODO bad layout here - we need to overmake it as possible - right now it's just working
-                @TODO we should rebuild this component, so we can pass an additional information about what layout we tend to use.
-                */}
+                @TODO bad layout here - we need to overmake it as possible - right now it's just working*/}
 
                 <GeneratePDFButton name={name} />
 
@@ -119,7 +117,7 @@ class InsideLayout extends Component {
             </Col>
             <Col className="gutter-row" span={6}>
                 {/* our third button can be here */}
-
+                <GeneratePDFButton3 name={name} />
             </Col>
             <Col className="gutter-row" span={6}>
               <Button
