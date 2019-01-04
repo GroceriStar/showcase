@@ -8,7 +8,7 @@ import {
 
 // import styles from './styles'
 
-import RenderLists2 from '../RenderLists3/RenderLists3';
+import RenderLists3 from '../RenderLists3/RenderLists3';
 
 // const DocumentLayout = ( styles, name ) => (
 
@@ -19,7 +19,7 @@ import RenderLists2 from '../RenderLists3/RenderLists3';
         <Text style={styles.text}>
           {name}
         </Text>
-        <RenderLists2 groceryName2={name}/>
+        <RenderLists3 groceryName2={name}/>
         {/* <View style={styles.block}>
           <View>
             <Text>one</Text>
