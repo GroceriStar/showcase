@@ -1,18 +1,11 @@
 import React, {
   Component
 } from 'react'
-// import { Link } from 'react-router-dom'
 
-import { Button, Icon, Layout, Row, Col } from 'antd'
 
-// import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
 import TileLayout from '../TileLayout/TileLayout'
 
 import { GeneratePDFButton } from '../GroceryListToPDF'
-
-
-// import { getFullGrocery } from '../../selectors/selector';
-
 
 
 
@@ -25,7 +18,9 @@ import { getFullGrocery } from '../../selectors/selector';
 import uuidv1 from 'uuid/v1';
 import { IngredientList } from '@groceristar/grocery-component';
 
+import { getRecipeLink } from '../../Router';
 
+import { Button, Icon, Layout, Row, Col } from 'antd'
 
 const { Header, Footer, Content } = Layout;
 
@@ -88,7 +83,7 @@ class RecipeLayout extends Component {
 
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
             <div style={{ color: 'black' }}>
-              
+
               {/*<TileLayout  items={getFullGrocery(name)} />*/}
 
               {/* @TODO move away this. incorporate same logic as

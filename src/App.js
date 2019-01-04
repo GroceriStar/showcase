@@ -5,7 +5,7 @@ import React, { Component, Fragment } from "react";
 
 // import HomeView from "./views/HomeView";
 
-import Router from './Router';
+import { Router } from './Router';
 
 
 

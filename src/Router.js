@@ -13,7 +13,12 @@ import AntdLayout from './layouts/GroceryList/AntdLayout'
 
 import CleanLayout from './layouts/GroceryList/CleanLayout'
 
+// @TODO later it'll have a config version
+// @TODO maybe we should generate a whole <Link />? looks like this is a perfect place for doing it.
 
+const getRecipeLink = (id) => {
+  return '/recipe/'+ id;
+}
 
 class Router extends Component {
   render(){
@@ -23,7 +28,7 @@ class Router extends Component {
 
           <Route path="/" exact component={HomeView} />
           <Route path="/home2" exact component={HomeRecipeView} />
-          
+
 
           <Route path="/grocery/:id" component={GroceryView} />
 
@@ -39,4 +44,4 @@ class Router extends Component {
   }
 }
 
-export default Router;
+export { Router, getRecipeLink };
