@@ -102,7 +102,7 @@ class InsideLayout extends Component {
 
 
           <Row gutter={16}>
-            <Col className="gutter-row" span={8}>
+            <Col className="gutter-row" span={6}>
 
                 {/* Should we really pass the name? or this is just because we don't have a propper ids here?
                 If yes, then we should make it clear, so later we'll be able to
@@ -111,11 +111,15 @@ class InsideLayout extends Component {
                 <GeneratePDFButton name={name} />
 
             </Col>
-            <Col className="gutter-row" span={8}>
+            <Col className="gutter-row" span={6}>
                 {/* our second button can be here */}
                 <GeneratePDFButton2 name={name} />
             </Col>
-            <Col className="gutter-row" span={8}>
+            <Col className="gutter-row" span={6}>
+                {/* our third button can be here */}
+                
+            </Col>
+            <Col className="gutter-row" span={6}>
               <Button
                 type="primary"
                 icon="right"

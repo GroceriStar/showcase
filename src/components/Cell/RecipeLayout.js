@@ -11,15 +11,9 @@ import TileLayout from '../TileLayout/TileLayout'
 import { GeneratePDFButton } from '../GroceryListToPDF'
 
 
-import { getFullGrocery } from '../../selectors/selector';
+// import { getFullGrocery } from '../../selectors/selector';
 
 
-const { Header, Footer, Content } = Layout;
-
-// @TODO replace this with a links, related to react-router
-function getLink( id ){
-  return '/grocery/'+ id;
-}
 
 
 
@@ -31,6 +25,14 @@ import { getFullGrocery } from '../../selectors/selector';
 import uuidv1 from 'uuid/v1';
 import { IngredientList } from '@groceristar/grocery-component';
 
+
+
+const { Header, Footer, Content } = Layout;
+
+// @TODO replace this with a links, related to react-router
+function getLink( id ){
+  return '/grocery/'+ id;
+}
 
 class RecipeLayout extends Component {
 
@@ -84,7 +86,7 @@ class RecipeLayout extends Component {
 
 
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-        /*<RenderGrocery items={getFullGrocery(name)} /> */}
+          {/*<RenderGrocery items={getFullGrocery(name)} /> */}
             <TileLayout  items={getFullGrocery(name)} />
           </div>
 
