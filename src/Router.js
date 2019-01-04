@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import HomeView from './views/HomeView'
 import HomeRecipeView from './views/HomeRecipeView'
+import PDFView from './views/PDFView'
 
 import GroceriesView from './views/GroceriesView'
 import GroceryView from './views/GroceryView'
@@ -28,6 +29,7 @@ class Router extends Component {
 
           <Route path="/" exact component={HomeView} />
           <Route path="/home2" exact component={HomeRecipeView} />
+          <Route path="/pdf" exact component={PDFView} />
 
 
           <Route path="/grocery/:id" component={GroceryView} />
