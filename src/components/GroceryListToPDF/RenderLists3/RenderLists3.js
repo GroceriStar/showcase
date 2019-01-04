@@ -5,7 +5,7 @@ import { Text, View, StyleSheet } from '@react-pdf/renderer';
 import List3, { Item } from '../List3/List3';
 
 // @TODO move this selector away from this not a container like component.
-import { getFullGrocery } from "../../../selectors/selector";
+// import { getFullGrocery } from "../../../selectors/selector";
 
 
 import uuidv1 from 'uuid/v1';
@@ -26,36 +26,45 @@ const styles = StyleSheet.create({
     // border: '1 solid black',
     // borderWidth: 1,
     // borderColor: 'black',
+    flexDirection:'column',
   },
   skills: {
-    fontSize: 14,
+    fontSize: '14px',
     // marginBottom: 10,
   },
-  main:{
-  marginTop: 10,
-
+  main: {
+    marginTop: '10px',
+    display: 'flex',
+    minHeight: '60px',
+    border: '1px solid black',
+    width: '300px'
   // borderLeft: '1 solid black',
   // borderRight: '1 solid black',
   },
   block: {
-    margin: 0,
+
+    margin: '0',
     flexDirection:'column',
     backgroundColor:'green',
   }
 });
 
 
-const Lists3 = ({ department, ingredients }) => (
+const ListsDepartment = ({ department, ingredients }) => (
   <View style={styles.main}>
-    <Text style={styles.title}>
-      {department}
-    </Text>
-    <View style={styles.block} >
+    <View>
+      <Text style={styles.title}>
+        {department}
+      </Text>
+    </View>
+
+    {/*}<View style={styles.block} > */}
     <List3>
       {ingredients.map((ingredient, num) => <Item
         key={uuidv1()}>{ingredient}</Item>)}
     </List3>
-  </View>
+     {/*</View> */}
+
   </View>
 );
 
@@ -63,8 +72,9 @@ const Lists3 = ({ department, ingredients }) => (
 // and this will be hardly to catch later
 const RenderLists3 = (props) => (
   <View>
-    {getFullGrocery(props.groceryName2).map(item => (
-      <Lists3
+
+    {props.data.map(item => (
+      <ListsDepartment
         key={uuidv1()}
         department={item.department}
         ingredients={item.ingredients} />
@@ -73,9 +83,10 @@ const RenderLists3 = (props) => (
 );
 
 
-Lists3.propTypes = {
-  name: PropTypes.string,
-  skills: PropTypes.array,
+ListsDepartment.propTypes = {
+  // name: PropTypes.string,
+  department: PropTypes.array,
+  ingredients: PropTypes.array,
 };
 
 export default RenderLists3;

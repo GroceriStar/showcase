@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
     flexGrow: 1
   },
   text: {
-    "font-size": "18px"
+    fontSize: '18px'
   },
   block: {
       backgroundColor: 'red'
   },
   block1: {
-      backgroundColor: 'green',
-      border: '1 solid purple'
+    backgroundColor: 'green',
+    border: '1 solid purple'
   }
 
 });
