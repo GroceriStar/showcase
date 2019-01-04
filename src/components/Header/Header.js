@@ -100,11 +100,16 @@ const Header = function({
         </Button>
       </Dropdown>
 
+
+      {/*
+
       <span style={{ marginLeft: 15 }}>
         Individual height
       </span>
 
+
       <Switch style={{ marginLeft: 15 }} defaultChecked onChange={setHeight} />
+      */}
 
       <span style={{ marginLeft: 15 }}>
 

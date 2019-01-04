@@ -3,15 +3,49 @@ import React, { Component, Fragment } from 'react'
 // import { Modal, Button } from 'antd';
 
 
+import { Table } from 'antd';
+
+import { GroceryList } from '@groceristar/grocery-component'
+
 import {
   getGroceryCollection
 } from "./../selectors/selector.js"
 
 
+const columns = [{
+  title: 'Name',
+  dataIndex: 'name',
+}, {
+  title: 'Age',
+  dataIndex: 'age',
+}, {
+  title: 'Address',
+  dataIndex: 'address',
+}];
+const data = [{
+  key: '1',
+  name: 'John Brown',
+  age: 32,
+  address: 'New York No. 1 Lake Park',
+}, {
+  key: '2',
+  name: 'Jim Green',
+  age: 42,
+  address: 'London No. 1 Lake Park',
+}, {
+  key: '3',
+  name: 'Joe Black',
+  age: 32,
+  address: 'Sidney No. 1 Lake Park',
+}];
+
+
+
+
 // @TODO change modals to async versions https://github.com/ant-design/ant-design/edit/master/components/modal/demo/async.md
 
 
-import { GroceryList } from '@groceristar/grocery-component'
+
 
 class GroceriesView extends Component {
 
@@ -64,6 +98,9 @@ class GroceriesView extends Component {
       <Fragment>
 
         <GroceryList items={collection} />
+
+
+        <Table columns={columns} dataSource={data} size="small" />
       {/*}
         <Button type="primary" onClick={this.showModal}>
            Open Modal that we want to compare with previous version
