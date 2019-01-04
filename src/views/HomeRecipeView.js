@@ -9,9 +9,12 @@ import "antd/dist/antd.css";
 import "./../styles.css";
 
 
-import { getGroceryCollection, getRandomRecipe,
-getShowcaseFiveRecipes,
-getFiveRandomIngredients } from "./../selectors/selector";
+import {
+  getGroceryCollection,
+  getRandomRecipe,
+  getFirstFiveRecipes,
+  getShowcaseFiveRecipes,
+  getFiveRandomIngredients } from "./../selectors/selector";
 
 
 // getGroceryCollection
@@ -19,7 +22,9 @@ getFiveRandomIngredients } from "./../selectors/selector";
 class HomeRecipeView extends Component {
 
     state = {
-      data: getShowcaseFiveRecipes(), //Did we need it here? i think we didn use all data from this method
+      //Did we need it here? i think we didn use all data from this method
+      // data: getShowcaseFiveRecipes(),
+      data: getFirstFiveRecipes(),
       columns: 2,
       margin: 70,
       filter: "",
@@ -47,35 +52,35 @@ class HomeRecipeView extends Component {
 
 
     // @TODO change this. I really don't like this method
-    getId(name){
-      var foundObj = {};
-        if (this.grocery.length > 0) {
-          foundObj = this.grocery.find((obj) =>  {
-            if(obj.name === name) {
-              return true;
-            } else {
-              return false;
-            }
-          });
-        }
-
-        let id = null;
-
-        if (_.isEmpty(foundObj)) {
-          this.grocery.push({
-            "name": name,
-            "id": this.currentId
-          })
-          id = this.currentId++;
-          // return this.currentId++;
-        } else {
-          id = foundObj.id;
-          // return foundObj.id;
-        }
-
-        // console.log(id);
-        return id;
-    }
+    // getId(name){
+    //   var foundObj = {};
+    //     if (this.grocery.length > 0) {
+    //       foundObj = this.grocery.find((obj) =>  {
+    //         if(obj.name === name) {
+    //           return true;
+    //         } else {
+    //           return false;
+    //         }
+    //       });
+    //     }
+    //
+    //     let id = null;
+    //
+    //     if (_.isEmpty(foundObj)) {
+    //       this.grocery.push({
+    //         "name": name,
+    //         "id": this.currentId
+    //       })
+    //       id = this.currentId++;
+    //       // return this.currentId++;
+    //     } else {
+    //       id = foundObj.id;
+    //       // return foundObj.id;
+    //     }
+    //
+    //     // console.log(id);
+    //     return id;
+    // }
 
 
 
@@ -99,9 +104,9 @@ class HomeRecipeView extends Component {
 
   render() {
 
-    console.log( getGroceryCollection() )
+    // console.log( getGroceryCollection() )
     // console.log( getRandomRecipe() )
-    console.log( getShowcaseFiveRecipes() )
+    // console.log( getShowcaseFiveRecipes() )
 
 
     //@TODO i don't like this structure...
@@ -159,13 +164,13 @@ class HomeRecipeView extends Component {
           // Delay when active elements (blown up) are minimized again
           closeDelay={400}
         >
-          {(data, open, toggle) => { //console.log(data) ;
+          {(data, open, toggle) => { //console.log(data.recipe) ;
             return (
               <Cell {...data}
                 open={open}
                 toggle={toggle}
                 id={data.key}
-                name={data.title}
+                name={data.recipe.title}
                 type='recipe'
               />
 
