@@ -83,8 +83,8 @@ const RenderLists3 = (props) => (
 
 
 ListsDepartment.propTypes = {
-  // name: PropTypes.string,
-  department: PropTypes.array,
+  // name: PropTypes.array, because getting an error expected array but receiving string
+  department: PropTypes.string,
   ingredients: PropTypes.array,
 };
 
