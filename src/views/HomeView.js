@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 
 import Menu     from "./../components/Header/Menu";
 
@@ -21,7 +21,9 @@ import "./../styles.css";
 
 import { getGroceryCollection } from "./../selectors/selector";
 
+import whyDidYouUpdate from "why-did-you-update";
 
+// whyDidYouUpdate(React);
 class HomeView extends Component {
 
     state = {
@@ -95,7 +97,7 @@ class HomeView extends Component {
     //
     // console.log(data);
 
-    const data = this.state.data;
+    // const data = this.state.data;
 
     return (
 
@@ -119,7 +121,7 @@ class HomeView extends Component {
         <Grid
           className="grid"
           // Arbitrary data, should contain keys, possibly heights, etc.
-          data={data}
+          data={this.state.data}
           // Key accessor, instructs grid on how to fet individual keys from the data set
           keys={d => d.name}
           // Can be a fixed value or an individual data accessor
@@ -137,7 +139,7 @@ class HomeView extends Component {
               <Cell {...data}
                 open={open}
                 toggle={toggle}
-                id={this.getId(data.name)}
+                id={this.getId(this.state.data.name)}
                 type='grocery-list'
               />
           )}
