@@ -31,7 +31,19 @@ function getLink( id ){
 }
 
 class RecipeLayout extends Component {
+  constructor(props){
+    super(props);
+    this.state = {toggle: this.props.toggle};
+  }
 
+  shouldComponentUpdate(nextProps, nextState) {
+  if (this.props.toggle !== nextState.toggle) {
+    console.log("Toggle RecipedeLayout **********************");
+        return true;
+      }
+      console.log("False RecipeLayout****************************");
+      return false;
+    }
   // constructor(props) {
   //   super(props);
   //   // maybe we should add to state some default stuff and then check on mount if data,
@@ -44,7 +56,7 @@ class RecipeLayout extends Component {
 
   render() {
 
-    const { id, recipe, toggle } = this.props;
+    const { id, recipe} = this.props;
 
     console.log(recipe);
 
@@ -71,7 +83,7 @@ class RecipeLayout extends Component {
                 className="tile-close"
                 type="close"
                 style={{ cursor: "pointer", transition: "color .3s" }}
-                onClick={toggle}
+                onClick={this.state.toggle}
               />
 
             </Col>
