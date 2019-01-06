@@ -71,6 +71,7 @@ class AdvancedSearchForm extends React.Component {
 }
 
 const WrappedAdvancedSearchForm = Form.create()(AdvancedSearchForm);
+
 ReactDOM.render(
   <div>
     <WrappedAdvancedSearchForm />
@@ -78,17 +79,3 @@ ReactDOM.render(
   </div>,
   mountNode
 );
-.ant-advanced-search-form {
-  padding: 24px;
-  background: #fbfbfb;
-  border: 1px solid #d9d9d9;
-  border-radius: 6px;
-}
-
-.ant-advanced-search-form .ant-form-item {
-  display: flex;
-}
-
-.ant-advanced-search-form .ant-form-item-control-wrapper {
-  flex: 1;
-}
