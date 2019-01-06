@@ -2,7 +2,8 @@ import React, { Component, PureComponent } from 'react';
 
 import Menu     from "./../components/Header/Menu";
 
-// import Header   from "./../components/Header/Header";
+import Header   from "./../components/Header/Header";
+
 import Cell     from "./../components/Cell/Cell";
 import { Grid } from "mauerwerk";
 import _        from "lodash";
@@ -105,7 +106,7 @@ class HomeView extends Component {
 
         <Menu />
 
-{/*
+
         <Header
           {...this.state}
           search={this.search}
@@ -114,7 +115,7 @@ class HomeView extends Component {
           setMargin={this.setMargin}
           setHeight={this.setHeight}
         />
- */}
+
 
 
 

@@ -111,13 +111,7 @@ const Header = function({
       <Switch style={{ marginLeft: 15 }} defaultChecked onChange={setHeight} />
       */}
 
-      <span style={{ marginLeft: 15 }}>
-
-      </span>
-
-      <Button type="primary">
-        <Link to="/groceries">View collection without fanciness</Link>
-      </Button>
+    
 
 
 

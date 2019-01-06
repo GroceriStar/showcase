@@ -1,24 +1,27 @@
-// So this is an actually a RenderGrocery components
-// just migrated to a new place, renamed for the better
-
-
 import React, { Component, Fragment } from "react";
-// import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
-
-// import { DepartmentList } from '@groceristar/grocery-component'
-import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
-
-
-
 import { Collapse } from 'antd';
 import uuidv1 from 'uuid/v1';
+
+// import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
+
+
+
+
+// import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
+
+
+
+
 import { IngredientList } from '@groceristar/grocery-component';
 
 
 const Panel = Collapse.Panel;
-// Looks like we don't use this component. Maybe we shall delete it soon
+
+
+
 
 // NOTE: right now this component is a mess, because of bug from AntD. they fixed it and in next release all start to work well.
+
 
 
 class TileLayout extends Component {
@@ -29,7 +32,8 @@ class TileLayout extends Component {
     // console.log(items)
     return (
       <Fragment>
-        { /* DepartmentListCollapse items={items} /> */ }
+
+         {/*DepartmentListCollapse items={items} />  */}
 
 
         <Collapse accordion>
@@ -43,6 +47,22 @@ class TileLayout extends Component {
            )}
 
         </Collapse>
+      {/*
+        <Collapse accordion>
+
+          {items && items.map( (value) =>
+             // console.log(value)
+             (
+               <Fragment>
+                 <Panel header={value.department} key={uuidv1()} >
+                   <IngredientList items={value.ingredients} />
+                 </Panel>
+                 </Fragment>
+           )
+           )}
+
+        </Collapse>
+*/}
 
       </Fragment>
     );

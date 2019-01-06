@@ -21,6 +21,9 @@ class RenderContent extends PureComponent {
   //   }
 
   render(){
+
+    
+
     return (
       <Content style={{ margin: '24px 16px 0', fontSize: '14px' }}>
 
