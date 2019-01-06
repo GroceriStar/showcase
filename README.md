@@ -34,6 +34,15 @@ Stretch goals:
 - [ ] Add to GL flow of forms we can create
 
 https://codesandbox.io/s/n1p6k7n440
+
+Showcase have search by Tittle
+Modals with layouts
+Connection to fetch
+Can be quickly replaced with "fake api"
+1) create a separated view for Grid
+2) separated layout for modal render
+3) we can make our component this way, so we can update into Material UI
+4) Print template of Recipes
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

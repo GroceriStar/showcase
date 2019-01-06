@@ -20,7 +20,7 @@ import { IngredientList } from '@groceristar/grocery-component';
 
 import { getRecipeLink } from '../../Router';
 
-import { Button, Icon, Layout, Row, Col } from 'antd'
+import { Button, Icon, Layout, Row, Col, Table } from 'antd'
 
 const { Header, Footer, Content } = Layout;
 
@@ -30,10 +30,67 @@ function getLink( id ){
   return '/grocery/'+ id;
 }
 
+const columns = [
+  // {
+  // title: 'ID',
+  // dataIndex: 'id',
+  // },
+  {
+  title: 'Title',
+  dataIndex: 'title',
+  },
+  {
+  title: 'Directions',
+  dataIndex: 'directions',
+  },
+  {
+  title: 'Ingredients',
+  dataIndex: 'ingredients',
+  },
+  {
+  title: 'Prep Time',
+  dataIndex: 'prep_time',
+  },
+  {
+  title: 'Total Time',
+  dataIndex: 'total_time',
+  },
+  {
+  title: 'Yield',
+  dataIndex: 'recipe_yield',
+  },
+  {
+  title: 'URL',
+  dataIndex: 'url',
+  },
+
+];
+//
+// const data = [{
+//   key: '1',
+//   name: 'John Brown',
+//   age: 32,
+//   address: 'New York No. 1 Lake Park',
+// }, {
+//   key: '2',
+//   name: 'Jim Green',
+//   age: 42,
+//   address: 'London No. 1 Lake Park',
+// }, {
+//   key: '3',
+//   name: 'Joe Black',
+//   age: 32,
+//   address: 'Sidney No. 1 Lake Park',
+// }];
+
+
+
+
 class RecipeLayout extends Component {
+
   constructor(props){
     super(props);
-    this.state = {toggle: this.props.toggle};
+    this.state = { toggle: this.props.toggle };
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -100,6 +157,7 @@ class RecipeLayout extends Component {
 
               {/* @TODO move away this. incorporate same logic as
                  TileLayout has but with TileLayout/RecipePlain version */}
+
               {recipe.id}
               <br />
               {recipe.title}
@@ -119,6 +177,8 @@ class RecipeLayout extends Component {
               {recipe.recipe_yield}
               <br />
               {recipe.url}
+
+              <Table columns={columns} dataSource={recipe} size="small" />
 
             </div>
           </div>

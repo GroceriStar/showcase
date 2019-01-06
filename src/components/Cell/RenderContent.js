@@ -22,7 +22,7 @@ class RenderContent extends PureComponent {
 
   render(){
 
-    
+
 
     return (
       <Content style={{ margin: '24px 16px 0', fontSize: '14px' }}>
@@ -35,7 +35,6 @@ class RenderContent extends PureComponent {
           {/* old version: /* Should we really pass the name? or this is just because we don't have a propper ids here?
           If yes, then we should make it clear, so later we'll be able to  */}
 
-          {/*<RenderGrocery items={getFullGrocery(name)} />*/}
           <TileLayout items={getFullGrocery(this.props.name)} />
 
 

@@ -11,7 +11,7 @@ import {
   getGroceryCollection
 } from "./../selectors/selector.js"
 
-//@TODo update this with data that we really have
+//@TODO update this with data that we really have
 const columns = [{
   title: 'Name',
   dataIndex: 'name',
@@ -22,6 +22,7 @@ const columns = [{
   title: 'Address',
   dataIndex: 'address',
 }];
+
 const data = [{
   key: '1',
   name: 'John Brown',
