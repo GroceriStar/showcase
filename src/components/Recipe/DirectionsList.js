@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
-const FullDetails = () => {
+
+const DirectionList = () => {
 
 }
 
-export default FullDetails
+export default DirectionList
