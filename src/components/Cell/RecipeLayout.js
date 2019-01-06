@@ -19,7 +19,7 @@ import uuidv1 from 'uuid/v1';
 import { IngredientList, DefaultList } from '@groceristar/grocery-component';
 
 import { getRecipeLink } from '../../Router';
-
+import RecipeHeader from './RecipeHeader';
 import { Button, Icon, Layout, Row, Col, Table } from 'antd'
 
 const { Header, Footer, Content } = Layout;
@@ -107,10 +107,6 @@ const columns = [
 
 class RecipeLayout extends Component {
 
-  constructor(props){
-    super(props);
-    this.state = { toggle: this.props.toggle };
-  }
 
   shouldComponentUpdate(nextProps, nextState) {
     if (this.props.toggle !== nextState.toggle) {
@@ -132,7 +128,7 @@ class RecipeLayout extends Component {
 
   render() {
 
-    const { id, recipe} = this.props;
+    const { toggle, id, recipe} = this.props;
 
     console.log(recipe);
 
@@ -140,32 +136,7 @@ class RecipeLayout extends Component {
 
     return (
       <Layout>
-        <Header style={{
-          // background: '#fff',
-          // color:'red',
-          //padding: 0
-          fontSize: '20px'
-      }}>
-
-
-          <Row>
-            <Col span={20}>
-
-                      "{recipe.title}" Template
-            </Col>
-            <Col span={4}>
-
-              <Icon
-                className="tile-close"
-                type="close"
-                style={{ cursor: "pointer", transition: "color .3s" }}
-                onClick={this.state.toggle}
-              />
-
-            </Col>
-          </Row>
-
-        </Header>
+        <RecipeHeader title={recipe.title} toggle={toggle} />
         <Content style={{ margin: '24px 16px 0', fontSize: '14px' }}>
 
 
