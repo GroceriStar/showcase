@@ -219,7 +219,7 @@ class HomeRecipeView extends Component {
 
         <hr />
 
-        <RecipeTable column={} data={} />
+        <RecipeTable columns={columns} data={data} />
 
       </div>
 
