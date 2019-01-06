@@ -16,7 +16,7 @@ import { GeneratePDFButton } from '../GroceryListToPDF'
 
 import { getFullGrocery } from '../../selectors/selector';
 import uuidv1 from 'uuid/v1';
-import { IngredientList } from '@groceristar/grocery-component';
+import { IngredientList, DefaultList } from '@groceristar/grocery-component';
 
 import { getRecipeLink } from '../../Router';
 
@@ -29,6 +29,7 @@ const { Header, Footer, Content } = Layout;
 function getLink( id ){
   return '/grocery/'+ id;
 }
+
 
 const columns = [
   // {
@@ -83,8 +84,26 @@ const columns = [
 //   address: 'Sidney No. 1 Lake Park',
 // }];
 
-
-
+//
+// {recipe.id}
+// <br />
+// {recipe.title}
+// <br />
+// {recipe.directions}
+//
+// <br />
+//
+// {recipe.ingredients}
+// <IngredientList items={recipe.ingredients} />
+//
+// <br />
+// {recipe.prep_time}
+// <br />
+// {recipe.total_time}
+// <br />
+// {recipe.recipe_yield}
+// <br />
+// {recipe.url}
 
 class RecipeLayout extends Component {
 
@@ -94,13 +113,13 @@ class RecipeLayout extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-  if (this.props.toggle !== nextState.toggle) {
-    console.log("Toggle RecipedeLayout **********************");
-        return true;
-      }
-      console.log("False RecipeLayout****************************");
-      return false;
+    if (this.props.toggle !== nextState.toggle) {
+      console.log("Toggle RecipedeLayout **********************");
+          return true;
     }
+    console.log("False RecipeLayout****************************");
+    return false;
+  }
   // constructor(props) {
   //   super(props);
   //   // maybe we should add to state some default stuff and then check on mount if data,
@@ -158,27 +177,39 @@ class RecipeLayout extends Component {
               {/* @TODO move away this. incorporate same logic as
                  TileLayout has but with TileLayout/RecipePlain version */}
 
+              <Row>
+              <Col>
               {recipe.id}
-              <br />
-              {recipe.title}
-              <br />
+              </Col>
+              <Col>
+                {recipe.title}
+              </Col>
+              <Col>
               {recipe.directions}
-
-              <br />
-
-              {recipe.ingredients}
+              </Col>
+              <Col>
+              {/*recipe.ingredients*/}
               <IngredientList items={recipe.ingredients} />
 
-              <br />
+              </Col>
+              <Col>
               {recipe.prep_time}
-              <br />
+              </Col>
+              <Col>
               {recipe.total_time}
-              <br />
+              </Col>
+              <Col>
               {recipe.recipe_yield}
-              <br />
+              </Col>
+              <Col>
               {recipe.url}
+              </Col>
+              </Row>
 
-              <Table columns={columns} dataSource={recipe} size="small" />
+
+
+
+              <Table columns={columns} dataSource={[recipe]} size="small" />
 
             </div>
           </div>

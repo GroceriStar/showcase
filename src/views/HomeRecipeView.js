@@ -176,6 +176,10 @@ class HomeRecipeView extends Component {
 
           ) }}
         </Grid>
+
+        <hr />
+        
+
       </div>
 
     );
