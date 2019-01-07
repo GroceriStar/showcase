@@ -30,8 +30,11 @@ const FullDetails = (props) => {
   // render(){
     return (
       <Fragment>
+        <h2> ID: {id} </h2>
+        <h4> {title} </h4>
 
-        
+        <DirectionList items={directions} />
+        <IngredientList items={ingredients} />
 
       </Fragment>
     )

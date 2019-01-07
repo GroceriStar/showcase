@@ -4,7 +4,7 @@ import { DefaultList } from '@groceristar/grocery-component'
 
 
 const DirectionList = ({ items }) => (
-  <DefaultList items={items}>
-)
+  <DefaultList items={items} />
+);
 
 export default DirectionList

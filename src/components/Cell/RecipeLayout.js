@@ -68,23 +68,6 @@ const columns = [
   },
 
 ];
-//
-// const data = [{
-//   key: '1',
-//   name: 'John Brown',
-//   age: 32,
-//   address: 'New York No. 1 Lake Park',
-// }, {
-//   key: '2',
-//   name: 'Jim Green',
-//   age: 42,
-//   address: 'London No. 1 Lake Park',
-// }, {
-//   key: '3',
-//   name: 'Joe Black',
-//   age: 32,
-//   address: 'Sidney No. 1 Lake Park',
-// }];
 
 //
 // {recipe.id}
@@ -109,15 +92,16 @@ const columns = [
 
 class RecipeLayout extends Component {
 
-
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.toggle !== nextState.toggle) {
-      console.log("Toggle RecipedeLayout **********************");
-          return true;
-    }
-    console.log("False RecipeLayout****************************");
-    return false;
-  }
+  //
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (this.props.toggle !== nextState.toggle) {
+  //     console.log("Toggle RecipedeLayout **********************");
+  //         return true;
+  //   }
+  //   console.log("False RecipeLayout****************************");
+  //   return false;
+  // }
+  //
   // constructor(props) {
   //   super(props);
   //   // maybe we should add to state some default stuff and then check on mount if data,
@@ -145,7 +129,7 @@ class RecipeLayout extends Component {
           <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
             <div style={{ color: 'black' }}>
 
-              {/*<TileLayout  items={getFullGrocery(name)} />*/}
+
 
               {/* @TODO move away this. incorporate same logic as
                  TileLayout has but with TileLayout/RecipePlain version */}
@@ -182,7 +166,7 @@ class RecipeLayout extends Component {
 
 
 
-              <Table columns={columns} dataSource={[recipe]} size="small" />
+              
 
               <RecipeTable data={[recipe]} />
 

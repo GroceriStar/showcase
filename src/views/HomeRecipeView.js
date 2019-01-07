@@ -23,41 +23,6 @@ import {
 // getGroceryCollection
 
 
-const columns = [
-  // {
-  // title: 'ID',
-  // dataIndex: 'id',
-  // },
-  {
-    title: 'Title',
-    dataIndex: 'title',
-  },
-  {
-    title: 'Directions',
-    dataIndex: 'directions',
-  },
-  {
-    title: 'Ingredients',
-    dataIndex: 'ingredients',
-  },
-  {
-    title: 'Prep Time',
-    dataIndex: 'prep_time',
-  },
-  {
-    title: 'Total Time',
-    dataIndex: 'total_time',
-  },
-  {
-    title: 'Yield',
-    dataIndex: 'recipe_yield',
-  },
-  {
-    title: 'URL',
-    dataIndex: 'url',
-  },
-
-];
 
 
 
@@ -174,7 +139,7 @@ class HomeRecipeView extends Component {
 
         <hr />
 
-        <RecipeTable columns={columns} data={data} />
+        <RecipeTable data={data} />
 
       </div>
 
