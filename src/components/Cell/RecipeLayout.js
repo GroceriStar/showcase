@@ -22,6 +22,8 @@ import { getRecipeLink } from '../../Router';
 import RecipeHeader from './RecipeHeader';
 import { Button, Icon, Layout, Row, Col, Table } from 'antd'
 
+import RecipeTable from './../Recipe/RecipeTable'
+
 const { Header, Footer, Content } = Layout;
 
 // @TODO replace this with a links, related to react-router
@@ -182,7 +184,7 @@ class RecipeLayout extends Component {
 
               <Table columns={columns} dataSource={[recipe]} size="small" />
 
-              <RecipeTable data={[recipe]}>
+              <RecipeTable data={[recipe]} />
 
             </div>
           </div>
