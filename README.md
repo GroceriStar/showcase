@@ -35,7 +35,7 @@ Stretch goals:
 
 https://codesandbox.io/s/n1p6k7n440
 
-Showcase have search by Tittle
+Showcase have search by Title
 Modals with layouts
 Connection to fetch
 Can be quickly replaced with "fake api"
@@ -43,6 +43,8 @@ Can be quickly replaced with "fake api"
 2) separated layout for modal render
 3) we can make our component this way, so we can update into Material UI
 4) Print template of Recipes
+
+- [ ] moving away from this project code, related to pdf export
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
