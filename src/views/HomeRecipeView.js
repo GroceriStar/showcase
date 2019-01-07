@@ -139,6 +139,8 @@ class HomeRecipeView extends Component {
 
         <hr />
 
+
+        {/* @TODO we need to find out, why this table didn't digesting our `data`, maybe problem in structure, but i don't know now */}
         <RecipeTable data={data} />
 
       </div>

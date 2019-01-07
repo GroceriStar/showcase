@@ -32,44 +32,14 @@ function getLink( id ){
   return '/grocery/'+ id;
 }
 
-
-const columns = [
-  // {
-  // title: 'ID',
-  // dataIndex: 'id',
-  // },
-  {
-  title: 'Title',
-  dataIndex: 'title',
-  },
-  {
-  title: 'Directions',
-  dataIndex: 'directions',
-  },
-  {
-  title: 'Ingredients',
-  dataIndex: 'ingredients',
-  },
-  {
-  title: 'Prep Time',
-  dataIndex: 'prep_time',
-  },
-  {
-  title: 'Total Time',
-  dataIndex: 'total_time',
-  },
-  {
-  title: 'Yield',
-  dataIndex: 'recipe_yield',
-  },
-  {
-  title: 'URL',
-  dataIndex: 'url',
-  },
-
-];
-
+// <FullDetails   data={recipe} />
+// <MiddleDetails data={recipe} />
+// <ShortDetails  data={recipe} />
 //
+// /* or full, middle, small */
+// <Details data={recipe} type={'full'} />
+
+//----------------------------------------
 // {recipe.id}
 // <br />
 // {recipe.title}
@@ -114,9 +84,10 @@ class RecipeLayout extends Component {
 
   render() {
 
-    const { toggle, id, recipe} = this.props;
+    const { toggle, id, recipe } = this.props;
 
-    console.log(recipe);
+    // console.log(recipe.ingredients);
+    // console.log(id);
 
     // console.log(this.props.data)
 
@@ -134,41 +105,68 @@ class RecipeLayout extends Component {
               {/* @TODO move away this. incorporate same logic as
                  TileLayout has but with TileLayout/RecipePlain version */}
 
-              <Row>
-              <Col>
-              {recipe.id}
-              </Col>
-              <Col>
-                {recipe.title}
-              </Col>
-              <Col>
-              {recipe.directions}
-              </Col>
-              <Col>
-              {/*recipe.ingredients*/}
-              <IngredientList items={recipe.ingredients} />
+              <Row style={{ marginBottom: '20px' }}>
+                <Col>
+                {id}
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: '20px' }}>
+                <Col>
+                  {recipe.title}
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: '20px' }}>
+                <Col>
 
-              </Col>
-              <Col>
-              {recipe.prep_time}
-              </Col>
-              <Col>
-              {recipe.total_time}
-              </Col>
-              <Col>
-              {recipe.recipe_yield}
-              </Col>
-              <Col>
-              {recipe.url}
-              </Col>
+
+                <Directions items={recipe.directions} />
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: '20px' }}>
+                <Col>
+                {/*recipe.ingredients*/}
+                <IngredientList items={recipe.ingredients} />
+
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: '20px' }}>
+                <Col>
+                {recipe.prep_time}
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: '20px' }}>
+                <Col>
+                {recipe.total_time}
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: '20px' }}>
+                <Col>
+                {recipe.recipe_yield}
+                </Col>
+              </Row>
+              <Row style={{ marginBottom: '20px' }}>
+                <Col>
+                {recipe.url}
+                </Col>
               </Row>
 
 
 
 
-              
+              <hr />
 
               <RecipeTable data={[recipe]} />
+
+              <hr />
+
+              {/* this is not working */}
+              <FullDetails   data={recipe} />
+              <MiddleDetails data={recipe} />
+              <ShortDetails  data={recipe} />
+
+
+              {/* or full, middle, small */}
+              <Details data={recipe} type={'full'} />
 
             </div>
           </div>
@@ -176,17 +174,9 @@ class RecipeLayout extends Component {
         </Content>
         <Footer style={{ textAlign: 'center' }}>
 
-
-
-
-
-
-
-
           {/* Should we really pass the name? or this is just because we don't have a propper ids here?
           If yes, then we should make it clear, so later we'll be able to
           @TODO bad layout here - we need to overmake it as possible - right now it's just working*/}
-
 
 
           <GeneratePDFButton name={recipe.title} />
@@ -196,16 +186,6 @@ class RecipeLayout extends Component {
             href={getLink(id)}>
             View "{recipe.title}"
           </Button>
-
-
-
-
-
-
-
-
-
-
 
 
         </Footer>

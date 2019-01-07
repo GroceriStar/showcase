@@ -2,15 +2,13 @@ import React, {
   Component
 } from 'react'
 // import { Link } from 'react-router-dom'
+//
+// import { Button, Icon, Layout, Row, Col } from 'antd'
 
-import { Button, Icon, Layout, Row, Col } from 'antd'
-
-
-// import { RenderGrocery } from '../RenderGrocery/RenderGrocery'
-
-import RenderFooter from './RenderFooter'
+import RenderFooter  from './RenderFooter'
 import RenderContent from './RenderContent';
-import RenderHeader from './RenderHeader';
+import RenderHeader  from './RenderHeader';
+
 const { Header, Footer, Content } = Layout;
 
 
