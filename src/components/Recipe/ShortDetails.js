@@ -6,7 +6,9 @@ const ShortDetails = (props) => {
 
   return(
     <Fragment>
+
     
+
     </Fragment>
   )
 }

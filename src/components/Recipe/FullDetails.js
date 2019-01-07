@@ -31,6 +31,8 @@ const FullDetails = (props) => {
     return (
       <Fragment>
 
+        
+
       </Fragment>
     )
   // }

@@ -5,7 +5,9 @@ const MiddleDetails = (props) => {
 
   return(
     <Fragment>
+
     
+
     </Fragment>
   )
 }
