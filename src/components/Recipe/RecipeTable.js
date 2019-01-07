@@ -33,14 +33,14 @@ const data = [{
 }];
 
 
-
+//@TODO maybe later we should use {...data} for settings like size, etc
 const RecipeTable = ({ columns, data }) => (
 
   <Table
     columns={columns}
     dataSource={data}
     size="small" />
-    
+
 )
 
 export default RecipeTable

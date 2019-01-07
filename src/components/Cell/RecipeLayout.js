@@ -182,6 +182,8 @@ class RecipeLayout extends Component {
 
               <Table columns={columns} dataSource={[recipe]} size="small" />
 
+              <RecipeTable data={[recipe]}>
+
             </div>
           </div>
 

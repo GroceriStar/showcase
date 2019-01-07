@@ -4,7 +4,7 @@ import { List } from 'antd';
 // import uuidv1 from 'uuid/v1';
 // https://ant.design/components/list/
 
-
+// This is component, related on AntD library
 class IngredientCustomList extends Component {
 
   render() {
