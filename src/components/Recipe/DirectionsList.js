@@ -1,7 +1,10 @@
 import React, { Component, Fragment } from 'react'
 
-const DirectionList = () => {
+import { DefaultList } from '@groceristar/grocery-component'
 
-}
+
+const DirectionList = ({ items }) => (
+  <DefaultList items={items}>
+)
 
 export default DirectionList

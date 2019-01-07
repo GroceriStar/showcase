@@ -34,12 +34,13 @@ const data = [{
 
 
 
-const RecipeTable = ({ columns, data }) => {
+const RecipeTable = ({ columns, data }) => (
 
   <Table
     columns={columns}
     dataSource={data}
     size="small" />
-}
+    
+)
 
 export default RecipeTable

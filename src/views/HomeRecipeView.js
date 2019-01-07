@@ -5,6 +5,8 @@ import Cell     from "./../components/Cell/Cell";
 import { Grid } from "mauerwerk";
 import _        from "lodash";
 
+import RecipeTable from './../components/Recipe/RecipeTable'
+
 import "antd/dist/antd.css";
 import "./../styles.css";
 
