@@ -88,42 +88,6 @@ class HomeRecipeView extends Component {
 
 
     grocery   = [];
-    currentId = 1;
-
-
-
-
-    // @TODO change this. I really don't like this method
-    // getId(name){
-    //   var foundObj = {};
-    //     if (this.grocery.length > 0) {
-    //       foundObj = this.grocery.find((obj) =>  {
-    //         if(obj.name === name) {
-    //           return true;
-    //         } else {
-    //           return false;
-    //         }
-    //       });
-    //     }
-    //
-    //     let id = null;
-    //
-    //     if (_.isEmpty(foundObj)) {
-    //       this.grocery.push({
-    //         "name": name,
-    //         "id": this.currentId
-    //       })
-    //       id = this.currentId++;
-    //       // return this.currentId++;
-    //     } else {
-    //       id = foundObj.id;
-    //       // return foundObj.id;
-    //     }
-    //
-    //     // console.log(id);
-    //     return id;
-    // }
-
 
 
 
@@ -150,18 +114,7 @@ class HomeRecipeView extends Component {
     // console.log( getRandomRecipe() )
     // console.log( getShowcaseFiveRecipes() )
 
-
-    //@TODO i don't like this structure...
-    // we can use streight map or lodash map and have more recognizible logic.
-    // here the test - did you figure out what this 3 lines doing without debug? me too :)
-    // const data = this.state.data.filter(
-    //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
-    // );
-
     const data = this.state.data;
-
-
-
 
 
     // it's a bad way, but at least it make our Grid setup less over confusing.
