@@ -890,6 +890,15 @@
   dependencies:
     uuid "^3.3.2"
 
+"@groceristar/pdf-export@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@groceristar/pdf-export/-/pdf-export-1.0.9.tgz#26b306ee4ab24a497dc3fd3e305c3a1ebc6384cb"
+  integrity sha512-q1IZAwMBA1lo+pD7z41wEub0W3gEkz3XnFT7591LPEGxvgmKhEnwwK/DiHLT3mCz2OVY7b5ZE62pBcMOqrNr0w==
+  dependencies:
+    "@groceristar/groceristar-fetch" "^1.1.37"
+    "@react-pdf/renderer" "^1.1.1"
+    uuid "^3.3.2"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
