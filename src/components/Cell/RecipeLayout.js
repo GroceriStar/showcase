@@ -11,6 +11,15 @@ import { GeneratePDFButton } from '../GroceryListToPDF'
 
 
 
+import Details       from './../Recipe/Details'
+import Directions    from './../Recipe/DirectionsList'
+import FullDetails   from './../Recipe/FullDetails'
+import MiddleDetails from './../Recipe/MiddleDetails'
+import ShortDetails  from './../Recipe/ShortDetails'
+
+
+
+
 
 
 

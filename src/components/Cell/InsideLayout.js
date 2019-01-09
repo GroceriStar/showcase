@@ -3,7 +3,12 @@ import React, {
 } from 'react'
 // import { Link } from 'react-router-dom'
 //
-// import { Button, Icon, Layout, Row, Col } from 'antd'
+
+import {
+  // Button, Icon,
+   Layout,
+    // Row, Col
+  } from 'antd'
 
 import RenderFooter  from './RenderFooter'
 import RenderContent from './RenderContent';
