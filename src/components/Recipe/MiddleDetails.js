@@ -11,7 +11,7 @@ const MiddleDetails = (props) => {
       <h2> ID: {id} </h2>
       <h4> {title} </h4>
 
-      <DirectionList items={directions} />
+      <DirectionList  items={directions} />
       <IngredientList items={ingredients} />
 
     </Fragment>

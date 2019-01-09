@@ -10,7 +10,7 @@ import React, { Component, Fragment } from 'react'
 // recipe.recipe_yield
 // recipe.url
 
-import DirectionList from './DirectionsList'
+import DirectionList      from './DirectionsList'
 import { IngredientList } from '@groceristar/grocery-component'
 
 
@@ -33,7 +33,7 @@ const FullDetails = (props) => {
         <h2> ID: {id} </h2>
         <h4> {title} </h4>
 
-        <DirectionList items={directions} />
+        <DirectionList  items={directions} />
         <IngredientList items={ingredients} />
 
       </Fragment>
