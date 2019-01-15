@@ -4,9 +4,24 @@ import React, {
 
 import { Button, Icon, Layout, Row, Col } from 'antd'
 
-import { GeneratePDFButton } from '../GroceryListToPDF'
-import { GeneratePDFButton2 } from '../GroceryListToPDF'
-import { GeneratePDFButton3 } from '../GroceryListToPDF'
+
+
+//@TODO it should be an updated we don't need to import three buttons, just because we pass a different layout to exporter
+
+
+import {
+  GeneratePDFButton,
+  GeneratePDFButton2,
+  GeneratePDFButton3
+ } from '@groceristar/pdf-export';
+
+//
+// import { GeneratePDFButton } from '../GroceryListToPDF'
+// import { GeneratePDFButton2 } from '../GroceryListToPDF'
+// import { GeneratePDFButton3 } from '../GroceryListToPDF'
+
+
+
 
 import RenderContent from './RenderContent';
 const { Footer } = Layout;
@@ -15,7 +30,9 @@ const { Footer } = Layout;
 function getLink( id ){
   return '/grocery/'+ id;
 }
+
 class RenderFooter extends PureComponent {
+
   // shouldComponentUpdate(nextProps, nextState) {
   // if (this.props.name !== nextProps.name || this.props.id !== nextProps.id) {
   //   console.log("Name and Id RenderFooter **********************");
@@ -24,8 +41,10 @@ class RenderFooter extends PureComponent {
   //     console.log("False RenderFooter****************************");
   //     return false;
   //   }
+
   render() {
-    return(
+
+    return (
       <Footer style={{ textAlign: 'center' }}>
 
 
@@ -37,14 +56,11 @@ class RenderFooter extends PureComponent {
               @TODO bad layout here - we need to overmake it as possible - right now it's just working*/}
 
               <GeneratePDFButton name={this.props.name} />
-
           </Col>
           <Col className="gutter-row" span={6}>
-              {/* our second button can be here */}
               <GeneratePDFButton2 name={this.props.name} />
           </Col>
           <Col className="gutter-row" span={6}>
-              {/* our third button can be here */}
               <GeneratePDFButton3 name={this.props.name} />
           </Col>
           <Col className="gutter-row" span={6}>

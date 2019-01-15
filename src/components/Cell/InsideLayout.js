@@ -10,23 +10,11 @@ import {
     // Row, Col
   } from 'antd'
 
-import RenderFooter  from './RenderFooter'
-import RenderContent from './RenderContent';
 import RenderHeader  from './RenderHeader';
+import RenderContent from './RenderContent';
+import RenderFooter  from './RenderFooter'
 
 const { Header, Footer, Content } = Layout;
-
-
-
-// @TODO update this component by moving out styles.
-// example
-// const cssHeader = {
-//   // background: '#fff',
-//   // color:'red',
-//   //padding: 0
-//   fontSize: '20px'
-// }
-// <Header style={cssHeader} />
 
 
 class InsideLayout extends Component {

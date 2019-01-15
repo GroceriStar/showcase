@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import { PDFViewer, Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 
 
@@ -47,26 +48,6 @@ const styles = StyleSheet.create({
   }
 });
 
-{/* <View style={styles.block}>
-  <View>
-    <Text>one</Text>
-  </View>
-  <View style={styles.block1}>
-    <Text>one2</Text>
-  </View>
-  <View style={styles.block1}>
-    <Text>one3</Text>
-  </View>
-  <View style={styles.block1}>
-      <Text>on4</Text>
-  </View>
-  <View style={styles.block1}>
-      <Text>on5</Text>
-  </View>
-  <View style={styles.block1}>
-    <Text>one6</Text>
-  </View>
-</View> */}
 
 const MyDocument = () => (
   <PDFViewer width={1200} height={1000}>

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import HomeView from './views/HomeView'
+import HomeView       from './views/HomeView'
 import HomeRecipeView from './views/HomeRecipeView'
-import PDFView from './views/PDFView'
+import PDFView        from './views/PDFView'
 
-import GroceriesView from './views/GroceriesView'
-import GroceryView from './views/GroceryView'
+import GroceriesView     from './views/GroceriesView'
+import GroceryView       from './views/GroceryView'
 import ManageGroceryView from './views/ManageGroceryView'
 
 
-import AntdLayout from './layouts/GroceryList/AntdLayout'
+import AntdLayout  from './layouts/GroceryList/AntdLayout'
 
 import CleanLayout from './layouts/GroceryList/CleanLayout'
 
