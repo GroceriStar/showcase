@@ -9,18 +9,14 @@ import { Button, Icon, Layout, Row, Col } from 'antd'
 //@TODO it should be an updated we don't need to import three buttons, just because we pass a different layout to exporter
 
 
-import {
-  GeneratePDFButton,
-  GeneratePDFButton2,
-  GeneratePDFButton3
- } from '@groceristar/pdf-export';
+import { GeneratePDFButton } from '@groceristar/pdf-export';
 
 //
 // import { GeneratePDFButton } from '../GroceryListToPDF'
 // import { GeneratePDFButton2 } from '../GroceryListToPDF'
 // import { GeneratePDFButton3 } from '../GroceryListToPDF'
 
-
+import { getFullGrocery } from '../../selectors/selector';
 
 
 import RenderContent from './RenderContent';
@@ -43,7 +39,8 @@ class RenderFooter extends PureComponent {
   //   }
 
   render() {
-
+    const { name, id } = this.props;
+    const data = getFullGrocery(name);
     return (
       <Footer style={{ textAlign: 'center' }}>
 
@@ -55,21 +52,21 @@ class RenderFooter extends PureComponent {
               If yes, then we should make it clear, so later we'll be able to
               @TODO bad layout here - we need to overmake it as possible - right now it's just working*/}
 
-              <GeneratePDFButton name={this.props.name} />
+              <GeneratePDFButton type={'PDF1'} name={name} data={data}  />
           </Col>
           <Col className="gutter-row" span={6}>
-              <GeneratePDFButton2 name={this.props.name} />
+              <GeneratePDFButton type={'PDF2'} name={name} data={data} />
           </Col>
           <Col className="gutter-row" span={6}>
-              <GeneratePDFButton3 name={this.props.name} />
+              <GeneratePDFButton type={'PDF3'} name={name} data={data} />
           </Col>
           <Col className="gutter-row" span={6}>
             <Button
               type="primary"
               icon="right"
               size="large"
-              href={getLink(this.props.id)}>
-                View "{this.props.name}"
+              href={getLink(id)}>
+                View "{name}"
             </Button>
           </Col>
         </Row>
