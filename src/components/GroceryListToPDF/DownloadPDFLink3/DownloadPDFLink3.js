@@ -7,7 +7,9 @@ import {
 import { Button } from 'antd';
 
 
-import { DocumentLayout3, RenderLists3 }  from '../index';
+// import { DocumentLayout3, RenderLists3 }  from '../index';
+
+import { DocumentLayout3, RenderLists3 }  from '@groceristar/pdf-export';
 
 import styles from './styles'
 
