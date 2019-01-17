@@ -2,20 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { PDFViewer, Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 
-
+// this version related to displaying recipe layout.
+// @TODO replace with Recipe Layout. Right now it's not working.
+// major sample we can see at pdf-react-print
 
 import { RenderLists3 } from '@groceristar/pdf-export';
 
-
-// import RenderLists3 from '../components/GroceryListToPDF/RenderLists3/RenderLists3'
-// Create styles
-// import styles from './styles'
 
 import { getFullGrocery } from "../selectors/selector";
 
 // console.log(styles)
 const data = getFullGrocery("19 Gluten-Free Foods Shopping List");
-console.log(data);
+// console.log(data);
 // Create Document Component
 
 const styles = StyleSheet.create({

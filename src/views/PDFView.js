@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { PDFViewer, Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 
-
+// this is a version, related to displaying GL with layout #3
 
 import { RenderLists3 } from '@groceristar/pdf-export';
 
