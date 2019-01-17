@@ -1,6 +1,7 @@
 
 
-
+// @TODO update it with a new version, related to our pdf-export
+// details upon request 
 
 import DownloadPDFLink   from './DownloadPDFLink/DownloadPDFLink';
 import GeneratePDFButton from './GeneratePDFButton/GeneratePDFButton';
