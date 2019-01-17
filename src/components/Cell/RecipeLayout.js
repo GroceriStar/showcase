@@ -3,9 +3,25 @@ import React, {
 } from 'react'
 
 import { Link } from 'react-router-dom';
+
+
+
+
+
+
 import TileLayout from '../TileLayout/TileLayout'
 
+
+
+
+
+
 import { GeneratePDFButton } from '../GroceryListToPDF'
+
+
+
+
+
 
 
 import Details       from './../Recipe/Details'
