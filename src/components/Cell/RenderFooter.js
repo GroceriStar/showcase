@@ -5,7 +5,7 @@ import React, {
 import { Button, Icon, Layout, Row, Col } from 'antd'
 
 
-
+import { Link } from 'react-router-dom';
 //@TODO it should be an updated we don't need to import three buttons, just because we pass a different layout to exporter
 
 
@@ -16,16 +16,12 @@ import { GeneratePDFButton } from '@groceristar/pdf-export';
 // import { GeneratePDFButton2 } from '../GroceryListToPDF'
 // import { GeneratePDFButton3 } from '../GroceryListToPDF'
 
+import { getLink } from '../../Router';
 import { getFullGrocery } from '../../selectors/selector';
 
 
 import RenderContent from './RenderContent';
 const { Footer } = Layout;
-
-// @TODO replace this with a links, related to react-router
-function getLink( id ){
-  return '/grocery/'+ id;
-}
 
 class RenderFooter extends PureComponent {
 
@@ -61,13 +57,15 @@ class RenderFooter extends PureComponent {
               <GeneratePDFButton type={'PDF3'} name={name} data={data} />
           </Col>
           <Col className="gutter-row" span={6}>
-            <Button
-              type="primary"
-              icon="right"
-              size="large"
-              href={getLink(id)}>
-                View "{name}"
-            </Button>
+            <Link to={getLink(id)}>
+              <Button
+                type="primary"
+                icon="right"
+                size="large">
+                  View "{name}"
+              </Button>
+            </Link>
+
           </Col>
         </Row>
 
