@@ -8,12 +8,17 @@ import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
 
 import { Collapse } from 'antd';
 import uuidv1 from 'uuid/v1';
-import {  IngredientList } from '@groceristar/grocery-component';
+
+import { IngredientList, DepartmentList } from '@groceristar/grocery-component';
+
 
 const Panel = Collapse.Panel;
 // Looks like we don't use this component. Maybe we shall delete it soon
 
-class RenderGrocery extends Component {
+// NOTE: right now this component is a mess, because of bug from AntD. they fixed it and in next release all start to work well.
+
+
+class RecipePlain extends Component {
 
   render() {
 
@@ -41,4 +46,4 @@ class RenderGrocery extends Component {
   }
 }
 
-export { RenderGrocery };
+export default RecipePlain;

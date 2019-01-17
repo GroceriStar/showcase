@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 import {
   Button,
   Icon,
@@ -9,7 +10,9 @@ import {
   Switch
 } from 'antd'
 
-export default function({
+// @TODO we have a long list of props here. it's confusing.
+
+const Header = function({
   shuffle,
   search,
   setColumns,
@@ -18,6 +21,17 @@ export default function({
   columns,
   margin
 }) {
+
+  // @TODO convert to this approach. at least it less confusing
+  // const { shuffle,
+  // search,
+  // setColumns,
+  // setMargin,
+  // setHeight,
+  // columns,
+  // margin } = this.props;
+
+
   return (
     <div className="header">
       <Button type="primary" onClick={shuffle}>
@@ -86,18 +100,23 @@ export default function({
         </Button>
       </Dropdown>
 
+
+      {/*
+
       <span style={{ marginLeft: 15 }}>
         Individual height
       </span>
 
-      <Switch style={{ marginLeft: 15 }} defaultChecked onChange={setHeight} />
 
-      <Button type="primary">
-        <Link to="/groceries">View collection without fanciness</Link>
-      </Button>
+      <Switch style={{ marginLeft: 15 }} defaultChecked onChange={setHeight} />
+      */}
+
+    
 
 
 
     </div>
   )
 }
+
+export default Header;

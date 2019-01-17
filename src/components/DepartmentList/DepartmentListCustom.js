@@ -5,6 +5,13 @@ import { List } from '@groceristar/grocery-component';
 
 import IngredientCustomList from '../Ingredients/IngredientCustomList.js';
 
+//@TODO it's should be tested, because i'm not recollecting if this working thing or should be finished
+
+const Wrapper = ({ children }) => (
+  <Collapse accordion>{children}</Collapse>
+);
+
+
 const RenderItem = ({ data, id }) => {
 
   return (
