@@ -21,6 +21,10 @@ const getRecipeLink = (id) => {
   return '/recipe/'+ id;
 }
 
+const getLink = id => {
+  return '/grocery/'+ id;
+}
+
 class Router extends Component {
   render(){
     return (
@@ -46,4 +50,4 @@ class Router extends Component {
   }
 }
 
-export { Router, getRecipeLink };
+export { Router, getRecipeLink, getLink };
