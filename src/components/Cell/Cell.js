@@ -7,6 +7,7 @@ import InsideLayout from './InsideLayout';
 import RecipeLayout from './RecipeLayout';
 import ShowFade from './ShowFade';
 import ShowAnimationFade from './ShowAnimationFade';
+
 // @TODO can we avoid passing css variable? i think yep
 // can we avoid passing a maximized variable - we should explore this
 // const styles = {

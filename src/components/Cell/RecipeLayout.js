@@ -158,7 +158,7 @@ class RecipeLayout extends Component {
                 {recipe.url}
                 </Col>
               </Row>
-
+            {/* then end */}
 
 
 
