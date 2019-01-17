@@ -8,7 +8,7 @@ import { PDFViewer, Document, Page, Text, View, StyleSheet } from '@react-pdf/re
 import { RenderLists3 } from '@groceristar/pdf-export';
 
 
-// import RenderLists3 from '../components/GroceryListToPDF/RenderLists3/RenderLists3'
+
 // Create styles
 // import styles from './styles'
 

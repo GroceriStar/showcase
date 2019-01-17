@@ -2,10 +2,6 @@ import DownloadPDFLink   from './DownloadPDFLink/DownloadPDFLink';
 import DownloadPDFLink2   from './DownloadPDFLink2/DownloadPDFLink2';
 import DownloadPDFLink3   from './DownloadPDFLink3/DownloadPDFLink3';
 
-import GeneratePDFButton from './GeneratePDFButton/GeneratePDFButton';
-import GeneratePDFButton2 from './GeneratePDFButton2/GeneratePDFButton2';
-import GeneratePDFButton3 from './GeneratePDFButton3/GeneratePDFButton3';
-
 
 // import DocumentLayout    from './DownloadPDFLink/DocumentLayout';
 //
@@ -19,9 +15,9 @@ import RenderLists       from './RenderLists/RenderLists';
 
 
 import RenderLists2       from './RenderLists2/RenderLists2';
-import RenderLists3       from './RenderLists3/RenderLists3';
+// import RenderLists3       from './RenderLists3/RenderLists3';
 
-
+import { RenderLists3 }  from '@groceristar/pdf-export';
 
 
 export {
@@ -29,9 +25,6 @@ export {
   DownloadPDFLink2,
   DownloadPDFLink3,
 
-  GeneratePDFButton,
-  GeneratePDFButton2,
-  GeneratePDFButton3,
   // DocumentLayout,
   // DocumentLayout2,
   // DocumentLayout3,

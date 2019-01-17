@@ -5,8 +5,8 @@ import React, {
 import { Link } from 'react-router-dom';
 import TileLayout from '../TileLayout/TileLayout'
 
-import { GeneratePDFButton } from '../GroceryListToPDF'
-
+// import { GeneratePDFButton } from '../GroceryListToPDF'
+import { GeneratePDFButton } from '@groceristar/pdf-export';
 
 import Details       from './../Recipe/Details'
 import Directions    from './../Recipe/DirectionsList'
