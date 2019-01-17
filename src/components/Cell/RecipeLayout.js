@@ -15,7 +15,9 @@ import TileLayout from '../TileLayout/TileLayout'
 
 
 
-
+// @TODO be aware - as we're replacing our previous versions of pdf export into a new, separated component.
+// i think it should be deleted and replaced with a component that we have at our separated package.
+// but it can break things
 import { GeneratePDFButton } from '../GroceryListToPDF'
 
 
@@ -23,12 +25,17 @@ import { GeneratePDFButton } from '../GroceryListToPDF'
 
 
 
-
+//@TODO this part of components are non finished, or not tested well. we should address that
 import Details       from './../Recipe/Details'
 import Directions    from './../Recipe/DirectionsList'
 import FullDetails   from './../Recipe/FullDetails'
 import MiddleDetails from './../Recipe/MiddleDetails'
 import ShortDetails  from './../Recipe/ShortDetails'
+
+
+
+
+
 
 
 import { getFullGrocery } from '../../selectors/selector';
