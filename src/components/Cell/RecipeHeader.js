@@ -63,29 +63,21 @@ class RecipeHeader extends Component {
 	//   }
 	render() {
 		return (
-  <Header style={
-				cssHeader
-			}
-			>
-  <Row>
-      <Col span={20}>
-            "
-      {this.props.title}
-" Template
+		  <Header style={cssHeader}>
+        <Row>
+        <Col span={20}>
+          "{this.props.title}" Template
+        </Col>
+        <Col span={4}>
 
+        <Icon
+          className="tile-close"
+          style={iconStyle}
+          type="close"
+          onClick={this.props.toggle}
+        />
 
-
-</Col>
-      <Col span={4}>
-
-  <Icon
-  className="tile-close"
-  style={iconStyle}
-  type="close"
-  onClick={this.props.toggle}
-						/>
-
-					</Col>
+          </Col>
 				</Row>
 
 			</Header>
