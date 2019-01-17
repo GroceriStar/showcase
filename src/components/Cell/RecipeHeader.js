@@ -22,12 +22,14 @@ const { Header, Footer, Content } = Layout;
 
 // @TODO update this component by moving out styles.
 // example
-// const cssHeader = {
-//   // background: '#fff',
-//   // color:'red',
-//   //padding: 0
-//   fontSize: '20px'
-// }
+const cssHeader = {
+	// background: '#fff',
+	// color:'red',
+	// padding: 0
+	fontSize: '20px',
+};
+
+const iconStyle = { cursor: 'pointer', transition: 'color .3s' };
 // <Header style={cssHeader} />
 
 class RecipeHeader extends Component {
@@ -41,7 +43,10 @@ class RecipeHeader extends Component {
 	//   }
 	render() {
 		return (
-  <Header className='RecipeHeader-header'>
+  <Header style={
+				cssHeader
+			}
+			>
   <Row>
       <Col span={20}>
             "
@@ -54,7 +59,8 @@ class RecipeHeader extends Component {
       <Col span={4}>
 
   <Icon
-  className="tile-close RecipeHeader-icon"
+  className="tile-close"
+  style={iconStyle}
   type="close"
   onClick={this.props.toggle}
 						/>
