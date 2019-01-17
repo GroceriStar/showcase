@@ -21,8 +21,6 @@ const getRecipeLink = (id) => {
   return '/recipe/'+ id;
 }
 
-// @TODO replace this with a links, related to react-router
-// @TODO good example how for second case this link is not working well.
 const getLink = id => {
   return '/grocery/'+ id;
 }
