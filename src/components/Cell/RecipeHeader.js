@@ -1,8 +1,6 @@
 import React, {
 	Component,
 } from 'react';
-
-import './RecipeHeader.scss';
 import uuidv1 from 'uuid/v1';
 import { IngredientList, DefaultList } from '@groceristar/grocery-component';
 import {
