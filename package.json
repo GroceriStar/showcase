@@ -13,7 +13,6 @@
     "antd": "^3.12.3",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
-    "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
