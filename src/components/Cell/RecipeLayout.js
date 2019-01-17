@@ -2,13 +2,10 @@ import React, {
   Component
 } from 'react'
 
-
+import { Link } from 'react-router-dom';
 import TileLayout from '../TileLayout/TileLayout'
 
 import { GeneratePDFButton } from '../GroceryListToPDF'
-
-
-
 
 
 import Details       from './../Recipe/Details'
@@ -18,28 +15,18 @@ import MiddleDetails from './../Recipe/MiddleDetails'
 import ShortDetails  from './../Recipe/ShortDetails'
 
 
-
-
-
-
-
 import { getFullGrocery } from '../../selectors/selector';
 import uuidv1 from 'uuid/v1';
 import { IngredientList, DefaultList } from '@groceristar/grocery-component';
 
-import { getRecipeLink } from '../../Router';
+import { getRecipeLink, getLink } from '../../Router';
 import RecipeHeader from './RecipeHeader';
 import { Button, Icon, Layout, Row, Col, Table } from 'antd'
 
 import RecipeTable from './../Recipe/RecipeTable'
-
+import RecipeLayoutMain from './RecipeLayoutMain';
 const { Header, Footer, Content } = Layout;
 
-// @TODO replace this with a links, related to react-router
-// @TODO good example how for second case this link is not working well.
-function getLink( id ){
-  return '/grocery/'+ id;
-}
 
 // <FullDetails   data={recipe} />
 // <MiddleDetails data={recipe} />
@@ -114,50 +101,10 @@ class RecipeLayout extends Component {
               {/* @TODO move away this. incorporate same logic as
                  TileLayout has but with TileLayout/RecipePlain version */}
 
-              <Row style={{ marginBottom: '20px' }}>
-                <Col>
-                {id}
-                </Col>
-              </Row>
-              <Row style={{ marginBottom: '20px' }}>
-                <Col>
-                  {recipe.title}
-                </Col>
-              </Row>
-              <Row style={{ marginBottom: '20px' }}>
-                <Col>
-
-
-                <Directions items={recipe.directions} />
-                </Col>
-              </Row>
-              <Row style={{ marginBottom: '20px' }}>
-                <Col>
-                {/*recipe.ingredients*/}
-                <IngredientList items={recipe.ingredients} />
-
-                </Col>
-              </Row>
-              <Row style={{ marginBottom: '20px' }}>
-                <Col>
-                {recipe.prep_time}
-                </Col>
-              </Row>
-              <Row style={{ marginBottom: '20px' }}>
-                <Col>
-                {recipe.total_time}
-                </Col>
-              </Row>
-              <Row style={{ marginBottom: '20px' }}>
-                <Col>
-                {recipe.recipe_yield}
-                </Col>
-              </Row>
-              <Row style={{ marginBottom: '20px' }}>
-                <Col>
-                {recipe.url}
-                </Col>
-              </Row>
+              <RecipeLayoutMain
+                id={id}
+                recipe={recipe}
+                />
             {/* then end */}
 
 
@@ -191,10 +138,13 @@ class RecipeLayout extends Component {
           <GeneratePDFButton name={recipe.title} />
           <br />
 
-          <Button type="primary" icon="right" size="large"
-            href={getLink(id)}>
-            View "{recipe.title}"
-          </Button>
+
+          <Link to={getLink(id)}>
+            <Button type="primary" icon="right" size="large">
+              View "{recipe.title}"
+            </Button>
+          </Link>
+
 
 
         </Footer>

@@ -10,6 +10,10 @@ import TileLayout from '../TileLayout/TileLayout';
 
 const { Header, Footer, Content } = Layout;
 
+const ContentStyle = { margin: '24px 16px 0', fontSize: '14px' };
+
+const divStyle = { padding: 24, background: '#fff', minHeight: 360 };
+
 class RenderContent extends PureComponent {
   // shouldComponentUpdate(nextProps, nextState) {
   // if (this.props.name !== nextProps.name) {
@@ -25,10 +29,10 @@ class RenderContent extends PureComponent {
 
 
     return (
-      <Content style={{ margin: '24px 16px 0', fontSize: '14px' }}>
+      <Content style={ContentStyle}>
 
 
-        <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+        <div style={divStyle}>
 
           {/* @TODO the problem here - we need to connect selectors and pass `name` variable here. it's not cool and not- reusable */}
 
