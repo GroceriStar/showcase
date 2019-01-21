@@ -1,4 +1,4 @@
-import { groceristar, chickenKyiv } from "@groceristar/groceristar-fetch";
+import { groceristar, chickenKyiv, showcase } from "@groceristar/groceristar-fetch";
 
 
 function getGroceryById( id ) {
@@ -10,7 +10,7 @@ function getFullGrocery( name ) {
 }
 
 function getGroceryCollection(){
-  return groceristar.getGroceryShowcase();
+  return showcase.getGroceryShowcase();
 }
 
 function getAllGrocery(){
