@@ -9,7 +9,7 @@
     "@groceristar/groceristar-fetch": "^1.1.49",
     "@groceristar/grocery-component": "^1.0.6",
     "@groceristar/pdf-export": "^1.0.24",
-    "@react-pdf/renderer": "^1.2.0",
+    "@react-pdf/renderer": "^1.2.1",
     "antd": "^3.12.4",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
