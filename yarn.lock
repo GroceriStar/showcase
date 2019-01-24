@@ -875,10 +875,10 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
-"@groceristar/groceristar-fetch@^1.1.49":
-  version "1.1.49"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.49.tgz#9d0263236b56740ba28fcd367db33fa878819a07"
-  integrity sha512-+7TU1QwAAdBgjBqR74W07xanOe2YndxkYX4EuawAC2KNrx+diaOx/UeQVsUc72CKWjm/aQkxxL/RpdZLdw/lFw==
+"@groceristar/groceristar-fetch@^1.1.53":
+  version "1.1.53"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.53.tgz#6c769a2d3e85d5fd647a7fbc1ba07b3402d7f698"
+  integrity sha512-uRrAOVTpCPO0R8atCMBAjOLjjmcOfKloIqVOAXZtwu3GIF/1LAHAHY37HvO35ovD5cLW+WAL3x0iJGgf9bVCgg==
   dependencies:
     fs "0.0.1-security"
     lodash "^4.17.10"
