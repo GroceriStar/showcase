@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 // import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
 
-// import { DepartmentList } from '@groceristar/grocery-component'
 import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
 
 
@@ -26,7 +25,7 @@ class RecipePlain extends Component {
     // console.log(items)
     return (
       <Fragment>
-        { /* DepartmentListCollapse items={items} /> */ }
+         { /*<DepartmentListCollapse items={items} /> */}
 
 
         <Collapse accordion>

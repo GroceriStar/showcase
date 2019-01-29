@@ -1,13 +1,12 @@
 import React, { Component, Fragment } from "react";
 import { Collapse } from 'antd';
 import uuidv1 from 'uuid/v1';
+import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
 
 // import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
 
 
 
-
-// import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
 
 
 
@@ -33,7 +32,7 @@ class TileLayout extends Component {
     return (
       <Fragment>
 
-         {/*DepartmentListCollapse items={items} />  */}
+    {/*<DepartmentListCollapse items={items} /> */}
 
 
         <Collapse accordion>
