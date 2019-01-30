@@ -22,6 +22,16 @@ import RenderFooter from './RenderFooter'
 import RenderContent from './RenderContent';
 const { Header, Footer, Content } = Layout;
 
+
+const headerStyle = {
+// background: '#fff',
+// color:'red',
+//padding: 0
+fontSize: '20px'
+};
+
+const iconStyle = { cursor: "pointer", transition: "color .3s" };
+
 class RenderHeader extends Component {
   // shouldComponentUpdate(nextProps, nextState) {
   // if (this.props.name !== nextProps.name || this.props.toggle !== nextProps.toggle) {
@@ -33,12 +43,7 @@ class RenderHeader extends Component {
   //   }
   render(){
     return (
-      <Header style={{
-      // background: '#fff',
-      // color:'red',
-      //padding: 0
-      fontSize: '20px'
-  }}>
+      <Header style={headerStyle}>
 
 
       <Row>
@@ -50,7 +55,7 @@ class RenderHeader extends Component {
           <Icon
             className="tile-close"
             type="close"
-            style={{ cursor: "pointer", transition: "color .3s" }}
+            style={iconStyle}
             onClick={this.props.toggle}
           />
 

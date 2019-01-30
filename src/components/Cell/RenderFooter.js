@@ -23,6 +23,8 @@ import { getFullGrocery } from '../../selectors/selector';
 import RenderContent from './RenderContent';
 const { Footer } = Layout;
 
+
+const footerStyle = { textAlign: 'center' };
 class RenderFooter extends PureComponent {
 
   // shouldComponentUpdate(nextProps, nextState) {
@@ -38,7 +40,7 @@ class RenderFooter extends PureComponent {
     const { name, id } = this.props;
     const data = getFullGrocery(name);
     return (
-      <Footer style={{ textAlign: 'center' }}>
+      <Footer style={footerStyle}>
 
 
         <Row gutter={16}>
