@@ -27,6 +27,8 @@ const Cell2 = ( props ) => {
   )
 }
 
+
+
 // we should add checking if we have a name actually.
 // because if i'm passing title instead of name - for sure all is crashing now
 
@@ -37,7 +39,7 @@ class Cell extends Component {
     // console.log(this.props);
 
     const { toggle, name, height, description, css, open, id, type } = this.props;
-
+    const cellStyle = { backgroundImage: css, cursor: !open ? "pointer" : "auto" };
     // console.log(this.props);
 
     var layout;
@@ -53,7 +55,7 @@ class Cell extends Component {
 
         <div
           className="cell"
-          style={{ backgroundImage: css, cursor: !open ? "pointer" : "auto" }}
+          style={cellStyle}
           onClick={!open ? toggle : undefined}
         >
 

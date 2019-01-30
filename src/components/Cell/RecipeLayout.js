@@ -28,6 +28,13 @@ import RecipeLayoutMain from './RecipeLayoutMain';
 const { Header, Footer, Content } = Layout;
 
 
+
+//Styles
+const contentStyle = { margin: '24px 16px 0', fontSize: '14px' };
+const contentDivStyle1 = { padding: 24, background: '#fff', minHeight: 360 };
+const contentDivStyle2 = { color: 'black' };
+const footerStyle = { textAlign: 'center' };
+
 // <FullDetails   data={recipe} />
 // <MiddleDetails data={recipe} />
 // <ShortDetails  data={recipe} />
@@ -90,11 +97,11 @@ class RecipeLayout extends Component {
     return (
       <Layout>
         <RecipeHeader title={recipe.title} toggle={toggle} />
-        <Content style={{ margin: '24px 16px 0', fontSize: '14px' }}>
+        <Content style={contentStyle}>
 
 
-          <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-            <div style={{ color: 'black' }}>
+          <div style={contentDivStyle1}>
+            <div style={contentDivStyle2}>
 
 
 
@@ -128,7 +135,7 @@ class RecipeLayout extends Component {
           </div>
 
         </Content>
-        <Footer style={{ textAlign: 'center' }}>
+        <Footer style={footerStyle}>
 
           {/* Should we really pass the name? or this is just because we don't have a propper ids here?
           If yes, then we should make it clear, so later we'll be able to
