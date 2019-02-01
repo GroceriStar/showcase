@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import deleteUserAccount from '../../helpers/deleteUserAccount'
-import fetchUserData from '../../helpers/fetchUserData'
-import inviteUser from '../../helpers/inviteUser'
-import updateUserDetails from '../../helpers/updateUserDetails'
+import { Redirect }         from 'react-router-dom';
+import deleteUserAccount    from '../../helpers/deleteUserAccount'
+import fetchUserData        from '../../helpers/fetchUserData'
+import inviteUser           from '../../helpers/inviteUser'
+import updateUserDetails    from '../../helpers/updateUserDetails'
 
 class UsersInfo extends Component {
 
 	constructor() {
 		super();
+
 		this.state = {
 			userdata: {},
 			editing: false
@@ -30,15 +31,15 @@ class UsersInfo extends Component {
 			let accessToken = sessionStorage.getItem("accessToken");
 
 			deleteUserAccount(userId, accessToken)
-			.then(response => {
-				console.log(response)
-				sessionStorage.removeItem("accessToken");
-				sessionStorage.removeItem("userId");
-				sessionStorage.setItem("isLoggedIn", JSON.stringify(false));
-				this.props.history.push('logout')
-			}).catch(err => {
-				console.log(err)
-			})
+				.then(response => {
+					console.log(response)
+					sessionStorage.removeItem("accessToken");
+					sessionStorage.removeItem("userId");
+					sessionStorage.setItem("isLoggedIn", JSON.stringify(false));
+					this.props.history.push('logout')
+				}).catch(err => {
+					console.log(err)
+				})
 		}
 		else
 			console.log("You clicked no")
@@ -67,60 +68,67 @@ class UsersInfo extends Component {
 	}
 
 	save() {
-		let userId = sessionStorage.getItem("userId");
+		let userId      = sessionStorage.getItem("userId");
 		let accessToken = sessionStorage.getItem("accessToken");
+
 		let user = {
 			"firstName": this.refs.fname.value,
 			"lastName": this.refs.lname.value
 		//	email: this.refs.email.value		//solve the issue of email verification after changing
 		}
+
 		updateUserDetails(userId, user, accessToken)
-		.then(response => {
-			console.log(user)
-			console.log("Success updating user data")
-		}).catch(err => console.log(err))
+			.then(response => {
+				console.log(user)
+				console.log("Success updating user data")
+			})
+			.catch(err => console.log(err))
+
 		this.setState({editing:false});
 	}
+
 //keep here if separate page not needed
 	send (e){
 		e.preventDefault();
 		console.log("entered email is: "+this.refs.email.value)
-		let at = sessionStorage.getItem("accessToken");
+		let at     = sessionStorage.getItem("accessToken");
 		let userId = sessionStorage.getItem("userId");
 
 		fetchUserData(userId, at)
-		.then(response => {
-			// console.log(response)
-			this.setState({userdata: response})
-			inviteUser(this.refs.email.value, this.state.userdata, at)
-			.then(res => {
-				console.log(res);
-				this.props.history.push('/profile');
-			}).catch(err => {
-				if(err.response)
-					console.log(err.response.data.error.message + "Error at sending invite");
-				else
-					console.log(err)
+			.then(response => {
+				// console.log(response)
+				this.setState({userdata: response})
+
+				inviteUser(this.refs.email.value, this.state.userdata, at)
+					.then(res => {
+						console.log(res);
+						this.props.history.push('/profile');
+					})
+					.catch(err => {
+						if(err.response)
+							console.log(err.response.data.error.message + "Error at sending invite");
+						else
+							console.log(err)
+					})
 			})
-		})
-		.catch(error => {
-			console.log(error + "Error in getting user data")
-		});
+			.catch(error => {
+				console.log(error + "Error in getting user data")
+			});
 	}
 
 	getUsersData() {
 		let accessToken = sessionStorage.getItem("accessToken");
-		let userId = sessionStorage.getItem("userId");
+		let userId      = sessionStorage.getItem("userId");
 		//console.log(userId);
 		fetchUserData(userId, accessToken)
-		.then(response => {
-			// console.log(response)
-			this.setState({userdata: response})
-			sessionStorage.setItem("email",response.email);
-		})
-		.catch(error => {
-			console.log(error + "Error in getting user data")
-		});
+			.then(response => {
+				// console.log(response)
+				this.setState({userdata: response})
+				sessionStorage.setItem("email",response.email);
+			})
+			.catch(error => {
+				console.log(error + "Error in getting user data")
+			});
 	}
 
 	renderNormal() {
@@ -172,15 +180,16 @@ class UsersInfo extends Component {
 	}
 
 	render() {
+
 		let check = JSON.parse(sessionStorage.getItem("isLoggedIn"));
+
 		if(check === true){
 			if(this.state.editing){
 				return this.renderEditMode();
-			}
-			else
+			} else {
 				return this.renderNormal();
-		}
-		else{
+			}
+		} else {
 			console.log("you need to login first")
 		//	console.log(sessionStorage.getItem("isLoggedIn"));
 			return <Redirect to="/" />
