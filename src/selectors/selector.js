@@ -1,4 +1,4 @@
-import { groceristar, chickenKyiv, showcase } from "@groceristar/groceristar-fetch";
+import { groceristar, chickenKyiv, showcase, gsLoopback } from "@groceristar/groceristar-fetch";
 
 
 function getGroceryById( id ) {
@@ -56,6 +56,18 @@ function getRecipeChickenKyivById(id) {
   return chickenKyiv.getRecipe()[id];
 }
 
+// GS Loopback
+function getUltimateGrocery(){
+  return gsLoopback.getUltimateGrocery();
+};
+
+function getGLwithUserRelations(){
+  return gsLoopback.getGLwithUserRelations();
+};
+
+function getIngredientsSampleFromDB(){
+  return gsLoopback.getIngredientsSampleFromDB();
+};
 
 export {
   getGroceryById,
@@ -68,7 +80,10 @@ export {
   getFirstFiveRecipes,
   getFiveRandomIngredients,
   getRecipeChickenKyivById,
-  getShowcaseFiveRecipes
+  getShowcaseFiveRecipes,
 
+  getUltimateGrocery,
+  getGLwithUserRelations,
+  getIngredientsSampleFromDB
 
 }
