@@ -45,11 +45,6 @@ function getFirstFiveRecipes(){
 }
 
 
-function getShowcaseFiveRecipes(){
-  return chickenKyiv.getShowcaseFiveRecipes();
-}
-
-
 function getFiveRandomIngredients(){
   return chickenKyiv.getFiveRandomIngredients();
 }
@@ -86,7 +81,7 @@ export {
   getFirstFiveRecipes,
   getFiveRandomIngredients,
   getRecipeChickenKyivById,
-  getShowcaseFiveRecipes,
+
 
   getUltimateGrocery,
   getGLwithUserRelations,
