@@ -1,11 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'antd';
+
 import { IngredientList } from '@groceristar/grocery-component';
 import Directions  from '../Recipe/DirectionsList';
 
+
 const rowStyle = { marginBottom: '20px' };
 
-const RecipeLayoutMain = ({id, recipe}) => (
+const RecipeLayoutMain = ({ id, recipe }) => (
   <div>
   <Row style={rowStyle}>
     <Col>

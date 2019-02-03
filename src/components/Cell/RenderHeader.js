@@ -1,7 +1,7 @@
 import React, {
   Component,
 } from 'react'
-// import { Link } from 'react-router-dom'
+
 
 import { Button, Icon, Layout, Row, Col } from 'antd'
 
@@ -17,9 +17,13 @@ import { GeneratePDFButton } from '@groceristar/pdf-export';
 // import { GeneratePDFButton2 } from '../GroceryListToPDF'
 // import { GeneratePDFButton3 } from '../GroceryListToPDF'
 
-import { getFullGrocery } from '../../selectors/selector';
+
 import RenderFooter from './RenderFooter'
 import RenderContent from './RenderContent';
+
+
+import { getFullGrocery } from '../../selectors/selector';
+
 const { Header, Footer, Content } = Layout;
 
 
@@ -31,6 +35,7 @@ fontSize: '20px'
 };
 
 const iconStyle = { cursor: "pointer", transition: "color .3s" };
+
 
 class RenderHeader extends Component {
   // shouldComponentUpdate(nextProps, nextState) {

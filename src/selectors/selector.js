@@ -9,9 +9,6 @@ function getFullGrocery( name ) {
   return groceristar.getGroceryByNameWithDepAndIng(name);
 }
 
-function getGroceryCollection(){
-  return showcase.getGroceryShowcase();
-}
 
 function getAllGrocery(){
   return groceristar.getAllGrocery();
@@ -30,6 +27,12 @@ function getGroceryDataFromId(id){
   };
 }
 
+
+//-----
+
+function getGroceryCollection(){
+  return showcase.getGroceryShowcase();
+}
 
 //----------
 
@@ -55,6 +58,9 @@ function getFiveRandomIngredients(){
 function getRecipeChickenKyivById(id) {
   return chickenKyiv.getRecipe()[id];
 }
+
+
+
 
 // GS Loopback
 function getUltimateGrocery(){
