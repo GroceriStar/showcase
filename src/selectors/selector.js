@@ -9,13 +9,20 @@ function getFullGrocery( name ) {
   return groceristar.getGroceryByNameWithDepAndIng(name);
 }
 
-function getGroceryCollection(){
-  let result = axios.get('http://127.0.0.1:8004/grocery-collection');
+async function getGroceryCollectionDB(){
+    try {
+  let result = await axios.get('http://127.0.0.1:8004/grocery-collection');
 // const result = await getResponse().data;
+
   console.log("In get Grocery collection");
   console.log(result);
   return result;
+} catch (error) {
+  console.error(error);
 }
+
+}
+
 
 async function getResponse() {
     let response;
@@ -110,6 +117,7 @@ export {
   getUltimateGrocery,
   getGLwithUserRelations,
   getIngredientsSampleFromDB,
-  getGroceriesKey
+  getGroceriesKey,
+  getGroceryCollectionDB
 
 }
