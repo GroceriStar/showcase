@@ -22,7 +22,7 @@ import "./../styles.css";
 
 import { getGroceryCollection, getGroceriesKey } from "./../selectors/selector";
 
-import whyDidYouUpdate from "why-did-you-update";
+//import whyDidYouUpdate from "why-did-you-update";
 
 // whyDidYouUpdate(React);
 class HomeView extends Component {

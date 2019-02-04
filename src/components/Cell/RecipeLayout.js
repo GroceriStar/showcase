@@ -1,12 +1,20 @@
 import React, {
   Component
 } from 'react'
+import uuidv1 from 'uuid/v1';
+
+
 
 import { Link } from 'react-router-dom';
+
+import { Button, Icon, Layout, Row, Col, Table } from 'antd'
+
 import TileLayout from '../TileLayout/TileLayout'
+
 
 // import { GeneratePDFButton } from '../GroceryListToPDF'
 import { GeneratePDFButton } from '@groceristar/pdf-export';
+
 
 import Details       from './../Recipe/Details'
 import Directions    from './../Recipe/DirectionsList'
@@ -16,15 +24,18 @@ import ShortDetails  from './../Recipe/ShortDetails'
 
 
 import { getFullGrocery } from '../../selectors/selector';
-import uuidv1 from 'uuid/v1';
+
 import { IngredientList, DefaultList } from '@groceristar/grocery-component';
 
 import { getRecipeLink, getLink } from '../../Router';
-import RecipeHeader from './RecipeHeader';
-import { Button, Icon, Layout, Row, Col, Table } from 'antd'
 
-import RecipeTable from './../Recipe/RecipeTable'
+import RecipeHeader from './RecipeHeader';
+
+
+import RecipeTable      from './../Recipe/RecipeTable'
 import RecipeLayoutMain from './RecipeLayoutMain';
+
+
 const { Header, Footer, Content } = Layout;
 
 

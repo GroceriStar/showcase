@@ -47,6 +47,12 @@ function getGroceryDataFromId(id){
 }
 
 
+//-----
+
+function getGroceryCollection(){
+  return showcase.getGroceryShowcase();
+}
+
 //----------
 
 function getRandomRecipe(){
@@ -58,11 +64,6 @@ function getFirstFiveRecipes(){
 }
 
 
-function getShowcaseFiveRecipes(){
-  return chickenKyiv.getShowcaseFiveRecipes();
-}
-
-
 function getFiveRandomIngredients(){
   return chickenKyiv.getFiveRandomIngredients();
 }
@@ -71,6 +72,9 @@ function getFiveRandomIngredients(){
 function getRecipeChickenKyivById(id) {
   return chickenKyiv.getRecipe()[id];
 }
+
+
+
 
 // GS Loopback
 function getUltimateGrocery(){
@@ -101,7 +105,7 @@ export {
   getFirstFiveRecipes,
   getFiveRandomIngredients,
   getRecipeChickenKyivById,
-  getShowcaseFiveRecipes,
+
 
   getUltimateGrocery,
   getGLwithUserRelations,

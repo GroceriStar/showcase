@@ -15,7 +15,7 @@ import {
   getGroceryCollection,
   getRandomRecipe,
   getFirstFiveRecipes,
-  getShowcaseFiveRecipes,
+
   getFiveRandomIngredients
 } from "./../selectors/selector";
 
@@ -30,7 +30,7 @@ class HomeRecipeView extends Component {
 
     state = {
       //Did we need it here? i think we didn use all data from this method
-      // data: getShowcaseFiveRecipes(),
+
       data: getFirstFiveRecipes(),
       columns: 2,
       margin: 70,
@@ -77,7 +77,7 @@ class HomeRecipeView extends Component {
 
     // console.log( getGroceryCollection() )
     // console.log( getRandomRecipe() )
-    // console.log( getShowcaseFiveRecipes() )
+    
 
     const data = this.state.data;
 

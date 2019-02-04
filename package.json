@@ -10,7 +10,7 @@
     "@groceristar/grocery-component": "^1.0.6",
     "@groceristar/pdf-export": "^1.0.24",
     "@react-pdf/renderer": "^1.2.3",
-    "antd": "^3.13.0",
+    "antd": "^3.13.1",
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
@@ -47,7 +47,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-app": "^3.0.6",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4"
   }
 }
