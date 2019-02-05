@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Collapse } from 'antd';
 import uuidv1 from 'uuid/v1';
+
 import DepartmentListCollapse from '../DepartmentList/DepartmentListCollapse';
 
 // import { DepartmentInfo } from "../DepartmentInfo/DepartmentInfo";
@@ -46,7 +47,7 @@ class TileLayout extends Component {
            )}
 
         </Collapse>
-      {/*
+      {/*}
         <Collapse accordion>
 
           {items && items.map( (value) =>

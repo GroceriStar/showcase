@@ -14,6 +14,8 @@ const ContentStyle = { margin: '24px 16px 0', fontSize: '14px' };
 
 const divStyle = { padding: 24, background: '#fff', minHeight: 360 };
 
+//@TODO after updates, i don't see a reason why we should keep this component. we can move all of this stuff into tile i assume...
+
 class RenderContent extends PureComponent {
   // shouldComponentUpdate(nextProps, nextState) {
   // if (this.props.name !== nextProps.name) {
