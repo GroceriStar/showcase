@@ -42,11 +42,30 @@ const text = `
 `;
 
 class GroceryView extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      id: this.props.match.params.id,
+      data: []
+    }
+  }
 
+  async componentDidMount(){
+    // let grocery = getGroceryById(this.state.id)[0];
+    // let groceryName = grocery.name;
+    try{
+      let response = await getGroceryDataFromId(this.state.id);
+        this.setState({
+              data: response.data
+            })
+        } catch (e) {
+            console.error("Can't connect to Database");
+    }
 
+  }
   render() {
 
-    const { id } = this.props.match.params;
+    // const { id } = this.props.match.params;
 
     // 1. console.log( getGroceryCollection() );
 
@@ -55,11 +74,11 @@ class GroceryView extends Component {
 
     // @TODO maybe we can move this things into selectors?
     // lately we wouldn't need to convert id to number
-    let grocery = getGroceryById(parseInt(id, 10))[0];
-    // console.log(grocery)
-
-    let groceryName = grocery.name;
-    let groceryWithDepAndIng = getFullGrocery(groceryName);
+    // let grocery = getGroceryById(parseInt(id, 10))[0];
+    // // console.log(grocery)
+    //
+    // let groceryName = grocery.name;
+    // let groceryWithDepAndIng = getFullGrocery(groceryName);
 
     // console.log(groceryWithDepAndIng)
 
@@ -79,7 +98,7 @@ class GroceryView extends Component {
 
         <Layout>
           <Header>
-            Header - {groceryName}
+            Header - {this.state.data.name}
           </Header>
           <Content>
 
@@ -104,7 +123,7 @@ class GroceryView extends Component {
 
             <Collapse accordion>
 
-              {groceryWithDepAndIng && groceryWithDepAndIng.map( (value) =>
+              {this.state.data && this.state.data.map( (value) =>
                  // console.log(value)
                  (<Panel header={value.department} key={uuidv1()} >
 
@@ -115,7 +134,7 @@ class GroceryView extends Component {
 
 
 
-             
+
 
             </Collapse>
 

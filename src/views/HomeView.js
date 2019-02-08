@@ -20,7 +20,7 @@ import "./../styles.css";
 // but what we should pass into InsideLayout it's also debatable. because we're overweight it right now
 
 
-import { getGroceryCollection, getGroceriesKey, getGroceryCollectionDB } from "./../selectors/selector";
+import { getGroceryCollection } from "./../selectors/selector";
 
 //import whyDidYouUpdate from "why-did-you-update";
 
@@ -51,19 +51,14 @@ class HomeView extends Component {
 
 // Using async await
 async componentDidMount(){
-  let response = await getGroceryCollectionDB();
-  console.log(response);
-  if (response != undefined){
+  try{
+  let response = await getGroceryCollection();
   this.setState({
         data: response.data
       })
-    }else {
-      console.log("No response");
-      this.setState({
-          data: getGroceryCollection()
-        })
-      }
-
+    } catch (e) {
+      console.error("Can't connect to Database in HomeView");
+    }
 }
 
     //@TODO move this stuff to header

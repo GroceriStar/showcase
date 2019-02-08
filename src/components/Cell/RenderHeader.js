@@ -22,8 +22,6 @@ import RenderFooter from './RenderFooter'
 import RenderContent from './RenderContent';
 
 
-import { getFullGrocery } from '../../selectors/selector';
-
 const { Header, Footer, Content } = Layout;
 
 
@@ -46,7 +44,8 @@ class RenderHeader extends Component {
   //     console.log("False RenderFooter****************************");
   //     return false;
   //   }
-  render(){
+
+render(){
     return (
       <Header style={headerStyle}>
 

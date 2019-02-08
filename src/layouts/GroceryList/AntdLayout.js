@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import {
   getGroceryById,
   getFullGrocery,
-  // getGroceryDataFromId
+  getGroceryDataFromId
 } from "../../selectors/selector";
 
 
@@ -18,22 +18,38 @@ class AntdLayout extends Component {
   constructor(props){
     super(props);
     this.state = {
-      id: parseInt(props.match.params.id, 10)
+      id: this.props.match.params.id,
+      data: []
     }
   }
+
+async componentDidMount(){
+  // let grocery = getGroceryById(this.state.id)[0];
+  // let groceryName = grocery.name;
+  try{
+    let response = await getGroceryDataFromId(this.state.id);
+      this.setState({
+            data: response.data
+          })
+      } catch (e) {
+          console.error("Can't connect to Database");
+  }
+
+}
 
   render() {
 
     // @TODO maybe we can move this things into selectors?
-    let grocery = getGroceryById(this.state.id)[0];
-    let groceryName = grocery.name;
-    let groceryWithDepAndIng = getFullGrocery(groceryName);
-
+    // let grocery = getGroceryById(this.state.id)[0];
+    // let groceryName = grocery.name;
+    // let groceryWithDepAndIng = getFullGrocery(groceryName);
+console.log(this.state.data);
+//     let groceryWithDepAndIng = getGroceryDataFromId(this.state.id);
     // let departmentsCollection = getGroceryDataFromId(this.state.id);
 
     return (
       <div>
-        <DepartmentListCollapse collection={groceryWithDepAndIng} />
+        <DepartmentListCollapse collection={this.state.data} />
       </div>
     );
   }

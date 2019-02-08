@@ -1,33 +1,13 @@
-import { groceristar, chickenKyiv, showcase, gsLoopback } from "@groceristar/groceristar-fetch";
+// import { groceristar, chickenKyiv, showcase, gsLoopback } from "@groceristar/groceristar-fetch";
 import axios from 'axios'
 
-function getGroceryById( id ) {
-  return groceristar.getGroceryById(id);
-}
+const URL = 'https://grocerylists-fake-api.herokuapp.com';
+// const URL = 'http://localhost:4000';
 
-function getFullGrocery( name ) {
-  return groceristar.getGroceryByNameWithDepAndIng(name);
-}
-
-async function getGroceryCollectionDB(){
-    try {
-  let result = await axios.get('http://127.0.0.1:8004/grocery-collection');
-// const result = await getResponse().data;
-
-  console.log("In get Grocery collection");
-  console.log(result);
-  return result;
-} catch (error) {
-  console.error(error);
-}
-
-}
-
-
-async function getResponse() {
+async function getResponse(route) {
     let response;
   try {
-    let response = await axios.get('http://127.0.0.1:8004/grocery-collection');
+    response =  await axios.get(URL + route);
     console.log("Respons");
     console.log(response);
   } catch (error) {
@@ -36,70 +16,73 @@ async function getResponse() {
   return response;
 }
 
+function getGroceryById( id ) {
+  return getResponse("/grocery/" + id)
+}
+
+function getFullGrocery( name ) {
+  return getResponse("/grocery/name/" + name)
+}
+
+function getGroceryCollection(){
+  return getResponse("/grocery-collection")
+}
+
 function getAllGrocery(){
-  return groceristar.getAllGrocery();
+  return getResponse("/grocery-all")
 }
 
 
 function getGroceryDataFromId(id){
-
-  console.log(getGroceryById(id));
-  let grocery     = getGroceryById(id)[0];
-  let groceryName = grocery.name;
-  let groceryWithDepAndIng = getFullGrocery(groceryName);
-  return {
-    'name': groceryName,
-    'items': groceryWithDepAndIng
-  };
+  return getResponse("/grocery/data/" + id)
 }
 
 
 //-----
 
-function getGroceryCollection(){
-  return showcase.getGroceryShowcase();
-}
+// function getGroceryCollection(){
+//   return showcase.getGroceryShowcase();
+// }
 
 //----------
-
-function getRandomRecipe(){
-  return chickenKyiv.getRandomRecipe()
-}
-
+// @TODO remove fetch doesn't work
+// function getRandomRecipe(){
+//   return chickenKyiv.getRandomRecipe()
+// }
+//
 function getFirstFiveRecipes(){
-  return chickenKyiv.getFirstFiveRecipes();
+  return getResponse("/ck-firstfivefecipes")
 }
+//
+//
+// function getFiveRandomIngredients(){
+//   return chickenKyiv.getFiveRandomIngredients();
+// }
+//
+// //@TODO i don't like this name too
+// function getRecipeChickenKyivById(id) {
+//   return chickenKyiv.getRecipe()[id];
+// }
 
 
-function getFiveRandomIngredients(){
-  return chickenKyiv.getFiveRandomIngredients();
-}
-
-//@TODO i don't like this name too
-function getRecipeChickenKyivById(id) {
-  return chickenKyiv.getRecipe()[id];
-}
-
-
-
-
-// GS Loopback
-function getUltimateGrocery(){
-  return gsLoopback.getUltimateGrocery();
-};
-
-function getGLwithUserRelations(){
-  return gsLoopback.getGLwithUserRelations();
-};
-
-function getIngredientsSampleFromDB(){
-  return gsLoopback.getIngredientsSampleFromDB();
-};
-
-function getGroceriesKey(){
-  console.log(groceristar.getGroceriesWithDepIngKey());
-  return groceristar.getGroceriesWithDepIngKey();
-};
+// @TODO remove fetch doesn't work
+// // GS Loopback
+// function getUltimateGrocery(){
+//   return gsLoopback.getUltimateGrocery();
+// };
+//
+// function getGLwithUserRelations(){
+//   return gsLoopback.getGLwithUserRelations();
+// };
+//
+// function getIngredientsSampleFromDB(){
+//   return gsLoopback.getIngredientsSampleFromDB();
+// };
+//
+// function getGroceriesKey(){
+//   console.log(groceristar.getGroceriesWithDepIngKey());
+//   return groceristar.getGroceriesWithDepIngKey();
+// };
 
 export {
   getGroceryById,
@@ -108,16 +91,15 @@ export {
   getGroceryCollection,
   getAllGrocery,
 
-  getRandomRecipe,
+  // getRandomRecipe,
   getFirstFiveRecipes,
-  getFiveRandomIngredients,
-  getRecipeChickenKyivById,
+  // getFiveRandomIngredients,
+  // getRecipeChickenKyivById,
 
 
-  getUltimateGrocery,
-  getGLwithUserRelations,
-  getIngredientsSampleFromDB,
-  getGroceriesKey,
-  getGroceryCollectionDB
+  // getUltimateGrocery,
+  // getGLwithUserRelations,
+  // getIngredientsSampleFromDB,
+  // getGroceriesKey,
 
 }
