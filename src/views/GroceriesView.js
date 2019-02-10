@@ -53,13 +53,20 @@ class GroceriesView extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { visible: false };
+    this.state = {
+      visible: false,
+      collection:[]
+    };
 
     this.showModal    = this.showModal.bind(this);
 
     this.handleOk     = this.handleOk.bind(this);
 
     this.handleCancel = this.handleCancel.bind(this);
+
+    this.state = {
+
+    }
   }
 
   // state = { visible: false }
@@ -86,10 +93,21 @@ class GroceriesView extends Component {
     });
   }
 
+  async componentDidMount(){
+    try{
+    let response = await getGroceryCollection();
+    this.setState({
+          collection: response.data
+        })
+      } catch (e) {
+        console.error("Can't connect to Database");
+      }
+  }
+
   render() {
 
-    const collection = getGroceryCollection();
-    console.log(collection);
+    // const collection = getGroceryCollection();
+    // console.log(collection);
     // console.log( getAllGrocery() );
     // const data = this.state.data.filter(
     //   d => d.name.toLowerCase().indexOf(this.state.filter) !== -1
@@ -98,7 +116,7 @@ class GroceriesView extends Component {
     return (
       <Fragment>
 
-        <GroceryList items={collection} />
+        <GroceryList items={this.state.collection} />
 
 
         <Table columns={columns} dataSource={data} size="small" />

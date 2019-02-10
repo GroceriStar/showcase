@@ -10,15 +10,32 @@ import { DepartmentList } from '@groceristar/grocery-component'
 import {
   getGroceryById,
   getFullGrocery,
-  // getGroceryDataFromId
+  getGroceryDataFromId
 } from "../../selectors/selector";
 
 class CleanLayout extends Component {
+constructor(props){
+  super(props)
+  this.state ={
+    id: parseInt(this.props.match.params, 10),
+    data: []
+  }
+}
 
+  async componentDidMount(){
+    try{
+    let response = await getGroceryDataFromId(this.state.id);
+    this.setState({
+          data: response.data
+        })
+      } catch (e) {
+        console.error("Can't connect to Database");
+      }
+  }
 
   render() {
 
-    const { id } = this.props.match.params;
+    // const { id } = this.props.match.params;
 
     // 1. console.log( getGroceryCollection() );
 
@@ -27,11 +44,11 @@ class CleanLayout extends Component {
 
     // @TODO maybe we can move this things into selectors?
     // lately we wouldn't need to convert id to number
-    let grocery = getGroceryById(parseInt(id, 10))[0];
-    // console.log(grocery)
-
-    let groceryName = grocery.name;
-    let groceryWithDepAndIng = getFullGrocery(groceryName);
+    // let grocery = getGroceryById(parseInt(id, 10))[0];
+    // // console.log(grocery)
+    //
+    // let groceryName = grocery.name;
+    // let groceryWithDepAndIng = getFullGrocery(groceryName);
 
 
 
@@ -43,7 +60,7 @@ class CleanLayout extends Component {
 
     return (
       <Fragment>
-        <DepartmentList items={groceryWithDepAndIng} />
+        <DepartmentList items={this.state.data} />
       </Fragment>
     );
   }

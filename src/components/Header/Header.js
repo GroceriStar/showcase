@@ -11,6 +11,9 @@ import {
 } from 'antd'
 
 // @TODO we have a long list of props here. it's confusing.
+const inputHeader = { marginLeft: 15, minWidth: 130, maxWidth: 300 };
+const suffixIconStyle = { color: 'rgba(0,0,0,.25)' };
+const buttonStyle = { marginLeft: 15, minWidth: 130 };
 
 const Header = function({
   shuffle,
@@ -39,8 +42,8 @@ const Header = function({
       </Button>
 
       <Input
-        style={{ marginLeft: 15, minWidth: 130, maxWidth: 300 }}
-        suffix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />}
+        style={inputHeader}
+        suffix={<Icon type="search" style={suffixIconStyle} />}
         placeholder="input search text"
         onChange={search}
       />
@@ -70,7 +73,7 @@ const Header = function({
           </Menu>
         }>
 
-        <Button style={{ marginLeft: 15, minWidth: 130 }}>
+        <Button style={buttonStyle}>
           {columns} Columns <Icon type="down" />
         </Button>
 
@@ -95,7 +98,7 @@ const Header = function({
           </Menu>
         }>
 
-        <Button style={{ marginLeft: 15, minWidth: 130 }}>
+        <Button style={buttonStyle}>
           {margin} px margin <Icon type="down" />
         </Button>
       </Dropdown>
@@ -111,7 +114,7 @@ const Header = function({
       <Switch style={{ marginLeft: 15 }} defaultChecked onChange={setHeight} />
       */}
 
-    
+
 
 
 

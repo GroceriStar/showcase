@@ -22,20 +22,44 @@ import "./../styles.css";
 
 import { getGroceryCollection } from "./../selectors/selector";
 
-import whyDidYouUpdate from "why-did-you-update";
+//import whyDidYouUpdate from "why-did-you-update";
 
 // whyDidYouUpdate(React);
 class HomeView extends Component {
 
     state = {
-      data: getGroceryCollection(), //Did we need it here? i think we didn use all data from this method
+      data: [], //Did we need it here? i think we didn use all data from this method
       columns: 2,
       margin: 70,
       filter: "",
       height: true
     };
+//With using Promises
+// componentDidMount(){
+//   let response = getGroceryCollection().then((res) =>{
+//     console.log("In Promise");
+//     this.setState({
+//       data: res.data
+//     })
+//     console.log(res.data);
+//   });
+//   console.log("In DId Mount response");
+//   console.log(response);
+//
+//   console.log("End Did Mount");
+// }
 
-
+// Using async await
+async componentDidMount(){
+  try{
+  let response = await getGroceryCollection();
+  this.setState({
+        data: response.data
+      })
+    } catch (e) {
+      console.error("Can't connect to Database in HomeView");
+    }
+}
 
     //@TODO move this stuff to header
     search  = e => this.setState({ filter: e.target.value });
@@ -87,7 +111,8 @@ class HomeView extends Component {
 
 
   render() {
-
+    console.log("State");
+    console.log(this.state.data);
     // console.log(this.state.data);
     //@TODO i don't like this structure...
     // we can use streight map or lodash map and have more recognizible logic.

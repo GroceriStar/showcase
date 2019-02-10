@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
-import { Slug, Fade } from 'mauerwerk'
+import { Slug, Fade }  from 'mauerwerk'
 
-import InsideLayout from './InsideLayout';
+import InsideLayout    from './InsideLayout';
 
-import RecipeLayout from './RecipeLayout';
-import ShowFade from './ShowFade';
+import RecipeLayout      from './RecipeLayout';
+
+
+
+import ShowFade          from './ShowFade';
 import ShowAnimationFade from './ShowAnimationFade';
 
 // @TODO can we avoid passing css variable? i think yep
@@ -19,16 +22,32 @@ import ShowAnimationFade from './ShowAnimationFade';
 //@TODO for some reasons, when you print a props that we got - we have key = undefined.
 // maybe this is because keys attrib at grids also not working very well...
 // looks like this is not a big problem, but still - this is not good either
-const Cell2 = ( props ) => {
-  console.log(props);
-  const { toggle, name, height, description, css, open, id } = props;
-  return (
-    <div>This is America </div>
-  )
-}
+// const Cell2 = ( props ) => {
+//   console.log(props);
+//   const { toggle, name, height, description, css, open, id } = props;
+//   return (
+//     <div>This is America </div>
+//   )
+// }
+
+
 
 // we should add checking if we have a name actually.
 // because if i'm passing title instead of name - for sure all is crashing now
+
+// const cellLayout = ( props ) => {
+//   const { type } = props;
+//
+//   var layout;
+//   if( type == 'grocery-list'){
+//     layout = <InsideLayout id={id} name={name} toggle={toggle}  />;
+//   } else {
+//     // 'recipe' case
+//     layout = <RecipeLayout id={id} recipe={this.props.recipe} toggle={toggle} />;
+//   }
+//
+//   return layout;
+// }
 
 class Cell extends Component {
 
@@ -37,7 +56,7 @@ class Cell extends Component {
     // console.log(this.props);
 
     const { toggle, name, height, description, css, open, id, type } = this.props;
-
+    const cellStyle = { backgroundImage: css, cursor: !open ? "pointer" : "auto" };
     // console.log(this.props);
 
     var layout;
@@ -53,7 +72,7 @@ class Cell extends Component {
 
         <div
           className="cell"
-          style={{ backgroundImage: css, cursor: !open ? "pointer" : "auto" }}
+          style={cellStyle}
           onClick={!open ? toggle : undefined}
         >
 

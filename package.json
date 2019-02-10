@@ -6,19 +6,19 @@
   },
   "private": true,
   "dependencies": {
-    "@groceristar/groceristar-fetch": "^1.1.56",
+    "@groceristar/groceristar-fetch": "^1.1.60",
     "@groceristar/grocery-component": "^1.0.6",
     "@groceristar/pdf-export": "^1.0.24",
-    "@react-pdf/renderer": "^1.2.2",
-    "antd": "^3.13.0",
+    "@react-pdf/renderer": "^1.3.0",
+    "antd": "^3.13.2",
+    "axios": "^0.18.0",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.3",
-    "react-spring": "^7.2.9",
     "redux-devtools": "^3.5.0",
     "uuid": "^3.3.2",
     "why-did-you-update": "^1.0.6"
@@ -42,11 +42,11 @@
   ],
   "devDependencies": {
     "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-app": "^3.0.6",
-    "eslint-plugin-import": "^2.15.0",
-    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4"
   }
 }

@@ -23,8 +23,27 @@ import { getFullGrocery } from '../../selectors/selector';
 import RenderContent from './RenderContent';
 const { Footer } = Layout;
 
+
+const footerStyle = { textAlign: 'center' };
 class RenderFooter extends PureComponent {
 
+constructor(props){
+  super(props)
+  this.state ={
+    data: []
+  }
+}
+
+async componentDidMount(){
+  try{
+  let response = await getFullGrocery(this.props.name);
+  this.setState({
+        data: response.data
+      })
+    } catch (e) {
+        console.error("Can't connect to Database");
+    }
+}
   // shouldComponentUpdate(nextProps, nextState) {
   // if (this.props.name !== nextProps.name || this.props.id !== nextProps.id) {
   //   console.log("Name and Id RenderFooter **********************");
@@ -36,9 +55,9 @@ class RenderFooter extends PureComponent {
 
   render() {
     const { name, id } = this.props;
-    const data = getFullGrocery(name);
+    const data = this.state.data;
     return (
-      <Footer style={{ textAlign: 'center' }}>
+      <Footer style={footerStyle}>
 
 
         <Row gutter={16}>

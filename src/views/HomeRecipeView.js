@@ -15,7 +15,7 @@ import {
   getGroceryCollection,
   getRandomRecipe,
   getFirstFiveRecipes,
-  getShowcaseFiveRecipes,
+
   getFiveRandomIngredients
 } from "./../selectors/selector";
 
@@ -30,15 +30,24 @@ class HomeRecipeView extends Component {
 
     state = {
       //Did we need it here? i think we didn use all data from this method
-      // data: getShowcaseFiveRecipes(),
-      data: getFirstFiveRecipes(),
+
+      data:[],
       columns: 2,
       margin: 70,
       filter: "",
       height: true
     };
 
-
+async componentDidMount(){
+  try{
+    let response = await getFirstFiveRecipes();
+      this.setState({
+            data: response.data
+          })
+      } catch (e) {
+          console.error("Can't connect to Database");
+  }
+}
 
     //@TODO move this stuff to header
     search  = e => this.setState({ filter: e.target.value });
@@ -77,7 +86,7 @@ class HomeRecipeView extends Component {
 
     // console.log( getGroceryCollection() )
     // console.log( getRandomRecipe() )
-    // console.log( getShowcaseFiveRecipes() )
+
 
     const data = this.state.data;
 

@@ -11,6 +11,12 @@ import {
 
 // @TODO we have a long list of props here. it's confusing.
 
+const inputStyle = { marginLeft: 15, minWidth: 130, maxWidth: 300 };
+const suffixIconStyle = { color: 'rgba(0,0,0,.25)' };
+const buttonStyle = { marginLeft: 15, minWidth: 130 };
+const spanStyle = { marginLeft: 15 };
+const switchStyle = { marginLeft: 15 };
+
 const Header = function({
   shuffle,
   search,
@@ -38,8 +44,8 @@ const Header = function({
       </Button>
 
       <Input
-        style={{ marginLeft: 15, minWidth: 130, maxWidth: 300 }}
-        suffix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />}
+        style={inputStyle}
+        suffix={<Icon type="search" style={suffixIconStyle} />}
         placeholder="input search text"
         onChange={search}
       />
@@ -69,7 +75,7 @@ const Header = function({
           </Menu>
         }>
 
-        <Button style={{ marginLeft: 15, minWidth: 130 }}>
+        <Button style={buttonStyle}>
           {columns} Columns <Icon type="down" />
         </Button>
 
@@ -94,21 +100,21 @@ const Header = function({
           </Menu>
         }>
 
-        <Button style={{ marginLeft: 15, minWidth: 130 }}>
+        <Button style={buttonStyle}>
           {margin} px margin <Icon type="down" />
         </Button>
       </Dropdown>
 
-      <span style={{ marginLeft: 15 }}>
+      <span style={spanStyle}>
         Individual height
       </span>
 
-      <Switch style={{ marginLeft: 15 }} defaultChecked onChange={setHeight} />
+      <Switch style={switchStyle} defaultChecked onChange={setHeight} />
 
-      <span style={{ marginLeft: 15 }}>
+      <span style={spanStyle}>
 
       </span>
-      
+
       <Button type="primary">
         <Link to="/groceries">View collection without fanciness</Link>
       </Button>
