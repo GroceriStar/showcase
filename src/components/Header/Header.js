@@ -10,13 +10,57 @@ import {
   Switch
 } from 'antd'
 
-// @TODO we have a long list of props here. it's confusing.
+
 const inputHeader = { marginLeft: 15, minWidth: 130, maxWidth: 300 };
 
 const suffixIconStyle = { color: 'rgba(0,0,0,.25)' };
 
 const buttonStyle = { marginLeft: 15, minWidth: 130 };
 
+
+const DropdownMenu = (setColumns) => (
+  <Menu onClick={setColumns}>
+    <Menu.Item key="1">
+      1
+    </Menu.Item>
+    <Menu.Item key="2">
+      2
+    </Menu.Item>
+    <Menu.Item key="3">
+      3
+    </Menu.Item>
+    <Menu.Item key="4">
+      4
+    </Menu.Item>
+    <Menu.Item key="5">
+      5
+    </Menu.Item>
+    <Menu.Item key="6">
+      6
+    </Menu.Item>
+  </Menu>
+);
+
+// yes it bad @TODO change the NAME
+const DropdownMenu2 = (setMargin) => (
+  <Menu onClick={setMargin}>
+    <Menu.Item key="0">
+      0
+    </Menu.Item>
+    <Menu.Item key="20">
+      20
+    </Menu.Item>
+    <Menu.Item key="40">
+      40
+    </Menu.Item>
+    <Menu.Item key="70">
+      70
+    </Menu.Item>
+  </Menu>
+);
+
+
+// @TODO we have a long list of props here. it's confusing.
 const Header = function({
   shuffle,
   search,
@@ -52,28 +96,7 @@ const Header = function({
 
       <Dropdown
         trigger={['click']}
-        overlay={
-          <Menu onClick={setColumns}>
-            <Menu.Item key="1">
-              1
-            </Menu.Item>
-            <Menu.Item key="2">
-              2
-            </Menu.Item>
-            <Menu.Item key="3">
-              3
-            </Menu.Item>
-            <Menu.Item key="4">
-              4
-            </Menu.Item>
-            <Menu.Item key="5">
-              5
-            </Menu.Item>
-            <Menu.Item key="6">
-              6
-            </Menu.Item>
-          </Menu>
-        }>
+        overlay={DropdownMenu(setColumns)}>
 
         <Button style={buttonStyle}>
           {columns} Columns <Icon type="down" />
@@ -83,22 +106,7 @@ const Header = function({
 
       <Dropdown
         trigger={['click']}
-        overlay={
-          <Menu onClick={setMargin}>
-            <Menu.Item key="0">
-              0
-            </Menu.Item>
-            <Menu.Item key="20">
-              20
-            </Menu.Item>
-            <Menu.Item key="40">
-              40
-            </Menu.Item>
-            <Menu.Item key="70">
-              70
-            </Menu.Item>
-          </Menu>
-        }>
+        overlay={DropdownMenu2(setMargin)}>
 
         <Button style={buttonStyle}>
           {margin} px margin <Icon type="down" />
