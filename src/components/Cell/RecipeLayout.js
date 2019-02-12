@@ -16,11 +16,15 @@ import TileLayout from '../TileLayout/TileLayout'
 import { GeneratePDFButton } from '@groceristar/pdf-export';
 
 
+
 import Details       from './../Recipe/Details'
 import Directions    from './../Recipe/DirectionsList'
 import FullDetails   from './../Recipe/FullDetails'
 import MiddleDetails from './../Recipe/MiddleDetails'
 import ShortDetails  from './../Recipe/ShortDetails'
+
+
+
 
 
 import { getFullGrocery } from '../../selectors/selector';

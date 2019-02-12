@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import { Slug, Fade }  from 'mauerwerk'
+import { Slug, Fade }    from 'mauerwerk'
 
-import InsideLayout    from './InsideLayout';
+import InsideLayout      from './InsideLayout';
 
 import RecipeLayout      from './RecipeLayout';
 
