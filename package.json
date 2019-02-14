@@ -9,7 +9,7 @@
     "@groceristar/antd-showcase-components": "^1.0.5",
     "@groceristar/groceristar-fetch": "^1.1.60",
     "@groceristar/grocery-component": "^1.0.6",
-    "@groceristar/pdf-export": "^1.0.24",
+    "@groceristar/pdf-export": "^1.0.26",
     "@react-pdf/renderer": "^1.3.1",
     "antd": "^3.13.2",
     "axios": "^0.18.0",

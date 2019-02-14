@@ -963,12 +963,13 @@
   dependencies:
     uuid "^3.3.2"
 
-"@groceristar/pdf-export@^1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@groceristar/pdf-export/-/pdf-export-1.0.24.tgz#b7756045337c9bfeabc4371e73a6aad34240af42"
-  integrity sha512-bewxMYMXFGH+ldyvcjc3ft6Vwj7NgxDMtnbtbywufGKlg5ISdYlrAbulH7OTq9vL8pbwtuJ1XRBBhYjZZnPtxQ==
+"@groceristar/pdf-export@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@groceristar/pdf-export/-/pdf-export-1.0.26.tgz#070fd0afea9d1d9a615f9d89ba4074144703abc5"
+  integrity sha512-jYRdZ+wlfcJMc1NWj0dTKrk187cDit5ZnUpnZzvqEzaJDjO0ahuZT4k6TZS0XY2C93hVCSl2v8IqJYdMgIwyWw==
   dependencies:
     "@react-pdf/renderer" "^1.2.0"
+    antd "^3.13.2"
     uuid "^3.3.2"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
