@@ -4,7 +4,7 @@ import { Slug, Fade }    from 'mauerwerk'
 
 import InsideLayout      from './InsideLayout';
 
-import RecipeLayout      from './RecipeLayout';
+// import RecipeLayout      from './RecipeLayout';
 
 
 
@@ -62,10 +62,11 @@ class Cell extends Component {
     var layout;
     if( type == 'grocery-list'){
       layout = <InsideLayout id={id} name={name} toggle={toggle}  />;
-    } else {
-      // 'recipe' case
-      layout = <RecipeLayout id={id} recipe={this.props.recipe} toggle={toggle} />;
     }
+    // else {
+    //   // 'recipe' case
+    //   layout = <RecipeLayout id={id} recipe={this.props.recipe} toggle={toggle} />;
+    // }
 
 
     return (

@@ -925,10 +925,10 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
-"@groceristar/antd-showcase-components@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@groceristar/antd-showcase-components/-/antd-showcase-components-1.0.6.tgz#df8d0fb7051cd41105c6fddc2e2105e2ea26c1b2"
-  integrity sha512-6wUf/lorebQroenUwMKgCXt8vaeejXQMbfCQkg9YFOdtOBj/FNWEBRPN+BxFoccDGmEVojp/whCYxwwfAhGhOg==
+"@groceristar/antd-showcase-components@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@groceristar/antd-showcase-components/-/antd-showcase-components-1.0.7.tgz#ce457bf43b6302637a223c06525707cfb7e9a12e"
+  integrity sha512-zL5rS6ws+3fKBOGYVwecegUGK+H3c+G25m1s7hCdkllmyT3BH+ruuiH0qtEgIsxWD0mXWsQQwY+xLiIQzUOwoA==
   dependencies:
     "@groceristar/cards-wrapper" "^1.0.1"
     "@groceristar/grocery-component" "^1.0.6"

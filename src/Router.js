@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import HomeView       from './views/HomeView'
-import HomeRecipeView from './views/HomeRecipeView'
+
+// import HomeRecipeView from './views/HomeRecipeView'
 
 
 import GroceriesView     from './views/GroceriesView'
@@ -17,9 +18,9 @@ import CleanLayout from './layouts/GroceryList/CleanLayout'
 // @TODO later it'll have a config version
 // @TODO maybe we should generate a whole <Link />? looks like this is a perfect place for doing it.
 
-const getRecipeLink = (id) => {
-  return '/recipe/'+ id;
-}
+// const getRecipeLink = (id) => {
+//   return '/recipe/'+ id;
+// }
 
 const getLink = id => {
   return '/grocery/'+ id;
@@ -32,7 +33,7 @@ class Router extends Component {
         <Switch>
 
           <Route path="/" exact component={HomeView} />
-          <Route path="/home2" exact component={HomeRecipeView} />
+
 
 
 
