@@ -4,7 +4,7 @@ import { Slug, Fade } from 'mauerwerk'
 
 import InsideLayout from './InsideLayout';
 
-import RecipeLayout from './RecipeLayout';
+// import RecipeLayout from './RecipeLayout';
 
 class ShowFade extends Component {
   // shouldComponentUpdate(nextProps) {

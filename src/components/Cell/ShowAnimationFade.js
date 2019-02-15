@@ -4,7 +4,7 @@ import { Slug, Fade } from 'mauerwerk'
 
 import InsideLayout from './InsideLayout';
 
-import RecipeLayout from './RecipeLayout';
+// import RecipeLayout from './RecipeLayout';
 
 class ShowAnimationFade extends PureComponent {
   render(){

@@ -52,4 +52,4 @@ class Router extends Component {
   }
 }
 
-export { Router, getRecipeLink, getLink };
+export { Router,  getLink };
