@@ -8,13 +8,8 @@ import { Button, Icon, Layout, Row, Col } from 'antd'
 import { Link } from 'react-router-dom';
 //@TODO it should be an updated we don't need to import three buttons, just because we pass a different layout to exporter
 
-
 import { GeneratePDFButton } from '@groceristar/pdf-export';
 
-//
-// import { GeneratePDFButton } from '../GroceryListToPDF'
-// import { GeneratePDFButton2 } from '../GroceryListToPDF'
-// import { GeneratePDFButton3 } from '../GroceryListToPDF'
 
 import { getLink } from '../../Router';
 import { getFullGrocery } from '../../selectors/selector';
