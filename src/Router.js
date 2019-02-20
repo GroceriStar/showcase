@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {
+  // BrowserRouter,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 import HomeView       from './views/HomeView'
+// import HomeView   from '@groceristar/antd-showcase-components';
 
 // import HomeRecipeView from './views/HomeRecipeView'
 
@@ -29,13 +34,12 @@ const getLink = id => {
 class Router extends Component {
   render(){
     return (
-      <BrowserRouter>
+
+
+
         <Switch>
 
           <Route path="/" exact component={HomeView} />
-
-
-
 
 
           <Route path="/grocery/:id" component={GroceryView} />
@@ -45,9 +49,9 @@ class Router extends Component {
           <Route path="/groceries" component={GroceriesView} />
 
           <Route path="/manage/grocery/:id" component={ManageGroceryView} />
-
         </Switch>
-      </BrowserRouter>
+
+
     )
   }
 }

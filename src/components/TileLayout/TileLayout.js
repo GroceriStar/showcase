@@ -22,8 +22,6 @@ const Panel = Collapse.Panel;
 
 // NOTE: right now this component is a mess, because of bug from AntD. they fixed it and in next release all start to work well.
 
-
-
 class TileLayout extends Component {
 
   render() {

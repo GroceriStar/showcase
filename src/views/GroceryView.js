@@ -53,7 +53,7 @@ class GroceryView extends Component {
   async componentDidMount(){
     // let grocery = getGroceryById(this.state.id)[0];
     // let groceryName = grocery.name;
-    try{
+    try {
       let response = await getGroceryDataFromId(this.state.id);
         this.setState({
               data: response.data

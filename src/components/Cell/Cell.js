@@ -5,7 +5,7 @@ import { Slug, Fade }    from 'mauerwerk'
 import InsideLayout      from './InsideLayout';
 
 // import RecipeLayout      from './RecipeLayout';
-
+// import { Modal }   from '@groceristar/antd-showcase-components';
 
 
 import ShowFade          from './ShowFade';

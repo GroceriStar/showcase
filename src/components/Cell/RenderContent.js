@@ -19,7 +19,7 @@ const divStyle = { padding: 24, background: '#fff', minHeight: 360 };
 class RenderContent extends PureComponent {
 constructor(props){
   super(props)
-  this.state ={
+  this.state = {
     data: []
   }
 }

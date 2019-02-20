@@ -1,6 +1,9 @@
 import {
-  Form, Row, Col, Input, Button, Icon,
+  Form, Row, Col,
+  Input, Button, Icon,
 } from 'antd';
+
+// import { AdvancedSearchForm, WrappedAdvancedSearchForm }   from '@groceristar/antd-showcase-components';
 
 class AdvancedSearchForm extends React.Component {
   state = {
@@ -12,6 +15,7 @@ class AdvancedSearchForm extends React.Component {
     const count = this.state.expand ? 10 : 6;
     const { getFieldDecorator } = this.props.form;
     const children = [];
+
     for (let i = 0; i < 10; i++) {
       children.push(
         <Col span={8} key={i} style={{ display: i < count ? 'block' : 'none' }}>
@@ -53,7 +57,9 @@ class AdvancedSearchForm extends React.Component {
         className="ant-advanced-search-form"
         onSubmit={this.handleSearch}
       >
-        <Row gutter={24}>{this.getFields()}</Row>
+        <Row gutter={24}>
+          {this.getFields()}
+        </Row>
         <Row>
           <Col span={24} style={{ textAlign: 'right' }}>
             <Button type="primary" htmlType="submit">Search</Button>
