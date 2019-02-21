@@ -10,6 +10,10 @@ import "antd/dist/antd.css";
 import "./../styles.css";
 
 
+import { EmptyImageWrapper,
+LinkEmptyImage }   from '@groceristar/antd-showcase-components';
+
+
 // @TODO i want to have a separation.
 // right now to grid we're passing all stuff that we have for grocery lists,
 // but we only need major things like id and title, usually.
@@ -53,13 +57,13 @@ class HomeView extends Component {
   // Using async await
   async componentDidMount(){
     try {
-    let response = await getGroceryCollection();
-    this.setState({
-          data: response.data
-        })
-      } catch (e) {
+      let response = await getGroceryCollection();
+      this.setState({
+        data: response.data
+      })
+    } catch (e) {
         console.error("Can't connect to Database in HomeView");
-      }
+    }
   }
 
     //@TODO move this stuff to header
@@ -143,7 +147,7 @@ class HomeView extends Component {
         />
 
 
-
+        {/* if ( this.state.data )  */}
 
         <Grid
           className="grid"
