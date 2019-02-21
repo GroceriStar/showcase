@@ -66,7 +66,12 @@ class HomeView extends Component {
     }
   }
 
-    //@TODO move this stuff to header
+
+
+
+
+
+    //@TODO move this stuff to header. It's in separated package, btw ;)
     search  = e => this.setState({ filter: e.target.value });
     shuffle = () =>
       this.setState(state => ({ data: _.shuffle(state.data) }));
