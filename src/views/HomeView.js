@@ -1,13 +1,5 @@
 import React, { Component, PureComponent } from 'react';
-
-// import Menu     from "./../components/Header/Menu";
-// import Main   from '@groceristar/antd-showcase-components';
-
-// import Header   from "./../components/Header/Header";
 import { HeaderShowcase, Menu }   from '@groceristar/antd-showcase-components';
-
-
-
 
 import Cell     from "./../components/Cell/Cell";
 
