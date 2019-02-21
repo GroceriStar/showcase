@@ -5,7 +5,7 @@ const URL = 'https://grocerylists-fake-api.herokuapp.com';
 // const URL = 'http://localhost:4000';
 
 async function getResponse(route) {
-    let response;
+  let response;
   try {
     response =  await axios.get(URL + route);
     console.log("Respons");

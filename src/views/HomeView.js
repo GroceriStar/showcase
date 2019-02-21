@@ -1,7 +1,8 @@
 import React, { Component, PureComponent } from 'react';
-import { HeaderShowcase, Menu }   from '@groceristar/antd-showcase-components';
+import { HeaderShowcase, Menu } from '@groceristar/antd-showcase-components';
 
 import Cell     from "./../components/Cell/Cell";
+// import { HeaderShowcase, Menu } from '@groceristar/antd-showcase-components';
 
 import { Grid } from "mauerwerk";
 import _        from "lodash";
