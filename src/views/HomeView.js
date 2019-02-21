@@ -32,6 +32,9 @@ class HomeView extends Component {
       filter: "",
       height: true
     };
+
+
+
 //With using Promises
 // componentDidMount(){
 //   let response = getGroceryCollection().then((res) =>{
@@ -47,17 +50,17 @@ class HomeView extends Component {
 //   console.log("End Did Mount");
 // }
 
-// Using async await
-async componentDidMount(){
-  try{
-  let response = await getGroceryCollection();
-  this.setState({
-        data: response.data
-      })
-    } catch (e) {
-      console.error("Can't connect to Database in HomeView");
-    }
-}
+  // Using async await
+  async componentDidMount(){
+    try {
+    let response = await getGroceryCollection();
+    this.setState({
+          data: response.data
+        })
+      } catch (e) {
+        console.error("Can't connect to Database in HomeView");
+      }
+  }
 
     //@TODO move this stuff to header
     search  = e => this.setState({ filter: e.target.value });
