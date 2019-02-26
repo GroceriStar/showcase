@@ -13,12 +13,9 @@ import TileLayout from '../TileLayout/TileLayout'
 
 import { GeneratePDFButton } from '@groceristar/pdf-export';
 
-// import { GeneratePDFButton } from '../GroceryListToPDF'
-// import { GeneratePDFButton2 } from '../GroceryListToPDF'
-// import { GeneratePDFButton3 } from '../GroceryListToPDF'
 
 
-import RenderFooter from './RenderFooter'
+import RenderFooter  from './RenderFooter'
 import RenderContent from './RenderContent';
 
 
@@ -26,10 +23,10 @@ const { Header, Footer, Content } = Layout;
 
 
 const headerStyle = {
-// background: '#fff',
-// color:'red',
-//padding: 0
-fontSize: '20px'
+  // background: '#fff',
+  // color:'red',
+  //padding: 0
+  fontSize: '20px'
 };
 
 const iconStyle = { cursor: "pointer", transition: "color .3s" };
@@ -45,7 +42,7 @@ class RenderHeader extends Component {
   //     return false;
   //   }
 
-render(){
+  render(){
     return (
       <Header style={headerStyle}>
 
@@ -66,7 +63,8 @@ render(){
         </Col>
       </Row>
 
-    </Header>)
+    </Header>
+    )
   }
 }
 

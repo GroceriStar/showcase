@@ -24,16 +24,17 @@ constructor(props){
   }
 }
 
-async componentDidMount(){
-  try{
-  let response = await getFullGrocery(this.props.name);
-  this.setState({
-        data: response.data
-      })
-    } catch (e) {
-      console.error("Can't connect to Database");
-    }
-}
+  async componentDidMount(){
+
+    try  {
+    let response = await getFullGrocery(this.props.name);
+    this.setState({
+          data: response.data
+        })
+      } catch (e) {
+        console.error("Can't connect to Database");
+      }
+  }
 
   render(){
 
