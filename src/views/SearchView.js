@@ -3,7 +3,9 @@ import {
   Input, Button, Icon,
 } from 'antd';
 
-// import { AdvancedSearchForm, WrappedAdvancedSearchForm }   from '@groceristar/antd-showcase-components';
+// import {
+//  AdvancedSearchForm, WrappedAdvancedSearchForm
+// }   from '@groceristar/antd-showcase-components';
 
 class AdvancedSearchForm extends React.Component {
   state = {
@@ -12,6 +14,7 @@ class AdvancedSearchForm extends React.Component {
 
   // To generate mock Form.Item
   getFields() {
+
     const count = this.state.expand ? 10 : 6;
     const { getFieldDecorator } = this.props.form;
     const children = [];

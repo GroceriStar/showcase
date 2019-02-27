@@ -5,8 +5,14 @@ import {
   Route
 } from 'react-router-dom';
 
+
+
 import HomeView       from './views/HomeView'
 // import HomeView   from '@groceristar/antd-showcase-components';
+
+
+
+
 
 // import HomeRecipeView from './views/HomeRecipeView'
 
@@ -31,6 +37,8 @@ const getLink = id => {
   return '/grocery/'+ id;
 }
 
+
+
 class Router extends Component {
   render(){
     return (
@@ -49,8 +57,8 @@ class Router extends Component {
           <Route path="/groceries" component={GroceriesView} />
 
           <Route path="/manage/grocery/:id" component={ManageGroceryView} />
-        </Switch>
 
+        </Switch>
 
     )
   }
