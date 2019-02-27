@@ -1,8 +1,12 @@
 import React, { Component, PureComponent } from 'react';
-import { HeaderShowcase, Menu } from '@groceristar/antd-showcase-components';
+import {
+  HeaderShowcase,
+  Menu
+} from '@groceristar/antd-showcase-components';
+
 
 import Cell     from "./../components/Cell/Cell";
-// import { HeaderShowcase, Menu } from '@groceristar/antd-showcase-components';
+
 
 import { Grid } from "mauerwerk";
 import _        from "lodash";
@@ -11,8 +15,10 @@ import "antd/dist/antd.css";
 import "./../styles.css";
 
 
-import { EmptyImageWrapper,
-LinkEmptyImage }   from '@groceristar/antd-showcase-components';
+import {
+  EmptyImageWrapper,
+  LinkEmptyImage
+} from '@groceristar/antd-showcase-components';
 
 
 // @TODO i want to have a separation.
