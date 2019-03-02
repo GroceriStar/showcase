@@ -947,10 +947,10 @@
     style-loader "^0.23.1"
     uuid "^3.3.2"
 
-"@groceristar/cards-wrapper@^1.0.7", "@groceristar/cards-wrapper@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.9.tgz#2150a36d7aa5d90882082d32a45594a49d2e08a6"
-  integrity sha512-6zMvJYx/xtRSxcTReRQzyheB47NP9KqDlxbOuGhZpXuIXliWjPjXA9BD5iH4bCyaH1ncPHOcTwXDWOxscvZiPQ==
+"@groceristar/cards-wrapper@^1.0.12", "@groceristar/cards-wrapper@^1.0.7":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.12.tgz#a908bfcf7e0d2d8ddc9a9be2b97bdd8b26e4892a"
+  integrity sha512-8Jh3JAu7CiqZNSQrafDvvwTQAbMO+I5u+vAor+wdAcFZT75qDfltMn5j9iU2ucspPSSH6Qd2AO4KC1odyMMtcQ==
   dependencies:
     "@react-pdf/renderer" "^1.2.0"
     antd "^3.13.0"
