@@ -947,13 +947,14 @@
     style-loader "^0.23.1"
     uuid "^3.3.2"
 
-"@groceristar/cards-wrapper@^1.0.7", "@groceristar/cards-wrapper@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.9.tgz#2150a36d7aa5d90882082d32a45594a49d2e08a6"
-  integrity sha512-6zMvJYx/xtRSxcTReRQzyheB47NP9KqDlxbOuGhZpXuIXliWjPjXA9BD5iH4bCyaH1ncPHOcTwXDWOxscvZiPQ==
+"@groceristar/cards-wrapper@^1.0.13", "@groceristar/cards-wrapper@^1.0.7":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.13.tgz#387ff43b5aaf0a53f03f5e3340dfadb216bd6265"
+  integrity sha512-PwCY7fXspognIjreG1FJ3gJ3v8Nwjmm0JUQ3GYgpzyECxQLofkCDa/rMg0LlbSeHayVI+U1TIJO2T0l9gwl6mw==
   dependencies:
     "@react-pdf/renderer" "^1.2.0"
     antd "^3.13.0"
+    react-image "^2.0.0"
     uuid "^3.3.2"
 
 "@groceristar/groceristar-fetch@^1.2.2", "@groceristar/groceristar-fetch@^1.2.7":
