@@ -165,7 +165,7 @@ class HomeView extends Component {
       <div className="main">
         <Menu />
 
-        <HaderShowcase
+        <HeaderShowcase
           {...this.state}
           search={this.search}
           shuffle={this.shuffle}
