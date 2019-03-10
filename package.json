@@ -7,7 +7,7 @@
   "private": true,
   "dependencies": {
     "@groceristar/antd-showcase-components": "^1.0.38",
-    "@groceristar/cards-wrapper": "^1.0.14",
+    "@groceristar/cards-wrapper": "^1.0.15",
     "@groceristar/groceristar-fetch": "^1.2.10",
     "@groceristar/grocery-component": "^1.0.9",
     "@groceristar/pdf-export": "^1.0.37",
