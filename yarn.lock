@@ -948,10 +948,10 @@
     shx "^0.3.2"
     uuid "^3.3.2"
 
-"@groceristar/cards-wrapper@^1.0.12", "@groceristar/cards-wrapper@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.14.tgz#4af88182a9d09ae28ed445f9ff4cd4a5b4eeb97d"
-  integrity sha512-doSXYHfftIIfjiVf+SDhWTaavYLZlSi4Pi4DU1fo8SziYFcUNnMj1TDqxaLQ6vMMnV8fJ1snNFUosxrZkXwftg==
+"@groceristar/cards-wrapper@^1.0.12", "@groceristar/cards-wrapper@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.15.tgz#cca1f1e2afc35c6717de3cad4ee3013bcd523a25"
+  integrity sha512-LiFJZ97MbGpg6yfZj9yIPEOVmDL7S/SErdQiuHCx3pFI00C/BkW3Jag0zhsyGS6k8hLUmkTVrW1/AaiCrn1YOA==
   dependencies:
     "@react-pdf/renderer" "^1.2.0"
     antd "^3.13.0"
