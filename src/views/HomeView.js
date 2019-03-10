@@ -26,7 +26,7 @@ import { Empty } from "antd"
 // but what we should pass into InsideLayout it's also debatable. because we're overweight it right now
 
 import { getGroceryCollection } from "./../selectors/selector";
-
+import { Em } from "@groceristar/cards-wrapper"
 //import whyDidYouUpdate from "why-did-you-update";
 
 // whyDidYouUpdate(React);
@@ -115,7 +115,9 @@ class HomeView extends Component {
 
     getGrid(){
       if ( this.state.data.length == 0 ){
-        return (<Empty />)
+        return (
+          <Em />
+        )
       }else{
         return (
           <Grid
