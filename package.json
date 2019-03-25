@@ -10,7 +10,7 @@
     "@groceristar/cards-wrapper": "^1.0.17",
     "@groceristar/groceristar-fetch": "^2.0.3",
     "@groceristar/grocery-component": "^1.0.9",
-    "@groceristar/pdf-export": "^1.0.40",
+    "@groceristar/pdf-export": "^1.0.41",
     "@react-pdf/renderer": "^1.4.2",
     "antd": "^3.15.1",
     "axios": "^0.18.0",
