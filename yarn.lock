@@ -942,13 +942,13 @@
     shx "^0.3.2"
     uuid "^3.3.2"
 
-"@groceristar/cards-wrapper@^1.0.12", "@groceristar/cards-wrapper@^1.0.17":
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.17.tgz#254bdd743b993e539b9c11780513cb73819d5b5d"
-  integrity sha512-oTVtLYc4Xl1cRUSXiSgtQ2nczy8MlKSBDdfjAdiYUlfnNs8WY7OF8abjs9VxtYGSxvhjQNfESsKF+o2frbPMEg==
+"@groceristar/cards-wrapper@^1.0.12", "@groceristar/cards-wrapper@^1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.18.tgz#d593abb98d4abe2f2d39d4e61d078ab51809eda9"
+  integrity sha512-8QeOsN9U6nJ6URtP8TjjOkQTE8GG+lnlf1zghgaUkT7K3aOkYClQkgmYyi+I342ftHOUDHW10SN7EthZwcElTQ==
   dependencies:
     "@react-pdf/renderer" "^1.2.0"
-    antd "^3.13.0"
+    antd "^3.13.2"
     react-image "^2.0.0"
     uuid "^3.3.2"
 
@@ -1545,10 +1545,10 @@ ant-design-palettes@^1.1.3:
   dependencies:
     tinycolor2 "^1.4.1"
 
-antd@^3.13.0, antd@^3.13.6, antd@^3.15.0, antd@^3.15.1:
-  version "3.15.1"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-3.15.1.tgz#16ce63a2d84a88906e6ece934423871aa67395c5"
-  integrity sha512-ZNG7uVoLjotnTyRT0cD/X58RwHpC4exjCxGFO7UY9wG2Cfg+77TcemH16asgaV935bFhKpzivqPklGB7gYLLrA==
+antd@^3.13.2, antd@^3.13.6, antd@^3.15.0, antd@^3.15.1:
+  version "3.15.2"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-3.15.2.tgz#5692ed9f7db878b1ec9f0cafcb4027b9cb36c32e"
+  integrity sha512-yKN6v5j3znt/JFUJ8LFny179medv1ZlyKmQdtVvbOKuQN/VEnIo79fKVzmduacU+QMS/SJDuJ+oXD9zIuodPQQ==
   dependencies:
     "@ant-design/icons" "~1.2.0"
     "@ant-design/icons-react" "~1.1.2"
