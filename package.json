@@ -16,7 +16,7 @@
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
-    "react": "^16.8.5",
+    "react": "^16.8.6",
     "react-dom": "^16.8.4",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
