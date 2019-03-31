@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  // BrowserRouter,
+  BrowserRouter,
   Switch,
   Route
 } from 'react-router-dom';
@@ -44,7 +44,7 @@ class Router extends Component {
     return (
 
 
-
+      <BrowserRouter>
         <Switch>
 
           <Route path="/" exact component={HomeView} />
@@ -59,7 +59,7 @@ class Router extends Component {
           <Route path="/manage/grocery/:id" component={ManageGroceryView} />
 
         </Switch>
-
+        </BrowserRouter>
     )
   }
 }
