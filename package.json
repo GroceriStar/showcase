@@ -12,7 +12,7 @@
     "@groceristar/grocery-component": "^1.0.9",
     "@groceristar/pdf-export": "^1.0.43",
     "@react-pdf/renderer": "^1.4.2",
-    "antd": "^3.15.1",
+    "antd": "^3.16.1",
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
     "mauerwerk": "^2.0.2",
