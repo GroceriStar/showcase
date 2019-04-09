@@ -874,9 +874,9 @@
     shx "^0.3.2"
     uuid "^3.3.2"
 
-"@groceristar/cards-wrapper@^1.0.19":
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.19.tgz#6a0ac36350ce891cc805c4b3c05e0f7060ca5f5d"
+"@groceristar/cards-wrapper@^1.0.19", "@groceristar/cards-wrapper@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.20.tgz#3d4e78f0651037e10c52ad2756d732c9b9b6127f"
   dependencies:
     "@react-pdf/renderer" "^1.2.0"
     antd "^3.13.2"
