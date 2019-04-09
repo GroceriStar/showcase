@@ -8,7 +8,7 @@
   "dependencies": {
     "@groceristar/antd-showcase-components": "^1.0.43",
     "@groceristar/cards-wrapper": "^1.0.20",
-    "@groceristar/groceristar-fetch": "^2.1.8",
+    "@groceristar/groceristar-fetch": "^2.1.10",
     "@groceristar/grocery-component": "^1.0.9",
     "@groceristar/pdf-export": "^1.0.45",
     "@react-pdf/renderer": "^1.4.2",
