@@ -11,7 +11,7 @@
     "@groceristar/groceristar-fetch": "^2.1.10",
     "@groceristar/grocery-component": "^1.0.9",
     "@groceristar/pdf-export": "^1.1.0",
-    "@react-pdf/renderer": "^1.5.1",
+    "@react-pdf/renderer": "^1.5.4",
     "antd": "^3.17.0",
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
