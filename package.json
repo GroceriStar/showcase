@@ -44,7 +44,7 @@
   ],
   "devDependencies": {
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.1",
+    "enzyme-adapter-react-16": "^1.13.2",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-app": "^3.0.7",
     "eslint-plugin-import": "^2.16.0",
