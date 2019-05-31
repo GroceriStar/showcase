@@ -6,24 +6,24 @@
   },
   "private": true,
   "dependencies": {
-    "@groceristar/antd-showcase-components": "^1.0.43",
-    "@groceristar/cards-wrapper": "^1.0.21",
-    "@groceristar/groceristar-fetch": "^2.1.10",
-    "@groceristar/grocery-component": "^1.0.9",
-    "@groceristar/pdf-export": "^1.1.0",
-    "@react-pdf/renderer": "^1.6.0",
-    "antd": "^3.19.1",
+    "@groceristar/antd-showcase-components": "1.0.43",
+    "@groceristar/cards-wrapper": "1.0.21",
+    "@groceristar/groceristar-fetch": "2.1.10",
+    "@groceristar/grocery-component": "1.0.10",
+    "@groceristar/pdf-export": "1.1.0",
+    "@react-pdf/renderer": "1.6.0",
+    "antd": "3.19.1",
     "axios": "^0.18.0",
-    "lodash": "^4.17.11",
-    "mauerwerk": "^2.0.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
+    "lodash": "4.17.11",
+    "mauerwerk": "2.0.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-router": "5.0.0",
+    "react-router-dom": "5.0.0",
     "react-scripts": "3.0.1",
-    "react-virtualized": "^9.21.1",
-    "uuid": "^3.3.2",
-    "why-did-you-update": "^1.0.6"
+    "react-virtualized": "9.21.1",
+    "uuid": "3.3.2",
+    "why-did-you-update": "1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,12 +43,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.2",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-react-app": "^3.0.7",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0"
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.13.2",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-react-app": "3.0.8",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.13.0"
   }
 }
