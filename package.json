@@ -13,7 +13,7 @@
     "@groceristar/pdf-export": "1.1.0",
     "@react-pdf/renderer": "1.6.0",
     "antd": "3.19.1",
-    "axios": "0.18.0",
+    "axios": "0.19.0",
     "lodash": "4.17.11",
     "mauerwerk": "2.0.2",
     "react": "16.8.6",
