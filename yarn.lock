@@ -1159,37 +1159,28 @@
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-9.0.1.tgz#c27b391d8457d1e893f1eddeaf5e5412d12ffbb5"
 
-"@groceristar/antd-showcase-components@1.0.43":
-  version "1.0.43"
-  resolved "https://registry.yarnpkg.com/@groceristar/antd-showcase-components/-/antd-showcase-components-1.0.43.tgz#9af771e7cc2c71bcbfa306b20fda474ee8bc65b9"
+"@groceristar/antd-showcase-components@1.0.47":
+  version "1.0.47"
+  resolved "https://registry.yarnpkg.com/@groceristar/antd-showcase-components/-/antd-showcase-components-1.0.47.tgz#5fc73920b0953a4a47ba0b64f3c0ec545db439f6"
   dependencies:
-    "@groceristar/cards-wrapper" "^1.0.19"
+    "@groceristar/cards-wrapper" "^1.0.21"
     "@groceristar/grocery-component" "^1.0.10"
     antd "^3.13.6"
     lodash "^4.17.11"
-    react-image "^2.0.0"
+    react-image "^2.1.1"
     react-router "^5.0.0"
     react-router-dom "^5.0.0"
     reqwest "^2.0.5"
     shx "^0.3.2"
     uuid "^3.3.2"
 
-"@groceristar/cards-wrapper@1.0.21":
+"@groceristar/cards-wrapper@1.0.21", "@groceristar/cards-wrapper@^1.0.21":
   version "1.0.21"
   resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.21.tgz#3015cbf405fce1b6c2f028c547bc84d277c683af"
   dependencies:
     "@react-pdf/renderer" "^1.5.1"
     antd "^3.16.2"
     react-image "^2.1.1"
-    uuid "^3.3.2"
-
-"@groceristar/cards-wrapper@^1.0.19":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@groceristar/cards-wrapper/-/cards-wrapper-1.0.20.tgz#3d4e78f0651037e10c52ad2756d732c9b9b6127f"
-  dependencies:
-    "@react-pdf/renderer" "^1.2.0"
-    antd "^3.13.2"
-    react-image "^2.0.0"
     uuid "^3.3.2"
 
 "@groceristar/groceristar-fetch@2.2.0":
@@ -1443,7 +1434,7 @@
     react-reconciler "^0.20.4"
     yoga-layout-prebuilt "^1.9.3"
 
-"@react-pdf/renderer@^1.2.0", "@react-pdf/renderer@^1.5.1":
+"@react-pdf/renderer@^1.5.1":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.6.0.tgz#35850764e1f9fb29674f155038648e4b9ce26eab"
   dependencies:
@@ -2044,7 +2035,7 @@ antd@3.19.6:
     shallowequal "^1.1.0"
     warning "~4.0.3"
 
-antd@^3.13.2, antd@^3.13.6, antd@^3.16.1, antd@^3.16.2:
+antd@^3.13.6, antd@^3.16.1, antd@^3.16.2:
   version "3.19.3"
   resolved "https://registry.yarnpkg.com/antd/-/antd-3.19.3.tgz#9d4af091bbfab8bb888cc98f36c994fbaf12e931"
   dependencies:
@@ -8406,13 +8397,6 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@15.6.2:
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
-  dependencies:
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
-
 prop-types@15.7.2, prop-types@15.x, prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
@@ -9044,13 +9028,6 @@ react-error-overlay@^5.1.6:
 react-fast-compare@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
-
-react-image@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-image/-/react-image-2.0.0.tgz#c1d5f21351d3957ff54c9818b8adb26cd0d4204a"
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    prop-types "15.6.2"
 
 react-image@^2.1.1:
   version "2.1.1"
