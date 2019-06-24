@@ -23,7 +23,7 @@ import ManageGroceryView from './views/ManageGroceryView'
 
 
 import AntdLayout  from './layouts/GroceryList/AntdLayout'
-
+import {Header} from '@groceristar/antd-showcase-components'
 import CleanLayout from './layouts/GroceryList/CleanLayout'
 
 // @TODO later it'll have a config version
@@ -45,6 +45,7 @@ class Router extends Component {
 
 
       <BrowserRouter>
+      <Header />
         <Switch>
 
           <Route path="/" exact component={HomeView} />

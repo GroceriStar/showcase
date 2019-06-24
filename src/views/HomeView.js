@@ -165,16 +165,16 @@ class HomeView extends Component {
 
     return (
       <div className="main">
-        <Menu />
+        {/* <Menu /> */}
 
-        <HeaderShowcase
+        {/* <HeaderShowcase
           {...this.state}
           search={this.search}
           shuffle={this.shuffle}
           setColumns={this.setColumns}
           setMargin={this.setMargin}
           setHeight={this.setHeight}
-        />
+        /> */}
 
         {this.getGrid()}
       </div>
