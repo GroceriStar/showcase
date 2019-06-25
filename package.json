@@ -13,7 +13,7 @@
     "@groceristar/grocery-component": "1.0.10",
     "@groceristar/pdf-export": "1.2.2",
     "@groceristar/recipes-methods": "^0.1.0",
-    "@react-pdf/renderer": "1.6.2",
+    "@react-pdf/renderer": "1.6.3",
     "antd": "3.19.8",
     "axios": "0.19.0",
     "lodash": "4.17.11",
