@@ -1217,11 +1217,12 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/groceristar-fetch@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.0.tgz#878b758e41f11cb56eac38c66f2cce80cbc88b21"
+"@groceristar/groceristar-fetch@2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.4.tgz#68da9cdb16c42bd99bd930a50c00591c05e12d49"
+  integrity sha512-1FyBqBOyBOm4tG5XEBetRVi4QjdeencxOKKblc2tBCWxyQY0+jTGOYSAN+3gRhwAshKaHypUs7WHp0tmOYOFKw==
   dependencies:
-    "@groceristar/sd-wrapper" "^4.9.2"
+    "@groceristar/sd-wrapper" "^4.11.3"
     dayjs "^1.8.12"
     fs "0.0.2"
     lodash "^4.17.10"
@@ -1259,14 +1260,16 @@
     raven-js "^3.27.1"
     uuid "^3.3.2"
 
-"@groceristar/sd-wrapper@^4.9.2":
-  version "4.9.2"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.9.2.tgz#3c3b14f3f51173723b25a0b6adb39eabceeb6019"
+"@groceristar/sd-wrapper@^4.11.3", "@groceristar/sd-wrapper@^4.9.2":
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.11.3.tgz#fafa3c713d4d84e945408745974b7a515a9011a2"
+  integrity sha512-jwEmg9ELXiHSzlSbR7GBlhoglB06i4iZucgFZI8bMte2lF+S5w3/MES1noKyzyNcMIHTT8HpYvn7AQCbao47mg==
   dependencies:
     csv-parser "^2.3.0"
     dayjs "^1.8.14"
     lodash "^4.17.11"
     path "^0.12.7"
+    path-exists "^4.0.0"
     uuid "^3.3.2"
     yarn "^1.16.0"
 
@@ -4168,11 +4171,7 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-dayjs@^1.8.12:
-  version "1.8.12"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.12.tgz#f9610fb9b115aa2fe2a07e742c130df418cee76a"
-
-dayjs@^1.8.14:
+dayjs@^1.8.12, dayjs@^1.8.14:
   version "1.8.14"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.14.tgz#43e4f62830c2c3342c3fcd25934dc9162dbe6f38"
 
@@ -8565,6 +8564,11 @@ path-exists@^2.0.0:
 path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
+
+path-exists@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
+  integrity sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
 
 path-is-absolute@^1.0.0:
   version "1.0.1"
