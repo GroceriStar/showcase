@@ -3904,12 +3904,19 @@ crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
 
-css-animation@1.5.0, css-animation@1.x, css-animation@^1.3.2, css-animation@^1.5.0:
+css-animation@1.x, css-animation@^1.3.2, css-animation@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/css-animation/-/css-animation-1.5.0.tgz#c96b9097a5ef74a7be8480b45cc44e4ec6ca2bf5"
   dependencies:
     babel-runtime "6.x"
     component-classes "^1.2.5"
+
+css-animation@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/css-animation/-/css-animation-2.0.1.tgz#421e9451ce7b723d3ee6ae9d9dad9291cfb7bd06"
+  integrity sha512-wyj3jAVo52xu/P8kpTZyQLV/QhQvlhCtb9xGFIPamuMJwWGYdUXfbUlX/ByglNDMydDxxXk7k01H/2d9eS4X3Q==
+  dependencies:
+    component-classes "^1.2.6"
 
 css-blank-pseudo@^0.1.4:
   version "0.1.4"
