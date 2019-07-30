@@ -1,8 +1,8 @@
 // import { groceristar, chickenKyiv, showcase, gsLoopback } from "@groceristar/groceristar-fetch";
 import axios from 'axios'
 
-const URL = 'https://grocerylists-fake-api.herokuapp.com';
-// const URL = 'http://localhost:4000';
+// const URL = 'https://grocerylists-fake-api.herokuapp.com';
+const URL = 'http://localhost:4000';
 
 async function getResponse(route) {
   let response;
@@ -25,7 +25,7 @@ function getFullGrocery( name ) {
 }
 
 function getGroceryCollection(){
-  return getResponse("/grocery-collection")
+  return getResponse("/sh/get-grocery-collection")
 }
 
 function getAllGrocery(){
