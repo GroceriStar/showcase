@@ -1,8 +1,8 @@
 // import { groceristar, chickenKyiv, showcase, gsLoopback } from "@groceristar/groceristar-fetch";
 import axios from 'axios'
 
-const URL = 'https://grocerylists-fake-api.herokuapp.com';
-// const URL = 'http://localhost:4000';
+// const URL = 'https://grocerylists-fake-api.herokuapp.com';
+const URL = 'http://localhost:4000';
 
 async function getResponse(route) {
   let response;
@@ -17,24 +17,24 @@ async function getResponse(route) {
 }
 
 function getGroceryById( id ) {
-  return getResponse("/grocery/" + id)
+  return getResponse("/gs/get-grocery-by-id/" + id)
 }
 
 function getFullGrocery( name ) {
-  return getResponse("/grocery/name/" + name)
+  return getResponse("/gs/get-full-grocery/" + name)
 }
 
 function getGroceryCollection(){
-  return getResponse("/grocery-collection")
+  return getResponse("/sh/get-grocery-collection")
 }
 
 function getAllGrocery(){
-  return getResponse("/grocery-all")
+  return getResponse("/gs/get-all-grocery")
 }
 
 
 function getGroceryDataFromId(id){
-  return getResponse("/grocery/data/" + id)
+  return getResponse("/gs/get-grocery-data-from-id/" + id)
 }
 
 
@@ -51,7 +51,7 @@ function getGroceryDataFromId(id){
 // }
 //
 function getFirstFiveRecipes(){
-  return getResponse("/ck-firstfivefecipes")
+  return getResponse("/ck/get-first-five-recipes")
 }
 //
 //
