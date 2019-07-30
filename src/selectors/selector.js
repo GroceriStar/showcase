@@ -17,11 +17,11 @@ async function getResponse(route) {
 }
 
 function getGroceryById( id ) {
-  return getResponse("/grocery/" + id)
+  return getResponse("/gs/get-grocery-by-id/" + id)
 }
 
 function getFullGrocery( name ) {
-  return getResponse("/grocery/name/" + name)
+  return getResponse("/gs/get-full-grocery/" + name)
 }
 
 function getGroceryCollection(){
@@ -29,12 +29,12 @@ function getGroceryCollection(){
 }
 
 function getAllGrocery(){
-  return getResponse("/grocery-all")
+  return getResponse("/gs/get-all-grocery")
 }
 
 
 function getGroceryDataFromId(id){
-  return getResponse("/grocery/data/" + id)
+  return getResponse("/gs/get-grocery-data-from-id/" + id)
 }
 
 
@@ -51,7 +51,7 @@ function getGroceryDataFromId(id){
 // }
 //
 function getFirstFiveRecipes(){
-  return getResponse("/ck-firstfivefecipes")
+  return getResponse("/ck/get-first-five-recipes")
 }
 //
 //
