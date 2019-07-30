@@ -8,7 +8,7 @@ async function getResponse(route) {
   let response;
   try {
     response =  await axios.get(URL + route);
-    console.log("Respons");
+    console.log("Response");
     console.log(response);
   } catch (error) {
     console.error(error);
