@@ -9,7 +9,7 @@
     "@groceristar/antd-showcase-components": "1.0.47",
     "@groceristar/cards-wrapper": "1.0.21",
     "@groceristar/fetch-grocery-list": "0.1.0",
-    "@groceristar/groceristar-fetch": "^2.2.4",
+    "@groceristar/groceristar-fetch": "^2.2.6",
     "@groceristar/grocery-component": "1.0.10",
     "@groceristar/pdf-export": "1.2.2",
     "@groceristar/recipes-methods": "0.1.0",
