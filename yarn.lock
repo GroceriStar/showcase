@@ -1220,10 +1220,10 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/groceristar-fetch@2.2.6":
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.6.tgz#42d6ce7f7781103acd3c7547c5e14c8ad1d26ff7"
-  integrity sha512-3IVO/Z9kM1lxTZeMcRDzacULUFa6cbN2xiafON/fZHIFT5SjRLlneCG+NUMoAZ4tcAccsmJY8ZHqWjI6QuvaRw==
+"@groceristar/groceristar-fetch@2.2.7":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.7.tgz#482c6364050cc5d084840f4f6d4807ba93631cf1"
+  integrity sha512-6a7At9LMhG3FnK/+lA0GWOT44TPcmBGLkYCJ6hS0G/UU2yyqtJjbasW3CCVGgovVeIixaoNKzpjS5l9V8s7C/Q==
   dependencies:
     "@groceristar/sd-wrapper" "^4.11.3"
     dayjs "^1.8.15"
