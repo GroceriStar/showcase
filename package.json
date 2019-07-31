@@ -9,7 +9,7 @@
     "@groceristar/antd-showcase-components": "1.0.47",
     "@groceristar/cards-wrapper": "1.0.21",
     "@groceristar/fetch-grocery-list": "0.1.0",
-    "@groceristar/groceristar-fetch": "^2.2.4",
+    "@groceristar/groceristar-fetch": "2.2.6",
     "@groceristar/grocery-component": "1.0.10",
     "@groceristar/pdf-export": "1.2.2",
     "@groceristar/recipes-methods": "0.1.0",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
-    "eslint": "^5.16.0",
+    "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.1",
     "eslint-config-react-app": "4.0.1",
     "eslint-plugin-import": "2.18.2",
