@@ -13,7 +13,7 @@
     "@groceristar/grocery-component": "1.0.10",
     "@groceristar/pdf-export": "1.2.2",
     "@groceristar/recipes-methods": "0.1.4",
-    "@react-pdf/renderer": "1.6.8",
+    "@react-pdf/renderer": "1.6.17",
     "antd": "4.0.3",
     "axios": "0.19.2",
     "css-animation": "2.0.4",
