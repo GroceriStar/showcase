@@ -15,7 +15,7 @@
     "@groceristar/recipes-methods": "0.1.4",
     "@react-pdf/renderer": "1.6.8",
     "antd": "4.0.3",
-    "axios": "0.19.2",
+    "axios": "0.27.2",
     "css-animation": "2.0.4",
     "lodash": "4.17.15",
     "mauerwerk": "2.0.2",
